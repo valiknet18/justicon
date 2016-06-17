@@ -25,12 +25,49 @@
 		text-transform: uppercase
 	.submenu
 		display: none
+		background: #000
+		position: absolute
+		left: 0
+		top: 18px
 	ul > li
 		display: inline-block
 		margin-right: 28px
+		position: relative
 		white-space: nowrap
 		&.first
 			display: none
+		&:hover
+			& > .submenu
+				display: block
+				z-index: 1
+
+.menu2
+	color: #000
+	font-size: 12px
+	a
+		// font-family: OpenSans;
+		font-size: 16px
+		font-weight: 600
+		text-transform: uppercase
+	.submenu, .submenu2
+		display: none
+		background: #fff
+		position: absolute
+		left: 0
+		top: 18px
+	ul
+		white-space: nowrap
+		& > li
+			display: inline-block
+			margin-right: 28px
+			position: relative
+			white-space: nowrap
+			&.first
+				display: none
+			&:hover
+				& > .submenu
+					display: block
+					z-index: 1
 
 // .wrap
 
@@ -48,13 +85,20 @@
 			vertical-align: middle
 			white-space: nowrap
 			width: 1px
+	.langs
+		& > *
+			display: none
+			&.actlang
+				display: block
 	.logotype-holder
 		padding: 16px 0 9px
 	.bccall
+		padding-right: 12.4%
 		text-align: center
 		width: 100%
 		.phones-holder
 			color: #36393d
+			display: inline-block
 			position: relative
 			font-size: 20px
 			font-weight: 400
@@ -68,11 +112,43 @@
 			// 	position: absolute
 			// 	position: absolute
 			// 	width: 12px
+			.clear
+				margin-bottom: 10px
 			.fl
+				cursor: pointer
+				display: inline-block
+				vertical-align: middle
+				width: 200px
 				&:before
 					content: ''
+					background-size: contain
+					background-position: 50% 50%
+					background-repeat: no-repeat
+					display: inline-block
+					vertical-align: middle
 					height: 30px
 					width: 30px
+				&.life:before
+					background-image: url('../img/content/operator-icon-life.png')
+				&.viber:before
+					background-image: url('../img/content/operator-icon-cellphone.png')
+				&.kyivstar:before
+					background-image: url('../img/content/operator-icon-kyivstar.png')
+				&.mts:before
+					background-image: url('../img/content/operator-icon-mts.png')
+				&.mainphone:before
+					background-image: url('../img/content/operator-icon-cellphone.png')
+		.phones-list
+			background: #fff
+			padding: 0
+			position: absolute
+			overflow: hidden
+			max-height: 0
+			z-index: 1
+			transition: max-height .3s, padding .3s
+		.phones-list:hover, .mainphone:hover ~ .phones-list
+			padding: 10px 0
+			max-height: 600px
 		.r-pimp.calll
 			color: #333
 			font-size: 12px
@@ -88,3 +164,32 @@
 				border-bottom: 0.25px dashed black
 				width: 100%
 	.phones
+	.blue
+		display: block
+
+.search
+	& > *
+		position: relative
+	input
+		background: none
+		background-color: transparent
+		border: none
+		width: 50px
+		height: 50px
+		vertical-align: middle
+		&[type="submit"]
+			background-color: #6bb6ee
+			position: absolute
+			right: 0
+			top: 0
+			pointer-events: none
+		&[type="text"]
+			border: 1px solid transparent
+			transition: width .3s, border .3s, background .3s, pointer-events .3s .3s
+			&:focus, &:active, &.opened
+				border-color: #eee
+				width: 400px
+				& ~ [type="submit"]
+					display: block
+					pointer-events: all
+					z-index: 1
