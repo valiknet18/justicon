@@ -17,44 +17,62 @@
 	background-color: #36393d
 	color: #eee
 	font-size: 12px
+	position: relative
 	a
+		display: inline-block
 		color: white
 		// font-family: OpenSans;
 		font-size: 16px
 		font-weight: 600
 		text-transform: uppercase
+		line-height: 50px
+		height: 50px
+		&:hover
+			color: $main-color
+			// & ~ .submenu
+			// 	display: block
+			// 	z-index: 1
+	.close
+		position: absolute
+		right: 0
+		top: 0
+		height: 20px
+		width: 20px
+		background: transparent url('../img/icons/cross-icon-1.svg') 50% 50% no-repeat
+		background-size: contain
+		display: none
 	.submenu
 		display: none
 		background: #000
 		position: absolute
 		left: 0
-		top: 18px
-	ul > li
-		display: inline-block
-		margin-right: 28px
-		position: relative
-		white-space: nowrap
-		&.first
-			display: none
-		&:hover
-			& > .submenu
-				display: block
-				z-index: 1
+		top: 50px
+		max-width: 80vw
+	ul
+		margin-left: 30px
+		& > li
+			display: inline-block
+			margin-right: 27px
+			position: relative
+			white-space: nowrap
+			&.first
+				display: none
+			&:hover
+				& > .submenu
+					display: block
+					z-index: 1
+	.search
+		position: absolute
+		right: 0
+		top: 0
 
 .menu2
 	color: #000
 	font-size: 12px
 	a
-		// font-family: OpenSans;
-		font-size: 16px
-		font-weight: 600
-		text-transform: uppercase
-	.submenu, .submenu2
-		display: none
-		background: #fff
-		position: absolute
-		left: 0
-		top: 18px
+		color: #333
+		font-size: 14px
+		font-weight: 400
 	ul
 		white-space: nowrap
 		& > li
@@ -68,6 +86,12 @@
 				& > .submenu
 					display: block
 					z-index: 1
+	.submenu, .submenu2
+		display: none
+		background: #fff
+		position: absolute
+		left: 0
+		top: 18px
 
 // .wrap
 
@@ -155,6 +179,8 @@
 			font-weight: 400
 			text-transform: uppercase
 			position: relative
+			&:hover
+				color: $main-color
 			&:before
 				content: ''
 				position: absolute
@@ -178,15 +204,19 @@
 		height: 50px
 		vertical-align: middle
 		&[type="submit"]
-			background-color: #6bb6ee
+			background: #6bb6ee url('../img/icons/search-icon-1.svg') 50% 50% no-repeat
 			position: absolute
 			right: 0
 			top: 0
 			pointer-events: none
+			cursor: pointer
 		&[type="text"]
 			border: 1px solid transparent
 			transition: width .3s, border .3s, background .3s, pointer-events .3s .3s
+			background: #fff
+			cursor: pointer
 			&:focus, &:active, &.opened
+				cursor: initial
 				border-color: #eee
 				width: 400px
 				& ~ [type="submit"]

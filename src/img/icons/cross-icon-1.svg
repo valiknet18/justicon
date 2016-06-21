@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Avocode 2.6.0 - http://avocode.com -->
+<!-- Generator: Avocode 2.5.2 - http://avocode.com -->
 
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -9,15 +9,15 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="20"
-   width="20"
-   viewBox="0 0 20 20"
-   id="svg3399"
+   height="29"
+   width="29"
+   viewBox="0 0 29 29"
+   id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="search-icon-1.svg">
+   sodipodi:docname="cross-icon-1.svg">
   <metadata
-     id="metadata3407">
+     id="metadata10">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -28,7 +28,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs3405" />
+     id="defs8" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -40,18 +40,18 @@
      inkscape:pageshadow="2"
      inkscape:window-width="1871"
      inkscape:window-height="1056"
-     id="namedview3403"
+     id="namedview6"
      showgrid="false"
-     inkscape:zoom="32.279425"
-     inkscape:cx="7.9186729"
-     inkscape:cy="8.0610969"
+     inkscape:zoom="2.8771931"
+     inkscape:cx="-104.68111"
+     inkscape:cy="1.4126747"
      inkscape:window-x="1329"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg3399" />
+     inkscape:current-layer="svg2" />
   <path
-     d="M 13.43,12.18 20,18.75 18.75,20 12.18,13.43 C 10.9,14.44 9.28,15.05 7.52,15.05 3.37,15.05 0,11.68 0,7.52 0,3.37 3.37,0 7.52,0 c 4.16,0 7.53,3.37 7.53,7.52 0,1.76 -0.61,3.38 -1.62,4.66 l 0,0 0,0 z m -5.91,1.1 c 3.18,0 5.76,-2.58 5.76,-5.76 0,-3.17 -2.58,-5.75 -5.76,-5.75 -3.17,0 -5.75,2.58 -5.75,5.75 0,3.18 2.58,5.76 5.75,5.76 l 0,0 z m 0,0"
-     id="path3401"
+     d="M 17.469848,14.5 28.359293,3.6105556 25.389444,0.64070709 14.5,11.530152 3.6105556,0.64070709 0.64070709,3.6105556 11.530152,14.5 0.64070709,25.389444 3.6105556,28.359293 14.5,17.469848 25.389444,28.359293 28.359293,25.389444 17.469848,14.5 Z m 0,0"
+     id="path4"
      inkscape:connector-curvature="0"
      style="fill:#ffffff;fill-rule:evenodd" />
 </svg>

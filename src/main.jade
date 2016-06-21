@@ -113,19 +113,6 @@ html(lang='en')
 									span.blue
 										a.r-pimp(href='/kontakty/') Посмотреть больше контактов
 
-				.search
-					#title-search
-						form#searchform(action='/search/index.php')
-							input#title-search-input(type='text', name='q', value='', autocomplete='off')
-							input.zoom(name='s', type='submit', value='')
-					script(type='text/javascript').
-						var jsControl_047d514cb78d27614405030735c0b002 = new JCTitleSearch({
-						//'WAIT_IMAGE': '/bitrix/themes/.default/images/wait.gif',
-						'AJAX_PAGE' : '/',
-						'CONTAINER_ID': 'title-search',
-						'INPUT_ID': 'title-search-input',
-						'MIN_QUERY_LEN': 2
-						});
 				.langs
 					a.rus.actlang(href='/') RU
 					a.ukr(href='/ua/') UA
@@ -264,6 +251,11 @@ html(lang='en')
 					li
 						a(href='/pro-bono/')
 							span Про BONO
+				.search
+					#title-search
+						form#searchform(action='/search/index.php')
+							input#title-search-input(type='text', name='q', value='', autocomplete='off')
+							input.zoom(name='s', type='submit', value='')
 				.clear
 		.container
 			.promo
@@ -271,9 +263,9 @@ html(lang='en')
 					.inner
 						.lnb(style='display: block;')
 						.hero
-							.caroufredsel_wrapper(style='text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 1000px; height: 284px; margin: 0px; overflow: hidden;')
-								.carousel(style='text-align: left; float: none; position: absolute; top: 0px; left: 0px; margin: 0px; width: 7000px; height: 284px;')
-									#bx_3218110189_39.item
+							.caroufredsel_wrapper
+								.carousel
+									.item
 										h1
 											font(size='4') Минус
 											span(style='text-align: justify;')
@@ -292,7 +284,7 @@ html(lang='en')
 												font(color='#ff0000', style='font-size: small;') БЕСПЛАТНО!
 										.more
 											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/vygodnye-usloviya-po-registratsii-predstavitelstva.html?clear_cache=Y') Подробнее
-									#bx_3218110189_38.item
+									.item
 										h1
 											div(style='text-align: left;') Разрешение на опасные работы
 										h2
@@ -302,7 +294,7 @@ html(lang='en')
 												| при заказе Разрешения на опасные работы – супервыгодные условия!
 										.more
 											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/aktsiya-po-oformleniyu-razresheniya-na-opasnye-raboty.html') Подробнее
-									#bx_3218110189_37.item
+									.item
 										h1
 											div
 												font(color='#ff0000') СКИДКА 5%
@@ -704,16 +696,6 @@ html(lang='en')
 								form#subscribeForm(action='/', method='post')
 									input#bxajaxid_421871ab4f6ad4c5c6a8c670da4ca683_8BACKi(type='hidden', name='bxajaxid', value='421871ab4f6ad4c5c6a8c670da4ca683')
 									input(type='hidden', name='AJAX_CALL', value='Y')
-									script(type='text/javascript').
-										function _processform_8BACKi(){
-										var obForm = top.BX('bxajaxid_421871ab4f6ad4c5c6a8c670da4ca683_8BACKi').form;
-										top.BX.bind(obForm, 'submit', function() {BX.ajax.submitComponentForm(this, 'comp_421871ab4f6ad4c5c6a8c670da4ca683', true)});
-										top.BX.removeCustomEvent('onAjaxSuccess', _processform_8BACKi);
-										}
-										if (top.BX('bxajaxid_421871ab4f6ad4c5c6a8c670da4ca683_8BACKi'))
-										_processform_8BACKi();
-										else
-										top.BX.addCustomEvent('onAjaxSuccess', _processform_8BACKi);
 									input#sessid(type='hidden', name='sessid', value='6cc4b30ded9e68995805d92a7592f942')
 									input#s(type='text', name='EMAIL', value='Ваш e-mail')
 									input.s-1(type='submit', name='Save', value='')
@@ -731,10 +713,6 @@ html(lang='en')
 						p
 							| E-mail: 
 							span.blue
-								script(type='text/javascript').
-									<!--
-									var matponn = ['l','f','a','e','a','i','s','c','a','/','n','=',' ','n','s','"','t','u','@','i','i','a','f','>','m','e','m','"','j','o','n',' ','s','l','t','o','>','<','l','h','u','=','t','u','<','a','o','u','o','c','f','r','o','j','.','@','"','c','.','a','i','i',':','a','s','n','"','i'];var vscsdnj = [35,50,43,5,66,57,55,26,31,65,28,39,2,49,38,40,56,62,20,11,44,63,18,47,42,41,9,8,21,19,17,33,23,12,13,27,67,64,45,3,22,7,24,30,0,1,51,54,59,58,6,4,14,53,29,52,46,34,61,10,48,16,15,36,37,60,32,25];var bberemj= new Array();for(var i=0;i<vscsdnj.length;i++){bberemj[vscsdnj[i]] = matponn[i]; }for(var i=0;i<bberemj.length;i++){document.write(bberemj[i]);}
-									// -->
 								a.email(href='mailto:info@justicon.ua') info@justicon.ua
 				.clear
 		#calld.modal
@@ -761,7 +739,6 @@ html(lang='en')
 							textarea(name='MESSAGE', rows='5', cols='40')
 						input(type='hidden', name='PARAMS_HASH', value='e781470f86e5a39be0e28bb1a0bd4a33')
 						input(type='submit', name='submit', value='Отправить')
-				script(src='/bitrix/templates/usticon/js/ajax.js')
 			.close.button
 		#zaprosd.modal
 			h3 Заказать услугу
@@ -785,7 +762,6 @@ html(lang='en')
 							textarea(name='MESSAGE', rows='5', cols='40')
 						input(type='hidden', name='PARAMS_HASH', value='72fe7e53c6b5d5dbed07f4c9e3169835')
 						input(type='submit', name='submit', value='Отправить')
-				script(src='/bitrix/templates/usticon/js/ajax.js')
 			.close.button
 		#zaproscon.modal
 			h3 Заказать консультацию
@@ -809,62 +785,13 @@ html(lang='en')
 							textarea(name='MESSAGE', rows='5', cols='40')
 						input(type='hidden', name='PARAMS_HASH', value='72fe7e53c6b5d5dbed07f4c9e3169835')
 						input(type='submit', name='submit', value='Отправить')
-				script(src='/bitrix/templates/usticon/js/ajax.js')
 			.close.button
 		#totop.bl-button
 			span Наверх
-		script(type='text/javascript').
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-6138164-2']);
-			_gaq.push(['_trackPageview']);
-			(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		// Yandex.Metrika counter
-		script(type='text/javascript').
-			(function (d, w, c) {
-			(w[c] = w[c] || []).push(function() {
-			try {
-			w.yaCounter14609872 = new Ya.Metrika({id:14609872,
-			webvisor:true,
-			clickmap:true,
-			trackLinks:true,
-			accurateTrackBounce:true});
-			} catch(e) { }
-			});
-			var n = d.getElementsByTagName("script")[0],
-			s = d.createElement("script"),
-			f = function () { n.parentNode.insertBefore(s, n); };
-			s.type = "text/javascript";
-			s.async = true;
-			s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-			if (w.opera == "[object Opera]") {
-			d.addEventListener("DOMContentLoaded", f, false);
-			} else { f(); }
-			})(document, window, "yandex_metrika_callbacks");
 		noscript
 			| <div><img src="//mc.yandex.ru/watch/14609872" style="position:absolute; left:-9999px;" alt="" /></div>
 		// /Yandex.Metrika counter
 		// Start SiteHeart code
-		script.
-			(function(){
-			var widget_id = 608564;
-			_shcp =[{widget_id : widget_id}];
-			var lang =(navigator.language || navigator.systemLanguage
-			|| navigator.userLanguage ||"en")
-			.substr(0,2).toLowerCase();
-			var url ="widget.siteheart.com/widget/sh/"+ widget_id +"/"+ lang +"/widget.js";
-			var hcc = document.createElement("script");
-			hcc.type ="text/javascript";
-			hcc.async =true;
-			hcc.src =("https:"== document.location.protocol ?"https":"http")
-			+"://"+ url;
-			var s = document.getElementsByTagName("script")[0];
-			s.parentNode.insertBefore(hcc, s.nextSibling);
-			})();
-		// End SiteHeart code
 		.title-search-result
 		#bx-admin-prefix.bx-core-window.bx-core-adm-dialog(style='z-index: 0; position: absolute; display: none; top: 10px; left: 0px;')
 			.bx-core-adm-dialog-head(style='cursor: move;')

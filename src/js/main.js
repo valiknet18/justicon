@@ -169,36 +169,11 @@ $(document).on('ready', function () {
 		})();
 
 
-		// article add comment fake textarea
-		(function () {
-
-			$('[contenteditable="true"]').each(function () {
-
-				var $self = $(this),
-					$textarea,
-					fakePlaceholder = null;
-
-				if ($self.hasClass('comment-wysiwyg')) {
-
-					$textarea = $self.siblings('textarea');
-
-					$self.on('keyup', function () {
-						$textarea.html( $self.html() );
-					}).on('focus', function () {
-						if (fakePlaceholder === null) {
-							fakePlaceholder = $self.html();
-							$self.html('');
-						};
-						if (fakePlaceholder === $self.html()) $self.html('');
-					}).on('blur', function () {
-						if (!$self.text().replace(/\n\S/, '')) $self.html( fakePlaceholder );
-					});
-
-				}
-
-			});
-
-		})();
+		// init main-slider
+		$('.caroufredsel_wrapper').simpleSlider({
+			'holderClass': '.carousel',
+			'slideClass': '.item'
+		});
 
 		// modals
 		var modals = {
