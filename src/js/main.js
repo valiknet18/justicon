@@ -166,7 +166,7 @@ $(document).on('ready', function () {
 
 			return plg;
 
-		})();
+	})();
 
 
 		// init main-slider

@@ -1,3 +1,10 @@
+// TODO dev
+.preloader
+	display: none !important
+
+.carousel .item:nth-child(1n+2)
+	display: none !important
+// TODO end dev
 
 .chromeperfectpixel-initial-block iframe,
 #chromeperfectpixel-supported-by
@@ -21,7 +28,7 @@
 	a
 		display: inline-block
 		color: white
-		// font-family: OpenSans;
+		// font-family: OpenSans
 		font-size: 16px
 		font-weight: 600
 		text-transform: uppercase
@@ -114,6 +121,7 @@
 			display: none
 			&.actlang
 				display: block
+				color: transparent
 	.logotype-holder
 		padding: 16px 0 9px
 	.bccall
@@ -223,3 +231,257 @@
 					display: block
 					pointer-events: all
 					z-index: 1
+
+.promo
+	background: url('https://unsplash.it/1600/800/?blur&image=223') 50% 50%
+	background: url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407') 50% 50%
+	background-size: cover
+	.wrap2
+		margin: 0 auto
+		width: 80%
+	.item
+		position: relative
+		// padding-left: 
+		padding: 80px 0 80px 50%
+		img
+			position: absolute
+			left: 0
+			bottom: 0
+			height: 100%
+			// width: 40%
+			background-position: 50% 50%
+			background-size: cover
+		h1
+			font-size: 40px
+			font-weight: 300
+			line-height: 40px
+			margin: 0
+		h2
+			color: #36393d
+			font-size: 16px
+			font-weight: 400
+			line-height: 20px
+
+.mservices
+	.wrap
+		margin: 50px auto 0
+		width: 80%
+	.fl1
+		font-size: 0
+		letter-spacing: 0
+		text-align: center
+		.item
+			display: inline-block
+			vertical-align: top
+			margin-bottom: 64px
+			position: relative
+			width: 25%
+			.title
+				&, & a
+					position: relative
+					color: #36393d
+					font-size: 14px
+					font-weight: 900
+					text-transform: uppercase
+					text-align: center
+					padding-top: 6px
+				&:before
+					$pseudo-width: 190px
+					background: #000
+					content: ''
+					display: inline-block
+					left: 50%
+					position: absolute
+					margin-left: $pseudo-width / -2
+					top: -1px
+					height: 1px
+					width: $pseudo-width
+			.title-hover
+				&, & a
+					color: #36393d
+					font-size: 14px
+					font-weight: 900
+					text-transform: uppercase
+					margin-bottom: 10px
+			.adc.pract
+				.s-all
+					border-radius: 50%
+					height: 130px
+					width: 130px
+					display: inline-block
+				.s1
+					@extend .s-all
+					background-position: -1px -98px
+				.s2
+					@extend .s-all
+					background-position: -199px -100px
+				.s3
+					@extend .s-all
+					background-position: -399px -100px
+				.s4
+					@extend .s-all
+					background-position: -1px -271px
+				.s5
+					@extend .s-all
+					background-position: -198px -438px
+				.s6
+					@extend .s-all
+					background-position: 0 -438px
+				.s7
+					@extend .s-all
+					background-position: -396px -272px
+				.s8
+					@extend .s-all
+					background-position: -197px -271px
+				.text
+					position: absolute
+					left: 0
+					top: 0
+					background: transparent
+					// right: 0
+					// bottom: 0
+					height: 100%
+					width: 100%
+					opacity: 0
+					text-align: center
+					transform: scale(1.6)
+					transform-origin: 50% 50%
+					transition: transform .3s, opacity .3s, background .3s
+					// border-radius: 50%
+					z-index: 1
+
+					// display: table-cell
+					// vertical-align: middle
+
+					display: flex
+					justify-content: center
+					align-items: center
+
+					// TODO remove
+					// pointer-events: none
+					a
+						color: #36393d
+						font-size: 14px
+						line-height: 18px
+				&:hover
+					// border-radius: 50%
+					.text
+						background: #fff
+						opacity: 1
+						transform: scale(1)
+
+/* Start:/bitrix/templates/usticon/css/sprites.css*/
+.r-trng, .l-trng, .ic-fb, .ic-gplus, .ic-twitter, .ic-email, .ic-lj, .ic-vk, .soc2, .soc1, .soc3, .soc4, .soc5, .eng, .rus, .ukr, .s-1, .ic-logo, .ic-phone, .zoom, .close, .smlogo, .blackphone, .s5, .s6, .s7, .s8, .s4, .s3, .s2, .s1, .skype
+	background: url('http://justicon.ua/bitrix/templates/usticon/css/sprites.png') no-repeat
+
+.r-trng
+	background-position: -346px -1px
+	width: 31px
+	height: 24px
+	display: none
+
+.l-trng
+	background-position: -297px 0
+	width: 30px
+	height: 24px
+	display: none
+
+.ic-fb
+	background-position: -592px 0
+	width: 26px
+	height: 24px
+
+.ic-gplus
+	background-position: -559px 0
+	width: 24px
+	height: 24px
+
+.ic-twitter
+	background-position: -520px 0
+	width: 26px
+	height: 24px
+
+.ic-email
+	background-position: -478px 0
+	width: 26px
+	height: 24px
+
+.ic-lj
+	background-position: -438px 0
+	width: 26px
+	height: 24px
+
+.ic-vk
+	background-position: -400px 0
+	width: 26px
+	height: 24px
+
+.soc2
+	background-position: -350px -49px
+	width: 25px
+	height: 19px
+
+.soc1
+	background-position: -299px -49px
+	width: 25px
+	height: 19px
+
+.soc3
+	background-position: -249px -48px
+	width: 25px
+	height: 19px
+
+.soc4
+	background-position: -199px -50px
+	width: 25px
+	height: 18px
+
+.soc5
+	background-position: -149px -50px
+	width: 25px
+	height: 19px
+
+.eng
+	background-position: -98px -50px
+	width: 24px
+	height: 18px
+
+.rus
+	background-position: -48px -50px
+	width: 25px
+	height: 18px
+
+.ukr
+	background-position: 0 -51px
+	width: 24px
+	height: 18px
+
+.s-1
+	background-position: -196px 0
+	width: 24px
+	height: 23px
+
+.ic-logo
+	background-position: -148px 0
+	width: 33px
+	height: 39px
+
+.ic-phone
+	background-position: -98px 0
+	width: 34px
+	height: 39px
+
+.zoom
+	background-position: -49px 0
+	width: 26px
+	height: 26px
+
+.close
+	background-position: 0 0
+	width: 30px
+	height: 30px
+
+.smlogo
+	background-position: -248px 0
+	width: 37px
+	height: 39px
