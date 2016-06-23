@@ -50,7 +50,7 @@
 		&:last-child
 			margin-bottom: 0
 
-.controls
+.paginator-holder, .controls
 	text-align: center
 	.page
 		display: inline-block
@@ -68,7 +68,8 @@
 			height: 12px
 			width: 12px
 
-.menu
+// .menu
+body > .menu
 	background-color: #36393d
 	color: #eee
 	font-size: 12px
@@ -105,7 +106,7 @@
 		display: none
 		background: #000
 		position: absolute
-		left: -18px
+		left: -30px
 		top: 50px
 		max-width: 80vw
 		white-space: nowrap
@@ -132,6 +133,7 @@
 		right: 0
 		top: 0
 
+// .menu2
 .menu2
 	color: #000
 	font-size: 12px
@@ -584,7 +586,7 @@
 
 .partners
 	.wrap
-	.controls
+	.controls, .paginator-holder
 		margin-top: 58px
 	.label-holder
 		text-align: center
@@ -619,7 +621,7 @@
 	margin-top: 26px
 	padding-bottom: 50px
 	background: #f9f9f9
-	.controls
+	.controls, .paginator-holder
 		margin-top: 0px
 	.top-news-holder
 		padding-top: 30px
@@ -823,7 +825,24 @@
 
 // MODALS
 .modal
+	background: #fff
 	display: none
+	overflow: auto
+	opacity: 0
+	position: fixed
+	left: 0
+	top: 0
+	height: 100%
+	width: 100%
+	z-index: 11
+	&.opened
+		display: block
+		opacity: 1
+		animation: modalOpen 0.6s
+		animation-fill-mode: forwards
+	&.clothing
+		animation: modalClose 0.6s
+		animation-fill-mode: forwards
 
 #totop
 	position: fixed

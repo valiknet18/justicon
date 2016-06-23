@@ -2,15 +2,7 @@
 if ($.browser.mobile) $('body').addClass('mobile');
 if ($.browser.safari) $('body').addClass('safari');
 
-var meatstudies = {};
-
-// WOW classes
-(function () {
-	if ($.browser.mobile) return;
-
-	blevogue.$wowElements = $('.fadeInUp, .fadeInRight, .fadeInLeft').addClass('wow');
-
-})();
+var justicon = {};
 
 var loading = {
 	avgTime: 3000,
@@ -170,9 +162,25 @@ $(document).on('ready', function () {
 
 
 		// init main-slider
-		$('.caroufredsel_wrapper').simpleSlider({
-			'holderClass': '.carousel',
-			'slideClass': '.item'
+		// $('.caroufredsel_wrapper').simpleSlider({
+		// 	'holderClass': '.carousel',
+		// 	'slideClass': '.item'
+		// });
+
+		$('.caroufredsel_wrapper').groupSlider({
+			'clickToNext': false,
+			'holderClass': 'parnters-container',
+			'loop': true,
+			'mouseDrug': true,
+			'mouseWheel': false,
+			'nextClass': 'arrow-right',
+			'pagination': true,
+			'preloaderClass': 'slide',
+			'prevClass': 'arrow-left',
+			'sectionClass': 'top-news',
+			'slideClass': 'part',
+			'slidesOnPage': 2,
+			'viewportClass': 'caroufredsel_wrapper'
 		});
 
 		// modals
@@ -228,7 +236,12 @@ $(document).on('ready', function () {
 
 				try {
 
-					$modal.removeClass('opened');
+					$modal
+						.addClass('clothing')
+						.one( animationPrefix, function () {
+							$(this)
+								.removeClass('opened clothing');
+						});
 
 				} catch (e) {
 
@@ -244,9 +257,11 @@ $(document).on('ready', function () {
 
 				if (!alt) {
 
-					$modal.one( transitionPrefix, bodyOverflow.unfixBody );
+					$modal.one( animationPrefix, bodyOverflow.unfixBody );
 
 					try {
+
+						if (!this.$cross) return
 
 						this.$cross.addClass('fadeOut').one(animationPrefix, function () {
 
@@ -262,7 +277,15 @@ $(document).on('ready', function () {
 
 				} else {
 
-					this.$cross.remove();
+					try {
+
+						this.$cross.remove();
+
+					} catch (e) {
+
+						console.error(e);
+
+					}
 
 				}
 
@@ -359,8 +382,8 @@ $(document).on('ready', function () {
 		// validation
 		(function () {
 
-			var $profileForms = $('form');
-			$profileForms.validate();
+			// var $profileForms = $('form');
+			// $profileForms.validate();
 
 		})();
 
