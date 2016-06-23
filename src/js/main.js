@@ -365,7 +365,7 @@ $(document).on('ready', function () {
 		})();
 
 
-		scroll
+		// scroll
 		$(document).on('scroll', function () {
 
 			var top = $(this).scrollTop();

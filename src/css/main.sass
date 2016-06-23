@@ -17,28 +17,67 @@
 	// height: 0
 	// width: 0
 
+.wrap
+	margin: 0 auto
+	width: 72.7%
+	@media (max-width: $tablet)
+		width: 100%
+
 .container
 	display: block
 
+.clear
+	display: table
+	height: 0
+	clear: both
+
+.gamburger
+	height: 50px
+	padding: 14px 14px
+	cursor: pointer
+	display: none
+	float: left
+	@media (max-width: $tablet)
+		display: block
+	span
+		background: #fff
+		display: block
+		height: 3px
+		margin: 6px 0
+		width: 30px
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
 
 .controls
 	text-align: center
-	margin-top: 58px
 	.page
 		display: inline-block
+		vertical-align: middle
 		border: 1px solid #000
 		height: 10px
 		width: 10px
 		border-radius: 50%
 		margin: 0 8px
+		cursor: pointer
 		&.active
 			background-color: #243e57
+		&:hover
+			margin: 0 7px
+			height: 12px
+			width: 12px
 
 .menu
 	background-color: #36393d
 	color: #eee
 	font-size: 12px
 	position: relative
+	.wrap
+		margin: 0
+		& > ul
+			@media (max-width: $tablet)
+				display: none
 	a
 		display: inline-block
 		color: white
@@ -66,9 +105,15 @@
 		display: none
 		background: #000
 		position: absolute
-		left: 0
+		left: -18px
 		top: 50px
 		max-width: 80vw
+		white-space: nowrap
+		padding: 18px
+		a
+			font-size: 12px
+		ul
+			margin-left: 0
 	ul
 		margin-left: 30px
 		& > li
@@ -98,7 +143,8 @@
 		white-space: nowrap
 		& > li
 			display: inline-block
-			margin-right: 28px
+			// margin-right: 28px
+			padding: 0 14px
 			position: relative
 			white-space: nowrap
 			&.first
@@ -106,13 +152,46 @@
 			&:hover
 				& > .submenu
 					display: block
-					z-index: 1
+					max-height: 600px
+					transition: max-height .9s
+					width: auto
+					z-index: 2
 	.submenu, .submenu2
-		display: none
-		background: #fff
+		width: 0
+		background: #f9f9f9
 		position: absolute
+		padding-top: 7px
+		left: -14px
 		left: 0
 		top: 18px
+		top: -17px
+		max-height: 0
+		overflow: hidden
+		transition: max-height .6s
+		z-index: 1
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+		// border-top: 5px solid $main-color
+		&:before
+			content: ''
+			background: $main-color
+			position: absolute
+			height: 5px
+			left: 0
+			top: 0
+			width: 100%
+		.close
+			display: none
+		a
+			display: block
+			line-height: 40px
+			padding: 0 14px
+			&:hover
+				background: $main-color
+				color: #fff
+		.header
+			a, &:hover
+				background: #f9f9f9
+				color: #333
 
 .header
 	.logo.invisible
@@ -129,6 +208,8 @@
 			white-space: nowrap
 			width: 1px
 	.langs
+		@media (max-width: $tablet)
+			display: none
 		& > *
 			display: none
 			&.actlang
@@ -136,10 +217,14 @@
 				color: transparent
 	.logotype-holder
 		padding: 16px 0 9px
+		@media (max-width: $tablet)
+			text-align: center
 	.bccall
 		padding-right: 12.4%
 		text-align: center
 		width: 100%
+		@media (max-width: $tablet)
+			display: none
 		.phones-holder
 			color: #36393d
 			display: inline-block
@@ -212,6 +297,9 @@
 	.phones
 	.blue
 		display: block
+	.menu2
+		@media (max-width: $tablet)
+			display: none
 
 .search
 	& > *
@@ -239,6 +327,8 @@
 				cursor: initial
 				border-color: #eee
 				width: 400px
+				max-width: 100%
+				max-width: calc(100vw - 15px)
 				& ~ [type="submit"]
 					display: block
 					pointer-events: all
@@ -248,13 +338,53 @@
 	background: url('https://unsplash.it/1600/800/?blur&image=223') 50% 50%
 	background: url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407') 50% 50%
 	background-size: cover
+	position: relative
+	&:before
+		content: ''
+		background: rgba(255,255,255,0.6)
+		// opacity: 0.2
+		position: absolute
+		left: 0
+		top: 0
+		height: 100%
+		width: 100%
+		@media (max-width: $tablet)
+			z-index: 1
 	.wrap2
 		margin: 0 auto
-		width: 80%
+		width: 72.7%
+		@media (max-width: $tablet)
+			width: 100%
+	.more
+		// line-height: 40px
+		border-radius: 3px
+		color: white
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+		text-align: center
+		display: inline-block
+		margin-top: 25px
+		@media (max-width: $tablet)
+			display: block
+			text-align: center
+		a
+			background-color: #f54f29
+			display: inline-block
+			color: white
+			padding: 11px 42px
+			&:hover
+				background-color: #d63d1a
 	.item
 		position: relative
 		// padding-left: 
-		padding: 80px 0 80px 50%
+		padding: 95px 0 99px 46.4%
+		@media (max-width: $tablet)
+			padding: 20px
+		*
+			position: relative
+			@media (max-width: $tablet)
+				z-index: 2
 		img
 			position: absolute
 			left: 0
@@ -263,21 +393,40 @@
 			// width: 40%
 			background-position: 50% 50%
 			background-size: cover
+			@media (max-width: $tablet)
+				height: auto
+				z-index: 0
+				max-width: 65%
+				max-height: 100%
 		h1
 			font-size: 40px
 			font-weight: 300
 			line-height: 40px
-			margin: 0
+			margin: 0 0 21px 0
+			@media (max-width: $tablet)
+				font-size: 26px
+				line-height: 33px
+				margin: 0 0 11px 0
 		h2
 			color: #36393d
 			font-size: 16px
 			font-weight: 400
 			line-height: 20px
+			@media (max-width: $tablet)
+				font-size: 14px
+				line-height: 21px
+		b
+			white-space: nowrap
 
 .mservices
 	.wrap
-		margin: 50px auto 0
+		margin-top: 50px
 		width: 80%
+		@media (max-width: $tablet)
+			overflow: hidden
+			padding: 0 10px
+			width: 100%
+			z-index: 1
 	.fl1
 		font-size: 0
 		letter-spacing: 0
@@ -288,6 +437,10 @@
 			margin-bottom: 64px
 			position: relative
 			width: 25%
+			@media (max-width: $tablet)
+				width: 50%
+			@media (max-width: $mobile-large)
+				width: 100%
 			.title
 				&, & a
 					position: relative
@@ -346,6 +499,8 @@
 					@extend .s-all
 					background-position: -197px -271px
 				.text
+					pointer-events: none
+
 					position: absolute
 					left: 0
 					top: 0
@@ -381,6 +536,7 @@
 						background: #fff
 						opacity: 1
 						transform: scale(1)
+						pointer-events: all
 
 
 .search-section
@@ -400,6 +556,8 @@
 			color: #333
 			font-size: 40px
 			font-weight: 100
+			@media (max-width: $mobile-large)
+				font-size: 26px
 		.input-form
 			input
 				background-color: white
@@ -421,9 +579,13 @@
 			font-weight: 400
 			padding: 14px 40px
 			text-transform: uppercase
+			&:hover
+				background-color: #d63d1a
 
 .partners
 	.wrap
+	.controls
+		margin-top: 58px
 	.label-holder
 		text-align: center
 		margin-top: 38px
@@ -454,17 +616,38 @@
 					margin: 0 20px
 
 .top-news
-	margin-top: 56px
-	.wrap
+	margin-top: 26px
+	padding-bottom: 50px
+	background: #f9f9f9
+	.controls
+		margin-top: 0px
 	.top-news-holder
+		padding-top: 30px
+		padding-bottom: 14px
 		.lnb.disabled
 		.caroufredsel_wrapper
+			overflow: hidden
 			.parnters-container
+				width: 800%
 				font-size: 0
 				letter-spacing: 0
+				white-space: nowrap
 				.part
+					margin-right: 21px
 					position: relative
 					display: inline-block
+					width: 325px
+					height: 300px
+					overflow: hidden
+					&:before
+						background: #fff
+						content: ''
+						position: absolute
+						left: 0
+						top: 0
+						height: 100%
+						width: 100%
+						opacity: 0.6
 					.label
 						color: #36393d
 						font-size: 20px
@@ -473,7 +656,10 @@
 						overflow: hidden
 						max-height: 50%
 						position: absolute
-						left: 0
+						left: 30px
+						right: 30px
+						top: 30px
+						white-space: normal
 					img
 					.btn
 						color: white
@@ -488,25 +674,27 @@
 						white-space: nowrap
 						left: 50%
 						transform: translateX(-50%)
+						&:hover
+							background-color: #5c768e
 
 .about.opensans
-	color: #777
-	font-size: 14px
-	font-weight: 400
-	line-height: 20px
-	.wrap
-		margin: 0 auto
-		width: 80%
-
+	@media (max-width: $tablet)
+		padding: 0 20px
+	&, p
+		color: #777
+		font-size: 14px
+		font-weight: 400
+		line-height: 20px
+		margin-top: 23px
 
 .search-input-1
 	position: relative
 	overflow: hidden
-	margin: 0 auto
-	width: 80%
-	// @media (max-width: $mobile-large)
-	// 	margin-bottom: 35px
-	// 	width: 100%
+	margin-top: 75px
+	@media (max-width: $tablet)
+		padding: 0 20px
+	.wrap
+		position: relative
 	input[type="text"], input.text
 		background-color: #ffffff
 		border: 1px solid #e2e2e2
@@ -543,8 +731,8 @@
 	.wrap
 		letter-spacing: 0
 		font-size: 0
-		margin: 0 auto
-		width: 80%
+		@media (max-width: $tablet)
+			padding: 0 20px
 	a
 		color: #666
 		font-size: 12px
@@ -553,16 +741,95 @@
 	.b-all
 		display: inline-block
 		vertical-align: top
-		width: 33.3%
+		width: 38%
 		float: left
+		padding-right: 40px
+		@media (max-width: $mobile-large)
+			float: none
+			width: 100%
 	.b1
 		@extend .b-all
 	.b2
 		@extend .b-all
 	.b3
 		@extend .b-all
+		padding-right: 0
+		width: 24%
+		@media (max-width: $mobile-large)
+			width: 100%
 	.b4
 		@extend .b-all
+	.b5
+		@extend .b-all
+		padding-top: 20px
+		padding-right: 0
+		line-height: 15px
+		width: 24%
+		@media (max-width: $mobile-large)
+			width: 100%
+		p
+			color: #666
+			font-size: 12px
+			font-weight: 400
+		a, .blue
+			color: $main-color
+	.head, .b5 b
+		color: #333
+		font-size: 12px
+		font-weight: 600
+		line-height: 15px
+		padding-top: 37px
+		margin-bottom: 3px
+		text-transform: uppercase
+	.bld
+		font-weight: 900
+	a
+		color: #666
+		font-size: 12px
+		font-weight: 400
+		line-height: 15px
+	.soc
+		text-align: center
+		&:before, &:after
+			content: ''
+			display: table
+			clear: both
+		.head
+			display: none
+		& > div
+			display: inline-block
+			margin: 29px 2px 0
+		noindex
+			display: none
+	.b
+		color: #666
+		font-size: 12px
+		font-weight: 400
+		line-height: 15px
+		text-align: center
+		.b1
+			margin-bottom: 40px
+			margin-top: 9px
+			width: 100%
+			@media (max-width: $tablet)
+				padding-right: 0
+			p
+				color: #666
+				font-size: 12px
+				font-weight: 400
+				line-height: 20px
+		.b2
+			display: none
+
+// MODALS
+.modal
+	display: none
+
+#totop
+	position: fixed
+	right: 20px
+	bottom: 20px
+	display: none
 
 /* Start:/bitrix/templates/usticon/css/sprites.css*/
 .r-trng, .l-trng, .ic-fb, .ic-gplus, .ic-twitter, .ic-email, .ic-lj, .ic-vk, .soc2, .soc1, .soc3, .soc4, .soc5, .eng, .rus, .ukr, .s-1, .ic-logo, .ic-phone, .zoom, .close, .smlogo, .blackphone, .s5, .s6, .s7, .s8, .s4, .s3, .s2, .s1, .skype
@@ -610,31 +877,6 @@
 	width: 26px
 	height: 24px
 
-.soc2
-	background-position: -350px -49px
-	width: 25px
-	height: 19px
-
-.soc1
-	background-position: -299px -49px
-	width: 25px
-	height: 19px
-
-.soc3
-	background-position: -249px -48px
-	width: 25px
-	height: 19px
-
-.soc4
-	background-position: -199px -50px
-	width: 25px
-	height: 18px
-
-.soc5
-	background-position: -149px -50px
-	width: 25px
-	height: 19px
-
 .eng
 	background-position: -98px -50px
 	width: 24px
@@ -679,3 +921,22 @@
 	background-position: -248px 0
 	width: 37px
 	height: 39px
+
+
+// SOCIALS spline
+.soc2, .soc1, .soc3, .soc4, .soc5
+	background: url('../img/content/socials-spline.svg') no-repeat
+	display: block
+	height: 38px
+	width: 38px
+
+.soc1
+	background-position: 0px 0px
+.soc2
+	background-position: -42px 0px
+.soc3
+	background-position: -84px 0px
+.soc4
+	background-position: -126px 0px
+.soc5
+	background-position: -168px 0px

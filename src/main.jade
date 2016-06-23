@@ -32,6 +32,9 @@ html(lang='en')
 								span Почему мы
 							.submenu
 								a.close(href='#')
+								.header
+									a(href='#')
+										span Почему мы
 								.inner
 									.block-item
 										.title
@@ -52,6 +55,9 @@ html(lang='en')
 								span Пресс-центр
 							.submenu
 								a.close(href='#')
+								.header
+									a(href='#')
+										span Пресс-центр
 								.inner
 									.block-item
 										.title
@@ -70,6 +76,9 @@ html(lang='en')
 								span Контакты
 							.submenu2
 								a.close(href='#')
+								.header
+									a(href='#')
+										span Контакты
 								.inner
 									.title Телефоны для связи
 									.subphones
@@ -122,6 +131,10 @@ html(lang='en')
 		.fill
 		.menu.fixed
 			.wrap
+				.gamburger(data-modal="#mobile-menu")
+					span
+					span
+					span
 				ul
 					li.first
 						a(href='/')
@@ -278,7 +291,7 @@ html(lang='en')
 												font(color='#ff0000')
 													b 5% скидку!
 										.more
-											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/skidka-na-kompleks-razreshenie-na-rabotu-vid-na-zhitelstvo.html?clear_cache=Y') Подробнее
+											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/skidka-na-kompleks-razreshenie-na-rabotu-vid-na-zhitelstvo.html?clear_cache=Y') Узнать больше
 									.item
 										h1
 											font(size='4') Минус
@@ -297,7 +310,7 @@ html(lang='en')
 													| При заказе регистрации представительства служебную карточку на КАЖДОГО иностранного сотрудника мы оформим Вам
 												font(color='#ff0000', style='font-size: small;') БЕСПЛАТНО!
 										.more
-											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/vygodnye-usloviya-po-registratsii-predstavitelstva.html?clear_cache=Y') Подробнее
+											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/vygodnye-usloviya-po-registratsii-predstavitelstva.html?clear_cache=Y') Узнать больше
 									.item
 										h1
 											div(style='text-align: left;') Разрешение на опасные работы
@@ -307,7 +320,7 @@ html(lang='en')
 													span(style='color: rgb(255, 0, 0);') «АКЦИЯ» 
 												| при заказе Разрешения на опасные работы – супервыгодные условия!
 										.more
-											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/aktsiya-po-oformleniyu-razresheniya-na-opasnye-raboty.html') Подробнее
+											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/aktsiya-po-oformleniyu-razresheniya-na-opasnye-raboty.html') Узнать больше
 									.item
 										h1
 											div
@@ -320,7 +333,7 @@ html(lang='en')
 												font(color='#ff0000')
 													b 5% скидку!
 										.more
-											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/skidka-na-kompleks-razreshenie-na-rabotu-vid-na-zhitelstvo.html?clear_cache=Y') Подробнее
+											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/skidka-na-kompleks-razreshenie-na-rabotu-vid-na-zhitelstvo.html?clear_cache=Y') Узнать больше
 							.clear
 							.swicher
 								.outer-center
@@ -617,13 +630,14 @@ html(lang='en')
 							.page
 						.clear
 
-		.about.opensans
-			.wrap
-				| Юридическая компания «ЮСТИКОН» была основана в Киеве в 2008 году. За время работы была сформирована команда юристов, ориентированных на достижение результата в любом юридическом вопросе. На сегодня компания объединяет около 20 специалистов в различных отраслях права. Благодаря опыту работы и успешной реализации проектов компания существенно расширила спектр предоставляемых услуг. Была разработана идеология, созданная основательная ресурсная база. Все это позволило занять собственную нишу на рынке юридических услуг. Компания «ЮСТИКОН» стала надежным юридическим консультантом для малого и среднего бизнеса в Украине, что подтверждается доверием постоянных клиентов.
+				.about.opensans
+					.wrap
+						| Юридическая компания «ЮСТИКОН» была основана в Киеве в 2008 году. За время работы была сформирована команда юристов, ориентированных на достижение результата в любом юридическом вопросе. На сегодня компания объединяет около 20 специалистов в различных отраслях права. Благодаря опыту работы и успешной реализации проектов компания существенно расширила спектр предоставляемых услуг. Была разработана идеология, созданная основательная ресурсная база. Все это позволило занять собственную нишу на рынке юридических услуг. Компания «ЮСТИКОН» стала надежным юридическим консультантом для малого и среднего бизнеса в Украине, что подтверждается доверием постоянных клиентов.
 
-		form(action="#").search-input-1
-			input.text(type='text', placeholder='Поиск')
-			input.submit(type='submit', value='найти')
+				form(action="#").search-input-1
+					.wrap
+						input.text(type='text', placeholder='Поиск')
+						input.submit(type='submit', value='найти')
 		.footer
 			.t
 				.wrap
@@ -673,23 +687,36 @@ html(lang='en')
 							a(href='/inform-byuro/adresnaya-kniga/') Адресная книга
 						p
 							a(href='/inform-byuro/spravochnaya-informatsiya/') Справочная информация
+					.b5
+						p
+							b Контакты
+						p
+							| Тел: 
+							span.b1d (044) 221 4000
+						p
+							| Skype: 
+							span.blue justicon.ua
+						p
+							| E-mail: 
+							span.blue
+								a.email(href='mailto:info@justicon.ua') info@justicon.ua
 					.soc
 						p.head
 							span Мы в соцсетях
 						div
-							.soc1
+							a.soc1(rel='nofollow', target='_blank', href='https://www.facebook.com/justicon')
 							noindex
 								a(rel='nofollow', target='_blank', href='https://www.facebook.com/justicon') Facebook
 						div
-							.soc2
+							a.soc2(rel='nofollow', target='_blank', href='http://vk.com/justicon')
 							noindex
 								a(rel='nofollow', target='_blank', href='http://vk.com/justicon') ВКонтакте
 						div
-							.soc3
+							a.soc3(rel='nofollow', target='_blank', href='https://twitter.com/justicon_ua')
 							noindex
 								a(rel='nofollow', target='_blank', href='https://twitter.com/justicon_ua') Twitter
 						div
-							.soc4
+							a.soc4(rel='nofollow', target='_blank', href='https://plus.google.com/102067683601334574177/posts')
 							noindex
 								a(rel='nofollow', target='_blank', href='https://plus.google.com/102067683601334574177/posts') Google+
 					.clear
@@ -701,7 +728,7 @@ html(lang='en')
 						p © 2008-2014. "JUSTICON.UA". Все права защищены
 						p
 							| При полном или частичном воспроизведении любых материалов сайта ссылка на источник обязательна.
-						p Если вы заметили ошибку, выделите текст и нажмите Ctrl + Enter
+						//- p Если вы заметили ошибку, выделите текст и нажмите Ctrl + Enter
 					.b2
 						p.head
 							span Подписаться на новости
@@ -715,19 +742,6 @@ html(lang='en')
 									input.s-1(type='submit', name='Save', value='')
 									input(type='hidden', name='PostAction', value='Add')
 									input(type='hidden', name='ID', value='')
-					.b3
-						p
-							b Контакты
-						p
-							| Тел: 
-							span.b1d (044) 221 4000
-						p
-							| Skype: 
-							span.blue justicon.ua
-						p
-							| E-mail: 
-							span.blue
-								a.email(href='mailto:info@justicon.ua') info@justicon.ua
 				.clear
 		#calld.modal
 			h3
@@ -863,3 +877,5 @@ html(lang='en')
 				.bx-core-adm-dialog-buttons
 					input#ok(type='button', name='ok', value='Отправить')
 					input#cancel(type='button', name='cancel', value='Отменить')
+
+	include ./partials/scripts.jade
