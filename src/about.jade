@@ -1,0 +1,1018 @@
+doctype html
+html(lang='en')
+	head
+		title Justicon
+		include ./partials/head.jade
+	body
+		.body.body-ru
+			.header
+				.wrap
+					a(href='/')
+						.logo.logo-ru Justicon
+					//
+						<div class="bccall"><div class="blackphone fl"></div><span>044 221 4000</span></div>
+						<div class="phones">
+						<div class="kyivstar fl"></div><span>(044) 2214000</span><div class="clear"></div>
+						<div class="mts fl"></div><span>(067) 7654321</span><div class="clear"></div>
+						<div class="life fl"></div><span>(093) 9876543</span><div class="clear"></div>
+						</div>
+					.bccall
+						.blackphone.fl
+						span
+							font(size='2')
+								b 044 221 4000
+						span.blue
+							a.r-pimp.calll(href='#') Обратный звонок
+						span.blue
+							a.r-pimp(href='#') Позвонить с сайта
+					.phones
+						.life.fl
+						|  (093) 1000 176 
+						.clear
+						.viber.fl
+						|  (093) 1000 176
+						.clear
+						.kyivstar.fl
+						|  (098) 1000 176
+					.search
+						#title-search
+							form#searchform(action='/search/index.php')
+								input#title-search-input(type='text', name='q', value='', autocomplete='off')
+								input.zoom(name='s', type='submit', value='')
+						script(type='text/javascript').
+							var jsControl_047d514cb78d27614405030735c0b002 = new JCTitleSearch({
+							//'WAIT_IMAGE': '/bitrix/themes/.default/images/wait.gif',
+							'AJAX_PAGE' : '/pro-bono/',
+							'CONTAINER_ID': 'title-search',
+							'INPUT_ID': 'title-search-input',
+							'MIN_QUERY_LEN': 2
+							});
+					.langs
+						a.rus.actlang(href='/') RU
+						a.ukr(href='/ua/') r
+						a.eng(href='#') r
+						.clear
+				.clear
+			.fill(style='display: block;')
+			.menu.fixed
+				.wrap
+					ul
+						li.first
+							a(href='/')
+								img(src='/bitrix/templates/usticon/i/sprites/smlogo.png')
+						li
+							a(href='/uslugi/')
+								span Услуги
+							.submenu
+								a.close(href='#')
+								.inner
+									.block-item
+										.title Корпоративные правоотношения
+										ul
+											li
+												a(href='/uslugi/korp/registratsiya/') Регистрация
+											li
+												a(href='/uslugi/korp/izmeneniya/') Изменения
+											li
+												a(href='/uslugi/korp/likvidatsiya/') Ликвидация
+											li
+												a(href='/uslugi/korp/soputstv/') Сопутствующие и дополнительные услуги
+										.title Лицензии, разрешения, сертификация
+										ul
+											li
+												a(href='/uslugi/lits/litsenzii/') Лицензии
+											li
+												a(href='/uslugi/lits/razresheniya/') Разрешения
+											li
+												a(href='/uslugi/lits/sertifikatsiya/') Сертификация
+									.block-item
+										.title Судебная практика
+										ul
+											li
+												a(href='/uslugi/sud/predst/') Представительство интересов в судах
+											li
+												a(href='/uslugi/sud/ispoln/') Представительство в исполнительном производстве
+											li
+												a(href='/uslugi/sud/dolg/') Возврат долгов
+											li
+												a(href='/uslugi/sud/praktiki/') Судебные практики
+										.title Недвижимость, строительство, земельное право
+										ul
+											li
+												a(href='/uslugi/zem/nedv/') Недвижимость
+											li
+												a(href='/uslugi/zem/stroi/') Строительство
+											li
+												a(href='/uslugi/zem/zem-pr/') Земельное право
+									.block-item
+										.title Миграционное право
+										ul
+											li
+												a(href='/uslugi/migr/immigr/') Иммиграция в Украину
+											li
+												a(href='/uslugi/migr/emigr/') Эмиграция из Украины
+											li
+												a(href='/uslugi/migr/soputstv-uslugi/') Сопутствующие услуги
+										.title Интеллектуальное право
+										ul
+											li
+												a(href='/uslugi/int/reg/') Регистрация торговых марок
+											li
+												a(href='/uslugi/int/patent/') Патентование устройств, способов, веществ, внешнего вида изделия
+											li
+												a(href='/uslugi/int/avtor/') Авторское право
+									.block-item
+										.title Абонентское обслуживание
+										ul
+											li
+												a(href='/uslugi/abon/a-y/') Абонентское юридическое обслуживание
+											li
+												a(href='/uslugi/abon/b-u/') Бухгалтерские услуги. Аутсорсинг
+											li
+												a(href='/uslugi/abon/d-b/') Дополнительные бухгалтерские услуги
+											li
+												a(href='/uslugi/abon/k-s/') Кадровое сопровождение
+										.title Налоговый и юридический консалтинг. Антимонопольное право
+										ul
+											li
+												a(href='/uslugi/konsalting/nalog/') Налоговый консалтинг
+											li
+												a(href='/uslugi/konsalting/yur/') Юридический консалтинг
+											li
+												a(href='/uslugi/konsalting/antimonopolnoe-pravo/') Антимонопольное право
+											li
+												a(href='/uslugi/konsalting/tamozhenno-brokerskie-uslugi/') Таможенно-брокерские услуги
+						li
+							a(href='/prays-list/')
+								span Прайс-лист
+						li
+							a(href='#')
+								span Информ-бюро
+							.submenu
+								a.close(href='#')
+								.inner
+									.block-item
+										.title Адресная книга
+										//
+											<ul>
+											<li><a href="/inform-byuro/adresnaya-kniga/adresa-ovir/">Адреса ОВИР</a></li>
+											<li><a href="/inform-byuro/adresnaya-kniga/adresa-sudy/">Адреса суды</a></li>
+											</ul>
+										ul
+											li
+												a.root-item(href='/inform-byuro/adresnaya-kniga/adresa-ovir/') Адреса ОВИР
+											li
+												a.root-item(href='/inform-byuro/adresnaya-kniga/adresa-sudy/') Адреса суды
+										.menu-clear-left
+									.block-item
+										.title Справочная информация
+										//
+											<ul>
+											<li><a href="/inform-byuro/spravochnaya-informatsiya/kved-2012/">Квед 2012</a></li>
+											<li><a href="/inform-byuro/spravochnaya-informatsiya/kvota-immigratsii/">Квота иммиграции</a></li>
+											<li><a href="/inform-byuro/spravochnaya-informatsiya/kodifikator-stroitelnykh-rabot/">Кодификатор строительных работ</a></li>
+											</ul>
+										ul
+											li
+												a.root-item(href='/inform-byuro/spravochnaya-informatsiya/kved-2012/') Квед 2012
+											li
+												a.root-item(href='/inform-byuro/spravochnaya-informatsiya/kodifikator-stroitelnykh-rabot/') Кодификатор строительных работ
+											li
+												a.root-item(href='/inform-byuro/spravochnaya-informatsiya/kvota-immigratsii/') Квота иммиграции
+										.menu-clear-left
+									.block-item
+										.title Архив
+						li
+							a(href='/pro-bono/')
+								span Про BONO
+					.menu2
+						ul
+							li
+								a(href='#')
+									span Почему мы
+								.submenu
+									a.close(href='#')
+									.inner
+										.block-item
+											.title
+												a(href='/about/') О компании
+										.block-item
+											.title
+												a(href='/uspeshnyy-rezultat/') Успешный результат
+										.block-item
+											.title
+												a(href='/nashi-klienty/') Наши клиенты
+										.block-item
+											.title
+												a(href='/aktsii-i-predlozheniya/') Акции и предложения
+										.block-item
+											.title
+							li
+								a(href='#')
+									span Пресс-центр
+								.submenu
+									a.close(href='#')
+									.inner
+										.block-item
+											.title
+												a(href='/press-tsentr/novosti-prava/') Новости права
+										.block-item
+											.title
+												a(href='/press-tsentr/expert/') Мнение эксперта
+										.block-item
+											.title
+												a(href='/press-tsentr/publikatsii/') Публикации
+										.block-item
+											.title
+												a(href='/press-tsentr/rassylka/') Рассылка
+							li
+								a(href='/kontakty/')
+									span Контакты
+								.submenu2
+									a.close(href='#')
+									.inner
+										.title Телефоны для связи
+										.subphones
+											//
+												<div class="blackphone fl"></div><span>(044) 1000 176</span><div class="clear"></div>
+												<div class="kyivstar fl"></div><span>(044) 1000 176</span><div class="clear"></div>
+												<div class="mts fl"></div><span>(067) 1000 176</span><div class="clear"></div>
+												<div class="life fl"></div><span>(093) 1000 176</span><div class="clear"></div>
+											.blackphone.fl
+											span +38 (044) 221-4000
+											div
+												span      
+												.clear
+												.life.fl
+												span +38 (093) 1000 176
+												br
+												.viber.fl
+												span +38 (093) 1000 176
+											div
+												br
+												.clear
+												.kyivstar.fl
+												span +38 (098) 1000 176
+												.clear
+										.hr.separate10
+										span.blue
+											a.r-pimp.calll(href='#') Заказать обратный звонок
+										span.blue
+											a.r-pimp(href='#') Позвонить с сайта
+										br
+										span.blue
+											a.r-pimp.zaprosl(href='#') Заказать услугу
+										br
+										span.blue
+											a.r-pimp.zaprosconl(href='#') Заказать консультацию
+										.hr.separate10
+										|                             Email: 
+										span.blue
+											a.r-pimp(href='#') info@justicon.ua
+										br
+										|                             Skype 
+										span.blue
+											a.r-pimp(href='#') justicon.ua
+										.hr.separate10
+										.separate10.hg1
+										span.blue
+											a.r-pimp(href='/kontakty/') Посмотреть больше контактов
+					.clear
+			.container
+				.wrap
+					.bc
+						div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+							a(itemprop='url', href='/', title='Главная')
+								span(itemprop='title') Главная
+						div  » 
+						div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+							span(itemprop='title') Про BONO
+					.tophr
+					.main.wide-l
+						h1#page-tit Про BONO
+						.rb.opensans.leftb
+							a#ban-cons3.zaprosconl
+							.title Наши клиенты
+							.partners
+								.parnters-holder
+									.lnb.disabled(style='display: block;')
+									.caroufredsel_wrapper(style='text-align: start; float: left; position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 200px; height: 300px; margin: 0px; overflow: hidden;')
+										.parnters-container(style='text-align: left; float: none; position: absolute; top: 0px; left: 0px; margin: 0px; width: 2200px; height: 300px;')
+											.part
+												div
+													span
+														img(src='/upload/iblock/4b3/HyundaiLogo.png', data-href='/nashi-klienty/?client=472')
+												div
+													span
+														img(src='/upload/iblock/22a/KIA.png', data-href='/nashi-klienty/?client=471')
+												div
+													span
+														img(src='/upload/iblock/995/Luxoft_logo.png', data-href='/nashi-klienty/?client=470')
+												div
+													span
+														img(src='/upload/iblock/219/EPAM_logo.png', data-href='/nashi-klienty/?client=469')
+												div
+													span
+														img(src='/upload/iblock/543/yandex2.png', data-href='/nashi-klienty/?client=487')
+												div
+													span
+														img(src='/upload/iblock/474/Metinvest_Logo_Ukr2.png', data-href='/nashi-klienty/?client=474')
+											.part
+												div
+													span
+														img(src='/upload/iblock/797/carlsberg_crown_logo_on_green.jpg', data-href='/nashi-klienty/?client=488')
+												div
+													span
+														img(src='/upload/iblock/f97/Logo_OTIS300dpi.png', data-href='/nashi-klienty/?client=486')
+												div
+													span
+														img(src='/upload/iblock/0fc/new_csa_logo_mar_2008.png', data-href='/nashi-klienty/?client=490')
+												div
+													span
+														img(src='/upload/iblock/c78/Лисод.png', data-href='/nashi-klienty/?client=473')
+												div
+													span
+														img(src='/upload/iblock/293/Кировский завод ОЦМ.png', data-href='/nashi-klienty/?client=475')
+												div
+													span
+														img(src='/upload/iblock/bad/ЕВРАЗ.png', data-href='/nashi-klienty/?client=489')
+											.part
+												div
+													span
+														img(src='/upload/iblock/033/uralremont.png', data-href='/nashi-klienty/?client=477')
+												div
+													span
+														img(src='/upload/iblock/b18/ukrdom.png', data-href='/nashi-klienty/?client=479')
+												div
+													span
+														img(src='/upload/iblock/bca/КРИВБАССПЕЦПРОЕКТ.png', data-href='/nashi-klienty/?client=478')
+												div
+													span
+														img(src='/upload/iblock/49e/vse-logo.png', data-href='/nashi-klienty/?client=480')
+												div
+													span
+														img(src='/upload/iblock/72b/ua-tenders.gif', data-href='/nashi-klienty/?client=481')
+												div
+													span
+														img(src='/upload/iblock/966/TENTE.png', data-href='/nashi-klienty/?client=492')
+											.part
+												div
+													span
+														img(src='/upload/iblock/fb3/TMM.png', data-href='/nashi-klienty/?client=493')
+												div
+													span
+														img(src='/upload/iblock/b68/horizont.png', data-href='/nashi-klienty/?client=482')
+												div
+													span
+														img(src='/upload/iblock/f80/ЕБЕРСПЕХЕР-logo.png', data-href='/nashi-klienty/?client=495')
+												div
+													span
+														img(src='/upload/iblock/abc/asmap_1.png', data-href='/nashi-klienty/?client=496')
+												div
+													span
+														img(src='/upload/iblock/2ec/14284.png', data-href='/nashi-klienty/?client=497')
+												div
+													span
+														img(src='/upload/iblock/b9a/DEC.gif', data-href='/nashi-klienty/?client=498')
+											.part
+												div
+													span
+														img(src='/upload/iblock/a96/ITK-logo-ua.gif', data-href='/nashi-klienty/?client=483')
+												div
+													span
+														img(src='/upload/iblock/241/gazetaua.png', data-href='/nashi-klienty/?client=484')
+												div
+													span
+														img(src='/upload/iblock/9c1/site2.fd968aa3e6db262dda98d05d1cfd7f0d[1].jpg', data-href='/nashi-klienty/?client=491')
+												div
+													span
+														img(src='/upload/iblock/52a/kmv.png', data-href='/nashi-klienty/?client=485')
+												div
+													span
+														img(src='/upload/iblock/0e2/gagarin.jpg', data-href='/nashi-klienty/?client=494')
+									.rnb(style='display: block;')
+									.clear
+									#pager2(style='display: block;')
+										a.selected(href='#')
+											span 1
+										a(href='#')
+											span 2
+										a(href='#')
+											span 3
+										a(href='#')
+											span 4
+										a(href='#')
+											span 5
+							//
+								<div class="title">Полезные документы</div>
+								<ul>
+								<ul>
+								</ul>
+								</ul>
+								<div class="cloud">
+								<noindex>
+								<div class="search-tags-cloud"  style='width:100%;'><a href="/search/index.php?tags=%D0%B7%D0%B5%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5+%D0%BF%D1%80%D0%B0%D0%B2%D0%BE" class="c6"rel="nofollow">земельное право</a> <a href="/search/index.php?tags=%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0+%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2" class="c2"rel="nofollow">Защита интересов</a> <a href="/search/index.php?tags=%D1%80%D0%B0%D0%B7%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F" class="c5"rel="nofollow">разрешения</a> <a href="/search/index.php?tags=%D0%98%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F" class="c7"rel="nofollow">Интеллектуальная</a> <a href="/search/index.php?tags=%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F" class="c6"rel="nofollow">сертификация</a> <a href="/search/index.php?tags=%D0%9A%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B5+%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D0%BE%D1%82%D0%BD%D0%BE%D1%88%D0%B5%D0%BD%D0%B8%D1%8F" class="c8"rel="nofollow">Корпоративные правоотношения</a> <a href="/search/index.php?tags=%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F" class="c4"rel="nofollow">Лицензия</a> <a href="/search/index.php?tags=%D0%9C%D0%B8%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B5" class="c7"rel="nofollow">Миграционное</a> <a href="/search/index.php?tags=%D0%9D%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C" class="c1"rel="nofollow">Недвижимость</a> </div>
+								</noindex>
+								</div>
+						.main-container
+							font(color='#ff0000', size='5') - 
+							b(style='font-size: large; color: rgb(0, 84, 165);') ПРОЕКТ «#ProBono»
+							font(size='4')  
+							div
+								font(size='4')
+									br
+								img(src='/upload/medialibrary/3c5/probono-news.jpg', title='probono-news.jpg', border='0', alt='probono-news.jpg', width='735', height='403', align='middle')
+								br
+								br
+								span(style='color: rgb(255, 0, 0); font-size: x-large;') - 
+								font(size='4')
+									b
+										font(color='#0054a5') КОНЦЕПЦИЯ ПРОЕКТА
+								br
+								div(style='text-align: justify;')
+									| Проект "#Probono" обеспечивает возможность гражданам Украины получить юридическую помощь бесплатно или за минимальное вознаграждение.
+								div(style='text-align: justify;')
+									br
+								div
+									div(style='text-align: justify;')
+										| Под юридической помощью разумеется юридическая консультация, помощь в подготовке процессуальных и других правовых документов, представительство интересов в судах, с целью защиты прав и свобод человека, их восстановления в случае нарушения.
+									div(style='text-align: justify;')
+										br
+								div
+									div(style='text-align: justify;')
+										| Проект «#ProBono» принадлежит юридической компании «Юстикон», является внутрифирменным проектом. К проекту могут быть привлечены исключительно адвокаты или юристы – сотрудники компании «Юстикон», и лица, подавшие заявку на участие в проекте.
+									div(style='text-align: justify;')
+										br
+								div
+									div(style='text-align: justify;')
+										| В проект «#ProBono» не входит другая деятельность, не связанная с непосредственным применением навыков адвокатов компании.
+									div(style='text-align: justify;')
+										br
+									span(style='color: rgb(255, 0, 0); font-size: x-large;') - 
+									font(size='4')
+										b
+											font(color='#0054a5') УСЛОВИЯ ПРОЕКТА
+									br
+									div(style='text-align: justify;')
+										font(color='#0054a5')
+											| 1.
+											b  
+										| Для участия в проекте необходимо подать заявку, предоставить копии документов, связанных с делом. Заявка должна быть заполнена от руки и подписанная заявителем с указанием даты и электронной почты.
+									div(style='text-align: justify;')
+										font(color='#0054a5') 2. 
+										| Прием заявок осуществляется исключительно по почте, через службы доставки или по электронной почте.
+									div(style='text-align: justify;')
+										font(color='#0054a5') 3. 
+										| Заявитель является ответственным лицом за достоверность поданной информации в заявке и прилагающих документах.
+									div(style='text-align: justify;')
+										font(color='#0054a5') 4. 
+										| В течение 10 дней со дня получения все заявки рассматриваются и оцениваются компанией.
+									div(style='text-align: justify;')
+										font(color='#0054a5') 5. 
+										| Компания не уточняет причины недопущения заявки к проекту.
+									div(style='text-align: justify;')
+										font(color='#0054a5') 6. 
+										| В случае если один заявитель направил более, чем 1 заявку, компания рассматривает все заявки с момента их получения.
+									font(color='#0054a5') 7. 
+									| В случае если один заявитель подал более, чем 1 заявку по одному вопросу, компания оценивает и допускает к проекту последнюю по дате получения заявку. 
+									br
+									div(style='text-align: justify;')
+										font(color='#0054a5') 8.
+										|  Заявителю предоставляется право подавать заявки на участие в проекте «#ProBono» неограниченное количество.
+									div
+										font(color='#0054a5')
+											font(color='#0054a5') 9. 
+										| Компания гарантирует сохранение конфиденциальности данных о заявителе и информации о судебных делах.
+									div(style='text-align: justify;')
+										| 10. При рассмотрении заявок компания оставляет право за собой осуществлять проверку изложенных обстоятельств.
+									div
+										font(color='#0054a5')
+											font(color='#0054a5') 11. 
+										| Компания гарантирует отсутствие привилегий или ограничений к лицам по признакам расы, цвета кожи, политических, религиозных или других убеждений, пола, социального происхождения, по языковым или другим признакам.
+									div
+										font(color='#0054a5')
+											font(color='#0054a5') 12.
+										| Компания не несет ответственность за заявки, что по независимым от компании причинам не были доставлены почтой или службой доставки.
+									font(color='#0054a5') 13.
+									|  После рассмотрения заявки, компания принимает решение о допуске заявки к проекту и закрепляет за делом адвоката/юриста компании 
+									b «ЮСТИКОН».
+									br
+									div
+										font(color='#0054a5') 14.
+										|  Компания оставляет за собой право не уточнять причины замены адвоката/юриста.
+									div
+										font(color='#0054a5')
+											font(color='#0054a5') 15.
+										| Компания сообщает заявителю о результате рассмотрения каждой заявки по электронной почте.
+									div
+										font(color='#0054a5')
+											font(color='#0054a5') 16.
+										| Адвокаты/юристы проекта «#ProBono» ведут переговоры по заявке только с заявителем или представителем от имени заявителя.
+									div(style='text-align: justify;')
+										font(color='#0054a5')
+											font(color='#0054a5') 17.
+										| Заявка без указания местожительства, электронной почты, не подписанная автором признается анонимной и рассмотрению не подлежит.
+									br
+									span(style='color: rgb(255, 0, 0); font-size: x-large;') - 
+									font(size='4')
+										font(color='#0054a5')
+											b КТО ИМЕЕТ ПРАВО ПОДАТЬ ЗАЯВКУ?
+									br
+									b Подать заявку на участие в проекте «#ProBono» имеют право:
+									br
+									font(color='#0054a5') 1. 
+									| Физические лица, достигшие совершеннолетие. 
+									br
+									font(color='#0054a5') 2. 
+									| Юридические лица. 
+									br
+									br
+									b От заявителя требуется:
+									br
+									ul
+										li(style='text-align: justify;') жалоба, что относиться к одной из практик, допущенных к проекту «#ProBono»;
+										li(style='text-align: justify;')
+											| лично от руки изложить суть жалобы, заслуживающей внимание и по мнению заявителя предполагающая успешный исход, на русском или украинском языках.
+										li(style='text-align: justify;') жалоба актуальная по срокам рассмотрения. 
+									br
+									table(border='1', cellpadding='1', cellspacing='1', align='center', width='700', height='200', style='border-collapse: collapse;')
+										tbody
+											tr
+												td(colspan='3')
+													div(style='text-align: center;')
+														b
+															font(color='#0054a5')
+																br
+													div(style='text-align: center;')
+														b
+															font(color='#0054a5', size='4') СФЕРА ПРИМЕНЕНИЯ ПРОЕКТА «Pro Bono» 
+													div(style='text-align: center;')
+														b
+															font(color='#0054a5')
+																br
+											tr
+												td.odd
+													div(style='text-align: left;')
+														b Практики, что допускаются к проекту:
+													div(style='text-align: left;')
+														b    
+														| Хозяйственные споры
+													div(style='text-align: center;')
+														span(style='text-align: left;')
+															div(style='text-align: left;')    Административные споры
+														span(style='text-align: left;')
+															div(style='text-align: left;')    Гражданские споры
+														span(style='text-align: left;')
+															div(style='text-align: left;')    Трудовые споры
+														span(style='text-align: left;')
+															div(style='text-align: left;')    Семейные споры
+														span(style='text-align: left;')
+															div(style='text-align: left;')    Наследственные споры
+														span(style='text-align: left;')
+															div(style='text-align: left;')    Земельные споры
+														span(style='text-align: left;')
+															div(style='text-align: left;')    Споры в сфере недвижимости
+														span(style='text-align: left;')
+															div(style='text-align: left;')    Налоговые споры
+														span(style='text-align: left;')
+															div(style='text-align: left;')    Возврат долгов
+														ul  
+												td.odd
+													div(style='text-align: left;')
+														b Практики, что НЕ допускаются к проекту:
+													div(style='text-align: justify;')
+														span(style='text-align: left;')    Корпоративное право
+														br
+														span(style='text-align: left;')    Антимонопольное и конкурентное право
+														br
+														span(style='text-align: left;')    Миграционное право
+														br
+														span(style='text-align: left;')    Недвижимость, кроме споров
+														br
+														span(style='text-align: left;')    Строительство, кроме споров
+														br
+														span(style='text-align: left;')    Земельное право, кроме споров
+														ul  
+													div(style='text-align: center;')
+														br
+													div(style='text-align: center;')
+														br
+													div(style='text-align: center;')
+														br
+													div(style='text-align: center;')
+														br
+									br
+									br
+									div(style='text-align: justify;')
+										| Юридическая компания 
+										b «ЮСТИКОН»
+										|  оставляет за собой право принять в проект «#ProBono» жалобу, что не допускается к проекту, в исключительных случаях, в том числе по инвалидности, в связи с чрезвычайным материальным затруднением или риском физическому здоровью человека.
+									div(style='text-align: justify;')
+										br
+									div(style='text-align: justify;')
+										span(style='color: rgb(255, 0, 0); font-size: x-large;') -
+										span(style='color: rgb(255, 0, 0); font-size: x-large;')  
+										font(color='#0054a5', size='4')
+											b КАК ПОДАТЬ ЗАЯВКУ?
+									div(style='text-align: justify;')
+										b
+											| Компания «ЮСТИКОН» принимает заявки на участие в проекте на бумажном носителе или в электронной версии. Пожалуйста, выполните следующие действия:
+									div(style='text-align: justify;')
+										font(color='#0054a5') 1.
+										|  Распечатайте бланк заявки на участие в проекте #ProBono. *гиперссылка для скачивания*
+									div(style='text-align: justify;')
+										font(color='#0054a5') 2.
+										|  Заполните бланк заявки в полном объеме, подпишите, поставьте дату на последней странице.
+									div(style='text-align: justify;')
+										font(color='#0054a5') 3.
+										|  Прикрепите к бланку заявки копии документов, относящиеся к жалобе.
+									div(style='text-align: justify;')
+										font(color='#0054a5') 4.
+										|  Отправьте заполненную и подписанную заявку, а также все документы, или по адресу:
+									div(style='text-align: justify;') ООО «Юстикон»
+									div(style='text-align: justify;') ул. Старовокзальная, 18
+									div(style='text-align: justify;') г. Киев
+									div(style='text-align: justify;') 01032 
+									div(style='text-align: justify;')
+										font(color='#0054a5') 5.
+										|  С 17 июня в проект #ProBono допускаются заявки на электронном носителе. Отправьте отсканированные заявку и документы на электронную почту проекта probono@justicon.ua.
+									div(style='text-align: justify;')
+										br
+									div(style='text-align: justify;')
+										b Обращаем внимание на следующее:
+									div(style='text-align: justify;')
+										| После получения заявки, компании необходимо 10 (десять) рабочих дней, чтобы рассмотреть и оценить заявку с документацией. В это время запросы / обращения от Заявителей относительно результата рассмотрения не принимаются.
+									div(style='text-align: justify;')
+										br
+									div(style='text-align: justify;')
+										| В случае если полученная документация от Заявителя не соответствует требованиям проекта, заявка не рассматривается.
+									div(style='text-align: justify;')
+										br
+									div(style='text-align: justify;')
+										| В связи с большим количеством заявок, получаемых ежедневно, компания не подтверждает получение заявки и документов по телефону или по электронной почте.
+					.clear
+				.pd10.hg1
+		.comments
+			.wrap
+				.fb-comments(data-href='http://justicon.ua', data-width='500')
+		.footer
+			.t
+				.wrap
+					.b1
+						p.head
+							span Услуги
+						p
+							a(href='/uslugi/korp/') Корпоративные правоотношения
+						p
+							a(href='/uslugi/lits/') Лицензии, разрешения, сертификация
+						p
+							a(href='/uslugi/sud/') Судебная практика
+						p
+							a(href='/uslugi/zem/') Недвижимость, строительство, земельное право
+						p
+							a(href='/uslugi/migr/') Миграционное право
+						p
+							a(href='/uslugi/int/') Интеллектуальное право
+						p
+							a(href='/uslugi/abon/') Абонентское обслуживание
+						p
+							a(href='/uslugi/konsalting/') Налоговый и юридический консалтинг. Антимонопольное право
+					.b2
+						p.head
+							span Почему мы
+						p
+							a(href='/about/') О компании
+						p
+							a(href='/uspeshnyy-rezultat/') Успешный результат
+						p
+							a(href='/nashi-klienty/') Наши клиенты
+					.b3
+						p.head
+							span Пресс-центр
+						p
+							a(href='/press-tsentr/novosti-prava/') Новости права
+						p
+							a(href='/press-tsentr/expert/') Мнение эксперта
+						p
+							a(href='/press-tsentr/publikatsii/') Публикации
+						p
+							a(href='/press-tsentr/rassylka/') Рассылка
+					.b4
+						p.head
+							span Информ-бюро
+						p
+							a(href='/inform-byuro/adresnaya-kniga/') Адресная книга
+						p
+							a(href='/inform-byuro/spravochnaya-informatsiya/') Справочная информация
+					.soc
+						p.head
+							span Мы в соцсетях
+						div
+							.soc1
+							noindex
+								a(rel='nofollow', target='_blank', href='https://www.facebook.com/justicon') Facebook
+						div
+							.soc2
+							noindex
+								a(rel='nofollow', target='_blank', href='http://vk.com/justicon') ВКонтакте
+						div
+							.soc3
+							noindex
+								a(rel='nofollow', target='_blank', href='https://twitter.com/justicon_ua') Twitter
+						div
+							.soc4
+							noindex
+								a(rel='nofollow', target='_blank', href='https://plus.google.com/102067683601334574177/posts') Google+
+					.clear
+				.clear
+			.b
+				.brd
+				.wrap
+					.b1
+						p © 2008-2014. "JUSTICON.UA". Все права защищены
+						p
+							| При полном или частичном воспроизведении любых материалов сайта ссылка на источник обязательна.
+						p Если вы заметили ошибку, выделите текст и нажмите Ctrl + Enter
+					.b2
+						p.head
+							span Подписаться на новости
+						#comp_421871ab4f6ad4c5c6a8c670da4ca683
+							.subscribe-edit
+								form#subscribeForm(action='/pro-bono/', method='post')
+									input#bxajaxid_421871ab4f6ad4c5c6a8c670da4ca683_8BACKi(type='hidden', name='bxajaxid', value='421871ab4f6ad4c5c6a8c670da4ca683')
+									input(type='hidden', name='AJAX_CALL', value='Y')
+									script(type='text/javascript').
+										function _processform_8BACKi(){
+										var obForm = top.BX('bxajaxid_421871ab4f6ad4c5c6a8c670da4ca683_8BACKi').form;
+										top.BX.bind(obForm, 'submit', function() {BX.ajax.submitComponentForm(this, 'comp_421871ab4f6ad4c5c6a8c670da4ca683', true)});
+										top.BX.removeCustomEvent('onAjaxSuccess', _processform_8BACKi);
+										}
+										if (top.BX('bxajaxid_421871ab4f6ad4c5c6a8c670da4ca683_8BACKi'))
+										_processform_8BACKi();
+										else
+										top.BX.addCustomEvent('onAjaxSuccess', _processform_8BACKi);
+									input#sessid(type='hidden', name='sessid', value='55485f56eb9fa9a9c6c2a1a026a00111')
+									input#s(type='text', name='EMAIL', value='Ваш e-mail')
+									input.s-1(type='submit', name='Save', value='')
+									div(style='display:none')
+										label
+											input(type='checkbox', name='RUB_ID[]', value='1', checked='')
+											| Рассылка новостей
+										br
+										label
+											input(type='radio', name='FORMAT', value='text', checked='')
+											| Текст
+										|  / 
+										label
+											input(type='radio', name='FORMAT', value='html')
+											| HTML
+									input(type='hidden', name='PostAction', value='Add')
+									input(type='hidden', name='ID', value='')
+					.b3
+						p
+							b Контакты
+						p
+							| Тел: 
+							span.b1d (044) 221 4000
+						p
+							| Skype: 
+							span.blue justicon.ua
+						p
+							| E-mail: 
+							span.blue
+								script(type='text/javascript').
+									<!--
+									var matponn = ['l','f','a','e','a','i','s','c','a','/','n','=',' ','n','s','"','t','u','@','i','i','a','f','>','m','e','m','"','j','o','n',' ','s','l','t','o','>','<','l','h','u','=','t','u','<','a','o','u','o','c','f','r','o','j','.','@','"','c','.','a','i','i',':','a','s','n','"','i'];var vscsdnj = [35,50,43,5,66,57,55,26,31,65,28,39,2,49,38,40,56,62,20,11,44,63,18,47,42,41,9,8,21,19,17,33,23,12,13,27,67,64,45,3,22,7,24,30,0,1,51,54,59,58,6,4,14,53,29,52,46,34,61,10,48,16,15,36,37,60,32,25];var bberemj= new Array();for(var i=0;i<vscsdnj.length;i++){bberemj[vscsdnj[i]] = matponn[i]; }for(var i=0;i<bberemj.length;i++){document.write(bberemj[i]);}
+									// -->
+								a.email(href='mailto:info@justicon.ua') info@justicon.ua
+				.clear
+		#calld.modal
+			h3
+				span Заказать обратный звонок
+			#callwrap
+				.mfeedback
+					form(action='/include/callback.php', method='POST')
+						input#sessid_1(type='hidden', name='sessid', value='55485f56eb9fa9a9c6c2a1a026a00111')
+						.mf-name
+							.mf-text
+								| Ваше имя
+							input(type='text', name='user_name', value='')
+						.mf-name
+							.mf-text
+								| Контактный номер
+								span.mf-req *
+							input(type='text', name='user_cont', value='')
+						.mf-name
+							.mf-text
+								| Ваш вопрос
+								span.mf-req *
+							// <input type="text" name="user_time" value="">
+							textarea(name='MESSAGE', rows='5', cols='40')
+						input(type='hidden', name='PARAMS_HASH', value='e781470f86e5a39be0e28bb1a0bd4a33')
+						input(type='submit', name='submit', value='Отправить')
+				script(src='/bitrix/templates/usticon/js/ajax.js')
+			.close.button
+		#zaprosd.modal
+			h3 Заказать услугу
+			#zaproswrap
+				.mfeedback
+					form(action='/include/zapros.php', method='POST')
+						input#sessid_2(type='hidden', name='sessid', value='55485f56eb9fa9a9c6c2a1a026a00111')
+						.mf-name
+							.mf-text
+								| Ваше имя
+							input(type='text', name='user_name', value='')
+						.mf-name
+							.mf-text
+								| Ваши контакты
+								span.mf-req *
+							input(type='text', name='user_cont', value='')
+						.mf-message
+							.mf-text
+								| Ваш вопрос
+								span.mf-req *
+							textarea(name='MESSAGE', rows='5', cols='40')
+						input(type='hidden', name='PARAMS_HASH', value='72fe7e53c6b5d5dbed07f4c9e3169835')
+						input(type='submit', name='submit', value='Отправить')
+				script(src='/bitrix/templates/usticon/js/ajax.js')
+			.close.button
+		#zaproscon.modal
+			h3 Заказать консультацию
+			#zaprosconwrap
+				.mfeedback
+					form(action='/include/zapros.php', method='POST')
+						input#sessid_3(type='hidden', name='sessid', value='55485f56eb9fa9a9c6c2a1a026a00111')
+						.mf-name
+							.mf-text
+								| Ваше имя
+							input(type='text', name='user_name', value='')
+						.mf-name
+							.mf-text
+								| Ваши контакты
+								span.mf-req *
+							input(type='text', name='user_cont', value='')
+						.mf-message
+							.mf-text
+								| Ваш вопрос
+								span.mf-req *
+							textarea(name='MESSAGE', rows='5', cols='40')
+						input(type='hidden', name='PARAMS_HASH', value='72fe7e53c6b5d5dbed07f4c9e3169835')
+						input(type='submit', name='submit', value='Отправить')
+				script(src='/bitrix/templates/usticon/js/ajax.js')
+			.close.button
+		#totop.bl-button(style='display: block;')
+			span Наверх
+		script(type='text/javascript').
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-6138164-2']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		// Yandex.Metrika counter
+		script(type='text/javascript').
+			(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+			try {
+			w.yaCounter14609872 = new Ya.Metrika({id:14609872,
+			webvisor:true,
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true});
+			} catch(e) { }
+			});
+			var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script"),
+			f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+			if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+			})(document, window, "yandex_metrika_callbacks");
+		noscript
+			| <div><img src="//mc.yandex.ru/watch/14609872" style="position:absolute; left:-9999px;" alt="" /></div>
+		// /Yandex.Metrika counter
+		// Start SiteHeart code
+		script.
+			(function(){
+			var widget_id = 608564;
+			_shcp =[{widget_id : widget_id}];
+			var lang =(navigator.language || navigator.systemLanguage
+			|| navigator.userLanguage ||"en")
+			.substr(0,2).toLowerCase();
+			var url ="widget.siteheart.com/widget/sh/"+ widget_id +"/"+ lang +"/widget.js";
+			var hcc = document.createElement("script");
+			hcc.type ="text/javascript";
+			hcc.async =true;
+			hcc.src =("https:"== document.location.protocol ?"https":"http")
+			+"://"+ url;
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hcc, s.nextSibling);
+			})();
+		// End SiteHeart code
+		.title-search-result
+		#bx-admin-prefix.bx-core-window.bx-core-adm-dialog(style='z-index: 0; position: absolute; display: none; top: 10px; left: 0px;')
+			.bx-core-adm-dialog-head(style='cursor: move;')
+				span.bx-core-adm-dialog-head-inner Сообщение об ошибке
+				.bx-core-adm-dialog-head-icons
+					span.bx-core-adm-icon-close(title='Закрыть')
+			.bx-core-adm-dialog-content-wrap.adm-workarea
+				.bx-core-adm-dialog-content(style='height: 130px; width: 350px;')
+					.bx-core-adm-dialog-head-block(style='display: none;')  
+					.bx-core-adm-dialog-content-wrap-inner
+						div
+							#send-error
+								table.bx-width100
+									tbody
+										tr
+											td.no-bootom-border(valign='top', style='padding-top: 10px !important;')
+												img(src='/bitrix/images/altasib.errorsend/altasib.errorsend.ok.gif', style='float: left; margin-right: 8px')
+											td.no-bootom-border(width='90%', style='padding-top: 8px !important;')
+												span(style='color: green; font-size: 14px')
+													b 	                        Ваше сообщение отправлено.
+												span(style='font-size: 12px; color: #7d7d7d')
+													br
+													br
+													| Спасибо за внимание!
+				.bx-core-adm-dialog-buttons
+					input#close(type='button', name='close', value='Закрыть')
+		#bx-admin-prefix.bx-core-window.bx-core-adm-dialog(style='z-index: 0; position: absolute; display: none; top: 10px; left: 0px;')
+			.bx-core-adm-dialog-head(style='cursor: move;')
+				span.bx-core-adm-dialog-head-inner Сообщение об ошибке
+				.bx-core-adm-dialog-head-icons
+					span.bx-core-adm-icon-close(title='Закрыть')
+			.bx-core-adm-dialog-content-wrap.adm-workarea
+				.bx-core-adm-dialog-content(style='height: 300px; width: 510px;')
+					.bx-core-adm-dialog-head-block(style='display: none;')  
+					.bx-core-adm-dialog-content-wrap-inner
+						div
+							#send-error
+								img(style='float: left; margin-right: 15px;', src='/bitrix/images/altasib.errorsend/altasib.errorsend.png')
+								br
+								span(style='font-size: 16px; color: #143f6d')
+									b Послать сообщение об ошибке автору?
+									br
+									span(style='font-size: 10px; color: #7d7d7d') (ваш браузер останется на той же странице)
+								br(style='clear: both')
+								br
+								span(style='font-size: 13px; color: #000')
+									b Найденная Вами ошибка в тексте:
+								div(style='border: 1px solid #d1d1d1; background-color: #fafafa; width: 470px; padding: 8px; margin: 7px 0px 13px 0px; height: 55px; color: #7d7d7d; font-size: 12px;')
+									span#error_start
+									font#error_body(color='red')
+									span#error_end
+								small(style='color: #7d7d7d') Комментарий для автора (необязательно):
+								div(style='width: 470px; height: 55px; padding: 8px; border: 1px solid #4b4b4b; margin: 3px 0px 3px 0px;')
+									textarea#error-comment(name='comment', rows='3', cols='5', style='width: 100%; border: 0px;  height: 55px; padding: 0px')
+				.bx-core-adm-dialog-buttons
+					input#ok(type='button', name='ok', value='Отправить')
+					input#cancel(type='button', name='cancel', value='Отменить')
+		#fancybox-tmp
+		#fancybox-loading
+			div
+		#fancybox-overlay
+		#fancybox-wrap
+			#fancybox-outer
+				#fancybox-bg-n.fancybox-bg
+				#fancybox-bg-ne.fancybox-bg
+				#fancybox-bg-e.fancybox-bg
+				#fancybox-bg-se.fancybox-bg
+				#fancybox-bg-s.fancybox-bg
+				#fancybox-bg-sw.fancybox-bg
+				#fancybox-bg-w.fancybox-bg
+				#fancybox-bg-nw.fancybox-bg
+				#fancybox-content
+				a#fancybox-close
+				#fancybox-title
+				a#fancybox-left(href='javascript:;')
+					span#fancybox-left-ico.fancy-ico
+				a#fancybox-right(href='javascript:;')
+					span#fancybox-right-ico.fancy-ico
+		#sh_button.shc.sh_btn.sh_btn_right.sh_btn_right_center(style='top: 392.5px; visibility: visible;')
+			img.shc.sh_logo_btn.sh_logo_img(rel='logo', style='margin: 6px;', src='//static.siteheart.com/widget/sh/20160324143236/img/logo.png')
+			.shc.sh_title_text(rel='title')
+				.shc.sh_btn_char З 
+				.shc.sh_btn_char а 
+				.shc.sh_btn_char д 
+				.shc.sh_btn_char а 
+				.shc.sh_btn_char й 
+				.shc.sh_btn_char т 
+				.shc.sh_btn_char е 
+				.shc.sh_btn_char   
+				.shc.sh_btn_char в 
+				.shc.sh_btn_char о 
+				.shc.sh_btn_char п 
+				.shc.sh_btn_char р 
+				.shc.sh_btn_char о 
+				.shc.sh_btn_char с 
+			.shc.sh_block_counter(title='Visitors to the site')
+				span(rel='counter') 0
+		iframe(src='//static.siteheart.com/widget/sh/20160324143236/html/a.html?s=justicon.ua', scrolling='no', frameborder='0', style='position:absolute;width:0;height:0;left:-14444;')
+
+
+		include ./partials/modals.jade
+	include ./partials/scripts.jade

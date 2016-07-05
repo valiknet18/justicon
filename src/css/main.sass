@@ -159,34 +159,49 @@ body > .menu
 					width: auto
 					z-index: 2
 	.submenu, .submenu2
+		$invisible-paddings: 5px
 		width: 0
-		background: #f9f9f9
+		// background: #f9f9f9
 		position: absolute
-		padding-top: 7px
+		padding-top: 15px + $invisible-paddings
+		padding-bottom: 2px + $invisible-paddings
 		left: -14px
 		left: 0
 		top: 18px
-		top: -17px
+		// top: -17px
 		max-height: 0
 		overflow: hidden
 		transition: max-height .6s
 		z-index: 1
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+		// box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
 		// border-top: 5px solid $main-color
 		&:before
-			content: ''
+			// content: ''
 			background: $main-color
 			position: absolute
 			height: 5px
 			left: 0
 			top: 0
 			width: 100%
+		&:after
+			content: ''
+			position: absolute
+			left: $invisible-paddings
+			right: $invisible-paddings
+			bottom: $invisible-paddings
+			top: 18px
+			background: #f9f9f9
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+			z-index: 0
 		.close
 			display: none
 		a
 			display: block
 			line-height: 40px
-			padding: 0 14px
+			padding: 0 14px + $invisible-paddings
+			margin: 0 $invisible-paddings
+			position: relative
+			z-index: 1
 			&:hover
 				background: $main-color
 				color: #fff
@@ -443,19 +458,19 @@ body > .menu
 				width: 50%
 			@media (max-width: $mobile-large)
 				width: 100%
+					position: relative
 			.title
 				&, & a
-					position: relative
 					color: #36393d
 					font-size: 14px
-					font-weight: 900
+					font-weight: 700
 					text-transform: uppercase
 					text-align: center
 					padding-top: 6px
 				&:before
+					// content: ''
 					$pseudo-width: 190px
 					background: #000
-					content: ''
 					display: inline-block
 					left: 50%
 					position: absolute
@@ -467,7 +482,7 @@ body > .menu
 				&, & a
 					color: #36393d
 					font-size: 14px
-					font-weight: 900
+					font-weight: 700
 					text-transform: uppercase
 					margin-bottom: 10px
 			.adc.pract
@@ -668,16 +683,20 @@ body > .menu
 						font-size: 14px
 						font-weight: 400
 						text-transform: uppercase
-						background-color: #243e57
+						background-color: transparent
+						border: 2px solid white
 						border-radius: 3px
-						padding: 15px 26px
+						padding: 8px 26px
 						position: absolute
 						bottom: 46px
 						white-space: nowrap
 						left: 50%
 						transform: translateX(-50%)
-						&:hover
-							background-color: #5c768e
+						transition: background .3s, color .3s, border .3s
+					&:hover
+						.btn
+							background-color: #243e57
+							border-color: #243e57
 
 .about.opensans
 	@media (max-width: $tablet)
@@ -784,7 +803,7 @@ body > .menu
 		margin-bottom: 3px
 		text-transform: uppercase
 	.bld
-		font-weight: 900
+		font-weight: 700
 	a
 		color: #666
 		font-size: 12px
