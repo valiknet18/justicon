@@ -351,6 +351,19 @@ body > .menu
 					pointer-events: all
 					z-index: 1
 
+.bc
+	margin: 14px 0
+	@media (max-width: $tablet)
+		padding: 0 20px
+	&, p, span, a
+		color: #999
+		font-size: 11px
+		font-weight: 400
+		line-height: 1em
+	> *
+		display: inline-block
+		margin-right: 6px
+
 .promo
 	background: url('https://unsplash.it/1600/800/?blur&image=223') 50% 50%
 	background: url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407') 50% 50%
@@ -707,6 +720,171 @@ body > .menu
 		font-weight: 400
 		line-height: 20px
 		margin-top: 23px
+		padding-left: 120px
+		@media (max-width: $tablet)
+			padding-left: 20px
+
+.main.wide-l
+	#page-tit
+		height: 150px
+		color: #243e57
+		font-size: 36px
+		font-weight: 300
+		line-height: 1em
+		margin: 0
+		padding: 57px 0 67px
+		position: relative
+		@media (max-width: $tablet)
+			background: url('../img/bg/map-background-1.jpg') 50% 50% no-repeat
+			background-size: 100% 100%
+			background-size: cover
+			padding-left: 20px
+			padding-right: 20px
+		&:before
+			background: url('../img/bg/map-background-1.jpg') 50% 50% no-repeat
+			background-size: 100% 100%
+			background-size: cover
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			left: calc(-13.5vw)
+			right: calc(-13.5vw)
+			z-index: -1
+			@media (max-width: $tablet)
+				display: none
+	.rb.opensans.leftb
+		a#ban-cons3.zaprosconl
+		.title
+		.partners
+			.parnters-holder
+				.lnb
+				.parnters-container
+					.part
+						div
+							span
+								img
+				.rnb
+				#pager2
+	.main-container
+		.contacts
+			$mobile-media-width: 1200px
+			table.address
+				margin-top: 80px
+				@media (max-width: $mobile-media-width)
+					display: block
+					margin-top: 40px
+				@media (max-width: $tablet)
+					padding-left: 20px
+					padding-right: 20px
+				.title
+					color: #243e57
+					font-size: 28px
+					font-weight: 300
+					line-height: 40px
+					margin-bottom: 16px
+					&:nth-child(1n+2)
+						margin-top: 60px
+						@media (max-width: $mobile-media-width)
+							margin-top: 0
+				p
+					color: #666
+					font-size: 16px
+					font-weight: 400
+					line-height: 30px
+				iframe
+					@media (max-width: $mobile-media-width)
+						height: 80vh
+						width: 100%
+				tbody
+					@media (max-width: $mobile-media-width)
+						display: block
+					tr
+						@media (max-width: $mobile-media-width)
+							display: block
+						td
+							vertical-align: top
+							@media (max-width: $mobile-media-width)
+								display: block
+							.fl, .t
+								display: inline-block
+								vertical-align: middle
+							.t
+								color: #36393d
+								font-size: 20px
+								font-weight: 400
+								line-height: 40px
+								margin-left: 16px
+								// TODO remode it from DOM!
+								img
+									display: none
+							.fl
+								height: 30px
+								width: 30px
+							.blackphone
+								background-image: url("../img/content/operator-icon-cellphone.png")
+							.life
+								background-image: url("../img/content/operator-icon-life.png")
+							.kyivstar
+								background-image: url("../img/content/operator-icon-kyivstar.png")
+							.skype
+								background-image: url("../img/content/operator-icon-kyivstar.png")
+							&:nth-child(1)
+								width: 100%
+								.clear + p
+									// TODO remode it from DOM!
+									// color: red !important
+									display: none
+								span.blue
+									display: none
+									a.calll.r-pimp
+									a.r-pimp.zaprosl
+									a.r-pimp.zaprosconl
+							&:nth-child(2)
+								width: 1px
+								@media (max-width: $mobile-media-width)
+									width: 100%
+			.hr
+				margin-top: 50px
+				height: 1px
+				background-color: #f2f2f3
+			table.emails
+				margin-top: 50px
+				margin-bottom: 95px
+				@media (max-width: $mobile-media-width)
+					display: block
+				@media (max-width: $tablet)
+					padding-left: 20px
+					padding-right: 20px
+				tbody
+					@media (max-width: $mobile-media-width)
+						display: block
+					tr
+						@media (max-width: $mobile-media-width)
+							display: block
+						td
+							color: #243e57
+							font-size: 24px
+							line-height: 30px
+							font-weight: 300
+							padding-bottom: 44px
+							@media (max-width: $mobile-media-width)
+								display: block
+							@media (max-width: $tablet)
+								padding-bottom: 21px
+								font-size: 20px
+								line-height: 1.25em
+							a
+								color: #0093dd
+								display: block
+								font-size: 14px
+								font-weight: 400
+								margin-top: 14px
+								text-decoration: none
+								@media (max-width: $tablet)
+									margin-top: 0
+
 
 .search-input-1
 	position: relative
