@@ -1052,6 +1052,68 @@ body > .menu
 		text-align: center
 		border-radius: 50%
 
+.accordion
+	.allHeaders
+		margin: 0
+	.h1
+		@extend .allHeaders
+		color: #243e57
+		font-size: 18px
+		font-weight: 400
+		line-height: 1.66em
+	.h2
+		@extend .allHeaders
+		color: #666
+		font-size: 16px
+		font-weight: 400
+		line-height: 1.875em
+	.h3
+		@extend .allHeaders
+		color: #666
+		font-size: 12px
+		font-weight: 400
+		line-height: 1.875em
+	.h4
+		@extend .allHeaders
+	.h5
+		@extend .allHeaders
+	.h6
+		@extend .allHeaders
+	table
+		border-collapse: collapse
+		table-layout: fixed
+		width: 100%
+		tr
+			vertical-align: top
+			td
+				&:nth-child(1)
+					width: 40%
+				&:nth-child(2)
+					text-align: right
+					width: 20%
+				&:nth-child(3)
+					width: 20%
+				&:nth-child(4)
+					width: 20%
+	.price-item
+		margin-bottom: 20px
+	.price-title
+		&, a
+			color: #0093dd
+			font-size: 16px
+			font-weight: 400
+			line-height: 1.25em
+	.price-term
+		color: #999
+		font-size: 14px
+		font-weight: 400
+		// line-height: 20px
+	.price-value
+		color: #243e57
+		font-size: 16px
+		font-weight: 600
+		// line-height: 20px
+
 .footer
 	background-color: #bed8f0
 	.wrap
