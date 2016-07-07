@@ -471,7 +471,10 @@ body > .menu
 				width: 50%
 			@media (max-width: $mobile-large)
 				width: 100%
-					position: relative
+				width: 50%
+				padding: 0 5px
+				margin-bottom: 40px
+				position: relative
 			.title
 				&, & a
 					color: #36393d
@@ -480,6 +483,10 @@ body > .menu
 					text-transform: uppercase
 					text-align: center
 					padding-top: 6px
+					@media (max-width: $mobile-large)
+						margin-top: -20px
+						padding-top: 0
+						font-size: 11px
 				&:before
 					// content: ''
 					$pseudo-width: 190px
@@ -498,12 +505,16 @@ body > .menu
 					font-weight: 700
 					text-transform: uppercase
 					margin-bottom: 10px
+					@media (max-width: $mobile-large)
+						font-size: 11px
 			.adc.pract
 				.s-all
 					border-radius: 50%
 					height: 130px
 					width: 130px
 					display: inline-block
+					@media (max-width: $mobile-large)
+						transform: scale(0.6)
 				.s1
 					@extend .s-all
 					background-position: -1px -98px
@@ -560,6 +571,8 @@ body > .menu
 						color: #36393d
 						font-size: 14px
 						line-height: 18px
+						@media (max-width: $mobile-large)
+							font-size: 11px
 				&:hover
 					// border-radius: 50%
 					.text
@@ -866,7 +879,8 @@ body > .menu
 						td
 							color: #243e57
 							font-size: 24px
-							line-height: 30px
+							// line-height: 30px
+							line-height: 1.25em
 							font-weight: 300
 							padding-bottom: 44px
 							@media (max-width: $mobile-media-width)
@@ -924,6 +938,129 @@ body > .menu
 		transform: translateY(100%)
 		transition: transform .3s .6s
 		text-transform: uppercase
+
+// SEARCH PAGE
+.search-page
+	@media (max-width: $tablet)
+		padding: 0 20px
+	& > form
+		position: relative
+		padding: 15px 0
+		input
+			height: 50px
+			width: 50%
+		input[type="text"]
+			width: 100%
+			color: #666
+			font-size: 16px
+			font-weight: 300
+			background-color: white
+			border: 1px solid #e2e2e2
+			box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.06)
+		input[type="submit"]
+			background: #6bb6ee url('../img/icons/search-icon-1.svg') 50% 50% no-repeat
+			border: none
+			position: absolute
+			right: 0
+			top: 0
+			width: 50px
+		td
+			position: relative
+		noindex
+			display: none
+		&:before
+			content: ''
+			position: absolute
+			background-color: #eef2f8
+			top: 0
+			bottom: 0
+			left: calc(-13.5vw)
+			right: calc(-13.5vw)
+			z-index: -1
+			@media (max-width: $tablet)
+				left: -20px
+				right: -20px
+	.search-result
+		.search-item
+			margin-top: 36px
+			h4
+				margin-bottom: 16px
+				&, & a
+					color: #243e57
+					font-size: 28px
+					line-height: 1.4em
+					font-weight: 300
+			.search-preview
+				color: #666
+				font-size: 14px
+				line-height: 20px
+				font-weight: 400
+			.search-item-meta
+				display: none
+			&:first-child
+				margin-top: 42px
+		font.text
+			display: block
+			text-align: center
+			font-size: 0
+			letter-spacing: 0
+			margin-top: 21px
+			a, b
+				color: #243e57
+				display: inline-block
+				position: relative
+				font-size: 18px
+				font-weight: 300
+				line-height: 1em
+				line-height: 30px
+				margin: 0 3px
+				height: 30px
+				vertical-align: middle
+				width: 30px
+				// TODO remove it
+				&:nth-last-child(1), &:nth-last-child(2)
+					display: none
+			b
+				&:after
+					content: ''
+					position: absolute
+					z-index: -1
+					left: 0
+					right: 0
+					top: 0
+					bottom: 0
+					// width: 30px
+					// height: 30px
+					background-color: #bed8f0
+		.search-sorting
+			margin-top: 40px
+			b
+				margin: 0 10px
+			a
+				color: #bed8f0
+
+.consult-me-block
+	background-color: #eef2f8
+	margin: 64px 0 101px
+	padding: 44px 68px 49px
+	@media (max-width: $tablet)
+		margin: 64px 0 0
+		padding: 44px 20px 49px
+	h1, h2, h3, h4, h5, h6
+		color: #243e57
+		font-size: 24px
+		font-weight: 300
+		line-height: 30px
+	button, .btn
+		color: white
+		font-size: 12px
+		font-weight: 400
+		text-transform: uppercase
+		background-color: #243e57
+		border-radius: 3px
+		padding: 12px 23px
+		margin-top: 25px
+
 
 .footer
 	background-color: #bed8f0
