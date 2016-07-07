@@ -1,0 +1,31 @@
+
+#page-tit
+	height: 150px
+	padding: 57px 0 67px
+	position: relative
+	&, h1, h2, h3, h4, h5, h6
+		color: #243e57
+		font-size: 36px
+		font-weight: 300
+		line-height: 1em
+		margin: 0
+	@media (max-width: $tablet)
+		background: url('../img/bg/map-background-1.jpg') 50% 50% no-repeat
+		background-size: 100% 100%
+		background-size: cover
+		padding-left: 20px
+		padding-right: 20px
+	&:before
+		background: url('../img/bg/map-background-1.jpg') 50% 50% no-repeat
+		background-size: 100% 100%
+		background-size: cover
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		left: calc(-13.5vw)
+		right: calc(-13.5vw)
+		z-index: -1
+		@media (max-width: $tablet)
+			display: none

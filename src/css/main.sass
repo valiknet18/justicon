@@ -738,35 +738,6 @@ body > .menu
 			padding-left: 20px
 
 .main.wide-l
-	#page-tit
-		height: 150px
-		color: #243e57
-		font-size: 36px
-		font-weight: 300
-		line-height: 1em
-		margin: 0
-		padding: 57px 0 67px
-		position: relative
-		@media (max-width: $tablet)
-			background: url('../img/bg/map-background-1.jpg') 50% 50% no-repeat
-			background-size: 100% 100%
-			background-size: cover
-			padding-left: 20px
-			padding-right: 20px
-		&:before
-			background: url('../img/bg/map-background-1.jpg') 50% 50% no-repeat
-			background-size: 100% 100%
-			background-size: cover
-			content: ''
-			display: block
-			position: absolute
-			top: 0
-			bottom: 0
-			left: calc(-13.5vw)
-			right: calc(-13.5vw)
-			z-index: -1
-			@media (max-width: $tablet)
-				display: none
 	.rb.opensans.leftb
 		a#ban-cons3.zaprosconl
 		.title
@@ -1061,6 +1032,25 @@ body > .menu
 		padding: 12px 23px
 		margin-top: 25px
 
+.sales-bonuses-block
+	margin-top: 50px
+	margin-bottom: 54px
+	position: relative
+	padding-left: 70px
+	&:before
+		content: '$'
+		position: absolute
+		left: 0
+		top: 0
+		width: 50px
+		height: 50px
+		color: white
+		font-size: 38px
+		font-weight: 300
+		line-height: 48px
+		background-color: #6bb6ee
+		text-align: center
+		border-radius: 50%
 
 .footer
 	background-color: #bed8f0
