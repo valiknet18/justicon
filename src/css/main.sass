@@ -1032,6 +1032,9 @@ body > .menu
 		border-radius: 3px
 		padding: 12px 23px
 		margin-top: 25px
+		margin-right: 10px
+		&.hot
+			background-color: #f54f29
 
 .sales-bonuses-block
 	margin-top: 40px
@@ -1112,8 +1115,12 @@ body > .menu
 		margin-bottom: 4px
 		margin-left: 23px
 		border-bottom: 1px solid #e2e2e2
+		@media (max-width: $tablet)
+			margin-left: 0
 		& + .cont
 			margin-left: 40px
+			@media (max-width: $tablet)
+				margin-left: 20px
 	.h3
 		@extend .allHeaders
 		@extend .pseudo-plus-icon
@@ -1124,6 +1131,8 @@ body > .menu
 		// margin-left: 20px
 		& + .cont
 			margin-left: 40px
+			@media (max-width: $tablet)
+				margin-left: 20px
 	.h4
 		@extend .allHeaders
 		color: #666
@@ -1132,12 +1141,17 @@ body > .menu
 		line-height: 1.875em
 		& + .cont
 			margin-left: 40px
+			@media (max-width: $tablet)
+				margin-left: 20px
 	.h5
 		@extend .allHeaders
 	.h6
 		@extend .allHeaders
 	pre
 		white-space: normal
+		@media (max-width: $tablet)
+			display: block
+			width: 100%
 	.trigger
 		cursor: pointer
 	.cont
@@ -1147,13 +1161,27 @@ body > .menu
 		&.opened
 			max-height: 9999999px
 			transition: max-height 0.6s
+	.table-holder
+		padding-bottom: 14px
 	table
 		border-collapse: collapse
 		table-layout: fixed
 		width: 100%
+		// min-width: 800px
+		@media (max-width: $tablet)
+			display: block
+			table-layout: auto
+			width: 100%
 		tr
 			vertical-align: top
+			@media (max-width: $tablet)
+				display: block
+				width: 100%
 			td
+				@media (max-width: $tablet)
+					padding: 6px 0
+					display: block
+					width: 100%
 				&:nth-child(1)
 					width: 50%
 
@@ -1162,6 +1190,8 @@ body > .menu
 					font-weight: 400
 					line-height: 20px
 					// position: relative
+					@media (max-width: $tablet)
+						width: 100%
 				&:nth-child(2)
 					text-align: right
 					width: 30%
@@ -1170,14 +1200,21 @@ body > .menu
 					font-size: 14px
 					font-weight: 400
 					line-height: 20px
+					@media (max-width: $tablet)
+						text-align: left
+						white-space: nowrap
+						width: 100%
 				&:nth-child(3)
-					padding-left: 20px
 					width: 20%
 
 					color: #243e57
 					font-size: 16px
 					font-weight: 600
 					line-height: 20px
+					@media (max-width: $tablet)
+						padding-left: 0
+						white-space: nowrap
+						width: 100%
 				&:nth-child(4)
 					width: 10%
 		&:nth-child(odd)

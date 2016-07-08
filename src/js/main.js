@@ -393,6 +393,13 @@ $(document).on('ready', function () {
 
 		})();
 
+		// wrap tables
+		(function () {
+
+			$('table').wrap('<div class="table-holder"></div>')
+
+		})();
+
 		// collapsing menu
 		(function () {
 
