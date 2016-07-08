@@ -26,6 +26,7 @@
 .container
 	display: block
 
+
 .clear
 	display: table
 	height: 0
@@ -1033,15 +1034,18 @@ body > .menu
 		margin-top: 25px
 
 .sales-bonuses-block
-	margin-top: 50px
-	margin-bottom: 54px
+	margin-top: 40px
+	margin-bottom: 13px
 	position: relative
 	padding-left: 70px
+	@media (max-width: $tablet)
+		padding: 0 20px
 	&:before
 		content: '$'
 		position: absolute
+		display: block
 		left: 0
-		top: 0
+		top: 9px
 		width: 50px
 		height: 50px
 		color: white
@@ -1051,34 +1055,98 @@ body > .menu
 		background-color: #6bb6ee
 		text-align: center
 		border-radius: 50%
+		@media (max-width: $tablet)
+			position: static
+			margin-bottom: 20px
+			margin-left: calc(50% - 25px)
+	h1, h2, h3, h4, h5, h6
+		margin-bottom: 18px
+		color: #243e57
+		font-size: 28px
+		font-weight: 300
+		line-height: 40px
 
 .accordion
+	@media (max-width: $tablet)
+		padding: 0 20px
 	.allHeaders
 		margin: 0
+	.pseudo-plus-icon
+		&:before
+			content: ''
+			// background-color: #6bb6ee
+			display: inline-block
+			font-family: FontAwesome
+			border-radius: 50%
+			// color: #fff
+			color: #6bb6ee
+			font-size: 16px
+			position: relative
+			margin-right: 18px
+			margin-left: 2px
+			line-height: 15px
+			height: 15px
+			width: 15px
+		&.opened:before
+			content: ''
+			color: #999
 	.h1
 		@extend .allHeaders
+		color: #333
+		cursor: default !important
+		font-size: 24px
+		font-weight: 300
+		line-height: 1.4em
+		margin-top: 14px
+		margin-bottom: 31px
+		& + .cont
+			max-height: initial
+	.h2
+		@extend .allHeaders
+		@extend .pseudo-plus-icon
 		color: #243e57
 		font-size: 18px
 		font-weight: 400
 		line-height: 1.66em
-	.h2
+		padding-bottom: 6px
+		margin-bottom: 4px
+		margin-left: 23px
+		border-bottom: 1px solid #e2e2e2
+		& + .cont
+			margin-left: 40px
+	.h3
 		@extend .allHeaders
+		@extend .pseudo-plus-icon
 		color: #666
 		font-size: 16px
 		font-weight: 400
 		line-height: 1.875em
-	.h3
+		// margin-left: 20px
+		& + .cont
+			margin-left: 40px
+	.h4
 		@extend .allHeaders
 		color: #666
 		font-size: 12px
 		font-weight: 400
 		line-height: 1.875em
-	.h4
-		@extend .allHeaders
+		& + .cont
+			margin-left: 40px
 	.h5
 		@extend .allHeaders
 	.h6
 		@extend .allHeaders
+	pre
+		white-space: normal
+	.trigger
+		cursor: pointer
+	.cont
+		overflow: hidden
+		max-height: 0
+		transition: max-height 0.6s
+		&.opened
+			max-height: 9999999px
+			transition: max-height 0.6s
 	table
 		border-collapse: collapse
 		table-layout: fixed
@@ -1087,22 +1155,63 @@ body > .menu
 			vertical-align: top
 			td
 				&:nth-child(1)
-					width: 40%
+					width: 50%
+
+					color: #0093dd
+					font-size: 16px
+					font-weight: 400
+					line-height: 20px
+					// position: relative
 				&:nth-child(2)
 					text-align: right
-					width: 20%
+					width: 30%
+
+					color: #999
+					font-size: 14px
+					font-weight: 400
+					line-height: 20px
 				&:nth-child(3)
+					padding-left: 20px
 					width: 20%
+
+					color: #243e57
+					font-size: 16px
+					font-weight: 600
+					line-height: 20px
 				&:nth-child(4)
-					width: 20%
+					width: 10%
+		&:nth-child(odd)
+			background-color: #ffffff
+		&:nth-child(even)
+			background-color: #f9f9f9
+			background-color: red
 	.price-item
-		margin-bottom: 20px
+		margin-top: 10px
+		margin-bottom: 10px
+		// tr
+			// padding-top: 20px
 	.price-title
 		&, a
 			color: #0093dd
 			font-size: 16px
 			font-weight: 400
 			line-height: 1.25em
+		a
+			display: inline-block
+			padding-left: 26px
+			position: relative
+			overflow: hidden
+			&:before
+				content: ''
+				font-family: FontAwesome
+				display: inline-block
+				vertical-align: top
+				position: absolute
+				left: 0
+				top: 1px
+				margin-right: 10px
+				font-size: 14px
+				color: #ccc
 	.price-term
 		color: #999
 		font-size: 14px

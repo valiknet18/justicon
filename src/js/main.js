@@ -393,6 +393,51 @@ $(document).on('ready', function () {
 
 		})();
 
+		// collapsing menu
+		(function () {
+
+			var $triggers = $('.accordion').find('.trigger');
+			$triggers.on('click', function () {
+				var $self = $(this),
+					$content = $self.next(),
+					openedSize;
+
+				if (!$self.hasClass('opened')) {
+
+
+					$self
+						.addClass('opened');
+
+					openedSize = getActualSizes($content).height;
+
+					$content
+						.addClass('opened')
+						.css({
+							'max-height': openedSize
+						})
+						.parents('.cont').each(function () {
+							var $self = $(this),
+								maxHeight = $self.css('max-height');
+							if (maxHeight && maxHeight !== 'none') {
+								$self.css('max-height', parseInt(maxHeight) + openedSize);
+							}
+						});
+
+				} else {
+
+					$self
+						.removeClass('opened');
+					$content
+						.css({
+							'max-height': ''
+						})
+						.removeClass('opened');
+
+				}
+			})
+
+		})();
+
 
 		// scroll
 		$(document).on('scroll', function () {

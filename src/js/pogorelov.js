@@ -74,7 +74,40 @@ bodyOverflow = (function () {
 
 		}.bind(this)
 	};
-})();
+})(),
+getActualSizes = (function ($) {
+	var tempStylesObject = {
+			'display': 'block',
+			'position': 'absolute',
+			'max-height': 'initial',
+			'visibility': 'hidden'
+		};
+	return function ($el, attr) {
+		var $clone = $el.clone(),
+			result = {
+				'height': 0,
+				'width': 0
+			};
+
+		$clone
+			.attr('style', '')
+			.addClass('opened')
+			.css(tempStylesObject)
+			.css({
+				'width': $el.width()
+			})
+			.insertAfter( $el );
+
+		result.height = $clone.height();
+		result.width = $clone.width();
+
+		// console.log( $clone );
+
+		$clone.remove();
+
+		return result;
+	}
+})(jQuery);
 
 (function ($) {
 
