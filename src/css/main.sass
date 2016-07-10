@@ -1405,6 +1405,61 @@ body > .menu
 	a
 		color: #0054a5
 
+// KVED-1.JADE
+.kved-template
+	.main-container
+		margin-top: 54px
+		margin-bottom: 60px
+		@media (max-width: $tablet)
+			padding: 0 20px
+		h1, h2, h3, h4, h5, h6
+			text-align: center
+			display: block
+			line-height: 1.5em
+			margin-top: 2em !important
+			margin-bottom: 1em !important
+		h1, .contentheading
+			color: #243e57
+			font-size: 28px
+			font-weight: 300
+			margin-top: 0
+			line-height: 1.2em
+			margin-bottom: 13px
+			@media (max-width: $tablet)
+				font-size: 20px
+		h3
+			font-size: 13px
+		p
+			margin-bottom: 1em
+		table
+			table
+				border-collapse: collapse
+				border-color: #bed8f0 !important
+				outline: none !important
+				border: none !important
+				width: 100%
+				td
+					vertical-align: middle
+					border-color: #bed8f0 !important
+					padding: 2px 20px
+					*
+						color: #666
+					p:last-child
+						margin-bottom: 0
+				tbody
+					tr:first-child
+						*
+							font-weight: 700
+							color: #000
+		& > .table-holder > table, & > table
+			margin: 0
+			&, & > tbody
+				&, & > tr, & > tr > td
+					display: block
+	& + .wrap
+		.consult-me-block
+			margin-top: 0
+
 .footer
 	background-color: #bed8f0
 	.wrap
