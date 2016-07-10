@@ -34,7 +34,7 @@
 
 .gamburger
 	height: 50px
-	padding: 14px 14px
+	padding: 14px
 	cursor: pointer
 	display: none
 	float: left
@@ -92,8 +92,8 @@ body > .menu
 		&:hover
 			color: $main-color
 			// & ~ .submenu
-			// 	display: block
-			// 	z-index: 1
+			//  display: block
+			//  z-index: 1
 	.close
 		position: absolute
 		right: 0
@@ -251,14 +251,14 @@ body > .menu
 			font-weight: 400
 			line-height: 1em
 			// &:before
-			// 	background-image: url('../img/icons/phone-icon-1.svg')
-			// 	background-size: contain
-			// 	content: ''
-			// 	height: 29px
-			// 	left: -10px
-			// 	position: absolute
-			// 	position: absolute
-			// 	width: 12px
+			//  background-image: url('../img/icons/phone-icon-1.svg')
+			//  background-size: contain
+			//  content: ''
+			//  height: 29px
+			//  left: -10px
+			//  position: absolute
+			//  position: absolute
+			//  width: 12px
 			.clear
 				margin-bottom: 10px
 			.fl
@@ -312,7 +312,7 @@ body > .menu
 				height: 1px
 				border-bottom: 0.25px dashed black
 				width: 100%
-	.phones
+	// .phones
 	.blue
 		display: block
 	.menu2
@@ -627,7 +627,7 @@ body > .menu
 				background-color: #d63d1a
 
 .partners
-	.wrap
+	// .wrap
 	.controls, .paginator-holder
 		margin-top: 58px
 	.label-holder
@@ -640,7 +640,7 @@ body > .menu
 			font-weight: 300
 			line-height: 1em
 	.parnters-holder
-		.lnb.disabled
+		// .lnb.disabled
 		.caroufredsel_wrapper
 			overflow: hidden
 			overflow-x: auto
@@ -668,7 +668,7 @@ body > .menu
 	.top-news-holder
 		padding-top: 30px
 		padding-bottom: 14px
-		.lnb.disabled
+		// .lnb.disabled
 		.caroufredsel_wrapper
 			overflow: hidden
 			.parnters-container
@@ -704,7 +704,7 @@ body > .menu
 						right: 30px
 						top: 30px
 						white-space: normal
-					img
+					// img
 					.btn
 						color: white
 						font-size: 14px
@@ -739,19 +739,6 @@ body > .menu
 			padding-left: 20px
 
 .main.wide-l
-	.rb.opensans.leftb
-		a#ban-cons3.zaprosconl
-		.title
-		.partners
-			.parnters-holder
-				.lnb
-				.parnters-container
-					.part
-						div
-							span
-								img
-				.rnb
-				#pager2
 	.main-container
 		.contacts
 			$mobile-media-width: 1200px
@@ -823,22 +810,27 @@ body > .menu
 									display: none
 								span.blue
 									display: none
-									a.calll.r-pimp
-									a.r-pimp.zaprosl
-									a.r-pimp.zaprosconl
+									// a.calll.r-pimp
+									// a.r-pimp.zaprosl
+									// a.r-pimp.zaprosconl
 							&:nth-child(2)
 								width: 1px
 								@media (max-width: $mobile-media-width)
+									padding-top: 20px
 									width: 100%
 			.hr
 				margin-top: 50px
 				height: 1px
 				background-color: #f2f2f3
+				@media (max-width: $mobile-media-width)
+					margin-top: 30px
 			table.emails
 				margin-top: 50px
 				margin-bottom: 95px
 				@media (max-width: $mobile-media-width)
 					display: block
+					margin-top: 30px
+					margin-bottom: 30px
 				@media (max-width: $tablet)
 					padding-left: 20px
 					padding-right: 20px
@@ -957,11 +949,15 @@ body > .menu
 			margin-top: 36px
 			h4
 				margin-bottom: 16px
+				@media (max-width: $tablet)
+					margin-bottom: 8px
 				&, & a
 					color: #243e57
 					font-size: 28px
 					line-height: 1.4em
 					font-weight: 300
+					@media (max-width: $tablet)
+						font-size: 20px
 			.search-preview
 				color: #666
 				font-size: 14px
@@ -1090,6 +1086,8 @@ body > .menu
 			line-height: 15px
 			height: 15px
 			width: 15px
+			@media (max-width: $tablet)
+				margin-right: 10px
 		&.opened:before
 			content: ''
 			color: #999
@@ -1102,6 +1100,10 @@ body > .menu
 		line-height: 1.4em
 		margin-top: 14px
 		margin-bottom: 31px
+		@media (max-width: $tablet)
+			font-size: 18px
+			margin-top: 16px
+			margin-bottom: 12px
 		& + .cont
 			max-height: initial
 	.h2
@@ -1116,6 +1118,7 @@ body > .menu
 		margin-left: 23px
 		border-bottom: 1px solid #e2e2e2
 		@media (max-width: $tablet)
+			font-size: 14px
 			margin-left: 0
 		& + .cont
 			margin-left: 40px
@@ -1129,6 +1132,10 @@ body > .menu
 		font-weight: 400
 		line-height: 1.875em
 		// margin-left: 20px
+		@media (max-width: $tablet)
+			font-size: 12px
+			line-height: 1.4em
+			margin-bottom: 12px
 		& + .cont
 			margin-left: 40px
 			@media (max-width: $tablet)
@@ -1194,6 +1201,7 @@ body > .menu
 						width: 100%
 				&:nth-child(2)
 					text-align: right
+					padding-right: 20px
 					width: 30%
 
 					color: #999
@@ -1259,6 +1267,143 @@ body > .menu
 		font-size: 16px
 		font-weight: 600
 		// line-height: 20px
+
+.mceThingTable
+	// @media (max-width: $tablet)
+		// padding-left: 20px
+		// padding-right: 20px
+	&, table
+		border: none !important
+		width: 100% !important
+		// table-layout: fixed
+	h3
+		color: #243e57
+		font-size: 28px
+		font-weight: 300
+		line-height: 1.2em
+		margin-top: 0
+		margin-bottom: 10px
+		position: relative
+		@media (max-width: $tablet)
+			font-size: 18px
+		&:before
+			content: "\f0e3"
+			display: block
+			border: 1px solid #6bb6ee
+			border-radius: 50%
+			color: #6bb6ee
+			font-family: FontAwesome
+			font-size: 24px
+			text-align: center
+			line-height: 50px
+			height: 50px
+			width: 50px
+			position: absolute
+			left: -60px
+			top: 5px
+			@media (max-width: $tablet)
+				font-size: 14px
+				position: static
+				margin-bottom: 10px
+				display: none
+				line-height: 30px
+				height: 30px
+				width: 30px
+	.show-schedule-and-map
+		color: #0093dd
+		display: inline-block
+		font-size: 14px
+		line-height: 1em
+		font-weight: 400
+		cursor: pointer
+		white-space: nowrap
+		margin-top: 40px
+		position: relative
+		margin-bottom: 20px
+		@media (max-width: $tablet)
+			// font-size: 12px
+			margin-top: 0
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			// width: 100%
+			border-top: 1px dashed #0093dd
+			height: 1px
+	tr
+		color: #666
+		font-size: 14px
+		font-weight: 400
+		vertical-align: top
+		td
+			border: none !important
+			padding: 0 0 40px 60px
+			vertical-align: top
+			position: relative
+			@media (max-width: $tablet)
+				display: block
+				padding: 0 20px 20px 20px
+			&:nth-child(1)
+				// TODO define padding right
+				padding-right: 100px
+				padding-right: 10px
+				width: 90%
+				@media (max-width: $tablet)
+					padding-right: 20px
+					width: 100%
+			&:nth-child(2)
+				text-align: right
+				width: 10%
+				@media (max-width: $tablet)
+					width: 100%
+				iframe
+					display: none
+					@media (max-width: $tablet)
+						width: 100%
+		&:not(.opened)
+			td:nth-child(1)
+				& p:nth-child(1n+4)
+					display: none
+
+.additional-services
+	margin-top: 60px
+	margin-bottom: 60px
+	@media (max-width: $tablet)
+		margin-top: 40px
+		margin-bottom: 40px
+		padding: 0 20px
+	h1, h2, h3, h4, h5, h6
+		margin-top: 0
+		margin-bottom: 0.5em
+		color: #0054a5
+		line-height: 1.4em
+	h1
+		font-size: 32px
+		@media (max-width: $tablet)
+			font-size: 28px
+	h2
+		font-size: 28px
+		@media (max-width: $tablet)
+			font-size: 22px
+	h3
+		font-size: 26px
+		@media (max-width: $tablet)
+			font-size: 18px
+	h4
+		font-size: 22px
+		@media (max-width: $tablet)
+			font-size: 16px
+	p, a, b
+		font-size: 18px
+		@media (max-width: $tablet)
+			font-size: 14px
+	p
+		margin-bottom: 10px
+	a
+		color: #0054a5
 
 .footer
 	background-color: #bed8f0

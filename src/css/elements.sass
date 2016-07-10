@@ -1,14 +1,18 @@
 
 #page-tit
-	height: 150px
-	padding: 57px 0 67px
+	padding: 52px 0 63px
 	position: relative
+	@media (max-width: $tablet)
+		overflow: hidden
+		padding: 18px 0 22px
 	&, h1, h2, h3, h4, h5, h6
 		color: #243e57
 		font-size: 36px
 		font-weight: 300
-		line-height: 1em
+		line-height: 1.2em
 		margin: 0
+		@media (max-width: $tablet)
+			font-size: 22px
 	@media (max-width: $tablet)
 		background: url('../img/bg/map-background-1.jpg') 50% 50% no-repeat
 		background-size: 100% 100%

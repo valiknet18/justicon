@@ -267,7 +267,7 @@ $(document).on('ready', function () {
 
 					try {
 
-						if (!this.$cross) return
+						if (!this.$cross) return;
 
 						this.$cross.addClass('fadeOut').one(animationPrefix, function () {
 
@@ -396,7 +396,7 @@ $(document).on('ready', function () {
 		// wrap tables
 		(function () {
 
-			$('table').wrap('<div class="table-holder"></div>')
+			$('table').wrap('<div class="table-holder"></div>');
 
 		})();
 
@@ -441,17 +441,50 @@ $(document).on('ready', function () {
 						.removeClass('opened');
 
 				}
-			})
+			});
+
+		})();
+
+
+		// collapsing address table
+		(function () {
+
+			var $showButtons = $('.show-schedule-and-map');
+			$showButtons.on('click', function () {
+				var $self, $iframe, $table, fakeSrc;
+				$self = $(this);
+				$table = $self
+					.closest('tr');
+				$iframe = $table
+					.find('iframe');
+				fakeSrc = $iframe.attr('fake-src');
+
+				if ($table.hasClass('opened')) {
+					$table.removeClass('opened');
+					$iframe.css({
+						'display': 'none'
+					});
+				} else {
+					$table.addClass('opened');
+					$iframe.css({
+						'display': 'initial'
+					});
+					if (fakeSrc) {
+						$iframe.attr('src', fakeSrc);
+						$iframe.attr('fake-src', '');
+					}
+				}
+			});
 
 		})();
 
 
 		// scroll
-		$(document).on('scroll', function () {
+		// $(document).on('scroll', function () {
 
-			var top = $(this).scrollTop();
+		// 	var top = $(this).scrollTop();
 
-		});
+		// });
 
 		// resize
 		$window.on('resize', function () {
