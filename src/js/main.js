@@ -479,6 +479,143 @@ $(document).on('ready', function () {
 		})();
 
 
+		// fixed menu
+		(function () {
+
+			var $document = $(document),
+				$menu = $('.menu'),
+				$header = $('.header'),
+				headerHeight = $header.height();
+			$document.on('scroll', function () {
+				var top = $document.scrollTop();
+				if (top > headerHeight) {
+					$menu.addClass('fixed');
+				} else {
+					$menu.removeClass('fixed');
+				}
+			});
+			// .on('resize', function () {
+			// 	headerHeight = $header.height();
+			// });
+
+		})();
+
+		// partners modal
+		(function () {
+
+			var $partners = $('#cl-in').find('.cl-item');
+			$partners.each(function () {
+				var $self = $(this),
+					$tabs = $self.find('.cltab'),
+					$tabBtns = $self.find('.cltabs > *');
+				$tabBtns.each(function (i) {
+					var $self = $(this);
+					$self.on('click', function () {
+						$self
+							.addClass('clact')
+							.siblings()
+							.removeClass('clact');
+						$tabs
+							.eq(i)
+							.addClass('active')
+							.siblings()
+							.removeClass('active');
+					});
+				});
+				$tabs.each(function (i) {
+					var $tab = $(this);
+					if (i === 0) {
+						$tab.addClass('active');
+					}
+					// modal image
+					$tab.find('img').on('click', function () {
+
+						var $body = $('body'),
+							$target = $(this),
+							$clone = $target.clone(),
+							origTop = $target.offset().top,
+							origLeft = $target.offset().left,
+							origWidth = $target.width(),
+							origHeight = $target.height();
+
+						var closeModal = function () {
+
+								$tint.removeClass('active');
+								$clone.css( stylesStack ).one(transitionPrefix, function () {
+
+									$clone.off().remove();
+									$tint.off().remove();
+
+								});
+
+							};
+
+						var stylesStack = {
+								'position': 'fixed',
+								'z-index': '20',
+								'transform': 'scale(1)',
+								'opacity': 0,
+								'left': origLeft,
+								'top': origTop,
+								'height': origHeight,
+								'width': origWidth
+							},
+							$tint = $('<div>')
+								.addClass('tint')
+								.one('DOMMouseScroll wheel mousewheel touchstart click', closeModal)
+								.appendTo( $body );
+
+						var stylesTarget = {
+							'transform': 'scale(1) translate(-50%, -50%)',
+							'-webkit-transform': 'scale(1) translate(-50%, -50%)',
+							'opacity': 1,
+							'left': '50%',
+							'top': '50%',
+							'height': this.naturalHeight,
+							'width': this.naturalWidth
+						};
+
+						if (this.naturalWidth > winWidth / 1.5) {
+
+							var ratio = this.naturalWidth / this.naturalHeight;
+							stylesTarget.width = winWidth / 1.5;
+							stylesTarget.height = stylesTarget.width / ratio;
+
+						}
+
+						$clone
+							.addClass( 'modal-image' )
+							.css( stylesStack )
+							.one('DOMMouseScroll wheel mousewheel touchstart click', closeModal)
+							.appendTo( $body );
+
+						setTimeout(function () {
+
+							$clone.css( stylesTarget );
+							$tint.addClass('active');
+
+						}, 20);
+
+					});
+				});
+			});
+			$partners.on('click', function (e) {
+				var $self = $(this),
+					$target = $(e.target),
+					$modal = $self.find('.modal-cl');
+				if ($self.hasClass('opened')) {
+					if (!($target.hasClass('modal-cl') || $target.hasClass('close'))) return;
+					$self.removeClass('opened');
+					bodyOverflow.unfixBody();
+				} else {
+					$self.addClass('opened');
+					bodyOverflow.fixBody();
+				}
+			});
+
+		})();
+
+
 		// scroll
 		// $(document).on('scroll', function () {
 
