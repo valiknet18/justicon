@@ -1,15 +1,41 @@
+
+// MODALS
 .modal
+	background: rgba(204,204,204,0)
+	// display: none
+	visibility: hidden
+	overflow: auto
+	opacity: 0
+	position: fixed
+	left: 0
+	top: 0
+	height: 100%
+	width: 100%
+	z-index: 11
+	transition: background .3s, opacity .3s
+	.modal-wrapper
+		@media (max-width: $tablet)
+			min-height: 100%
 	&.opened
-		animation: mobileMenuOpen 0.6s
-		animation: modalOpen 0.6s
+		background: rgba(204,204,204,0.5)
+		// display: block
+		visibility: visible
+		opacity: 1
+		.modal-wrapper
+			animation: modalOpen 0.6s
+			animation-fill-mode: forwards
 	&.clothing
-		animation: mobileMenuClose 0.6s
-		animation: modalClose 0.6s
+		background: rgba(204,204,204,0)
+		opacity: 0
+		.modal-wrapper
+			animation: modalClose 0.6s
+			animation-fill-mode: forwards
 
 .mobile-menu
 	background-color: #4c5155
 	top: 50px
 	&.opened
+		background-color: #4c5155
 		animation: mobileMenuOpen 0.6s
 	&.clothing
 		animation: mobileMenuClose 0.6s
@@ -56,16 +82,36 @@
 							font-weight: 400
 							color: #36393d
 							line-height: 20px
-							&:focus, &:active
-								color: white
-								background-color: #6bb6ee
 							.title
 								padding: 20px 20px
 								border-bottom: 1px solid #e2e2e2
+								&:focus, &:active
+									color: white
+									background-color: #6bb6ee
 						& > ul
 							display: none
+							position: fixed
+							top: 50px
+							left: 0
+							right: 0
+							bottom: 0
+							z-index: 2
+							background-color: #f9f9f9
+							li
+								color: #000
+								a
+									color: #000
+									padding: 20px 20px
+									border-bottom: 1px solid #e2e2e2
+									font-size: 18px
+									font-weight: 400
+									color: #36393d
+									line-height: 20px
 							&.opened
 								display: block
+								animation: mobileMenuOpen 0.6s
+							&.clothing
+								animation: mobileMenuClose 0.6s
 
 	.menu2
 		& > ul
@@ -84,3 +130,91 @@
 						background-color: #6bb6ee
 				& > .submenu
 					display: none
+
+// CALLBACK modal
+#calld
+	text-align: center
+	.modal-wrapper
+		margin: 90px auto 0px
+		background-color: #fff
+		border-radius: 3px
+		box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3)
+		width: 600px
+		position: relative
+		@media (max-width: $tablet)
+			margin: 0
+			width: 100%
+	h3
+		padding-top: 10px
+		color: #36393d
+		font-size: 24px
+		font-weight: 400
+		display: block
+		span
+			display: block
+	#callwrap
+		position: relative
+		&:after
+			content: ''
+			background-color: #6bb6ee
+			border-radius: 50%
+			color: #fff
+			text-align: center
+			font-family: FontAwesome
+			font-size: 28px
+			height: 64px
+			left: 50%
+			line-height: 64px
+			margin-left: -32px
+			position: absolute
+			top: -32px
+			width: 64px
+
+		// .mfeedback
+		form
+			background-color: #f1f1f1
+			margin-top: 50px
+			padding-top: 50px
+			padding-bottom: 20px
+			display: block
+			@media (max-width: $tablet)
+				min-height: calc(100vh - 100px)
+		input#sessid_1
+		.mf-name
+			.mf-text
+				display: none
+				span.mf-req
+		textarea, input
+			margin-bottom: 10px
+			width: 400px
+			background-color: white
+			border: 1px solid #c0c7ce
+			border-radius: 3px
+			box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1)
+			@media (max-width: $mobile-large)
+				width: 300px
+		input
+			height: 40px
+		textarea
+			min-height: 100px
+		input[type="submit"]
+			height: auto
+			width: auto
+			background-color: #f54f29
+			border-radius: 3px
+			color: white
+			font-size: 14px
+			line-height: 1em
+			font-weight: 400
+			text-transform: uppercase
+			outline: none
+			border: none
+			padding: 15px 60px
+			margin-top: 10px
+			transition: background 0.1s
+			&:hover
+				background-color: #c13d1f
+	.close.button
+		position: absolute
+		right: 6px
+		top: 6px

@@ -95,6 +95,12 @@
 				transform: rotateZ(45deg) translateY(-7px) translateX(-7px)
 				transform-origin: 0 50%
 				width: 18px
+.close
+	cursor: pointer
+	height: 20px
+	width: 20px
+	background: transparent url('../img/icons/cross-button-4.svg') 50% 50% no-repeat
+	background-size: contain
 
 .paginator-holder, .controls
 	text-align: center
@@ -132,6 +138,7 @@ body > .menu
 		height: 50px
 		width: 100%
 		margin: 0
+		overflow: auto
 		& > ul
 			@media (max-width: $tablet)
 				display: none
@@ -189,10 +196,10 @@ body > .menu
 		.title
 			text-transform: uppercase
 			font-weight: 700
-			max-width: 14vw
+			// max-width: 14vw
 			text-overflow: ellipsis
 			overflow: hidden
-			transition: max-width 0.2s
+			// transition: max-width 0.2s
 		ul
 			margin-left: 0
 			margin-top: 8px
@@ -207,8 +214,8 @@ body > .menu
 					max-width: 100%
 					text-transform: none
 					font-weight: 500
-					max-width: 14vw
-					transition: max-width 0.2s
+					// max-width: 14vw
+					// transition: max-width 0.2s
 			&:last-child
 				margin-bottom: 0
 	.block-item
@@ -216,9 +223,9 @@ body > .menu
 		display: inline-block
 		padding-right: 26px
 		vertical-align: top
-		&:hover
-			.title, ul li a
-				max-width: 100%
+		// &:hover
+		// 	.title, ul li a
+		// 		max-width: 100%
 	ul
 		margin-left: 30px
 		& > li
@@ -1508,6 +1515,10 @@ body > .menu
 	.table-holder
 		padding-top: 6px
 		padding-bottom: 6px
+	tbody
+		@media (max-width: $tablet)
+			display: block
+			width: 100%
 	table
 		border-collapse: collapse
 		table-layout: fixed
@@ -1523,6 +1534,7 @@ body > .menu
 				display: block
 				width: 100%
 			td
+				vertical-align: middle
 				@media (max-width: $tablet)
 					padding: 6px 0
 					display: block
@@ -1562,9 +1574,14 @@ body > .menu
 					line-height: 20px
 					position: relative
 					padding-left: 20px
+					text-align: right
+					padding-right: 44px
 					pre
 						display: inline-block
 						vertical-align: middle
+						white-space: nowrap
+						text-overflow: ellipsis
+						max-width: 100%
 					&:after
 						content: ''
 						display: inline-block
@@ -1605,6 +1622,8 @@ body > .menu
 				left: 38px
 				height: 16px
 				width: 15px
+		& + .clear:last-child, &:last-child
+			margin-bottom: 20px
 		// tr
 			// padding-top: 20px
 	.price-title
@@ -1933,26 +1952,6 @@ body > .menu
 		.b2
 			display: none
 
-// MODALS
-.modal
-	background: #fff
-	display: none
-	overflow: auto
-	opacity: 0
-	position: fixed
-	left: 0
-	top: 0
-	height: 100%
-	width: 100%
-	z-index: 11
-	&.opened
-		display: block
-		opacity: 1
-		animation: modalOpen 0.6s
-		animation-fill-mode: forwards
-	&.clothing
-		animation: modalClose 0.6s
-		animation-fill-mode: forwards
 
 #totop
 	position: fixed
@@ -1961,7 +1960,7 @@ body > .menu
 	display: none
 
 /* Start:/bitrix/templates/usticon/css/sprites.css*/
-.r-trng, .l-trng, .ic-fb, .ic-gplus, .ic-twitter, .ic-email, .ic-lj, .ic-vk, .soc2, .soc1, .soc3, .soc4, .soc5, .eng, .rus, .ukr, .s-1, .ic-logo, .ic-phone, .zoom, .close, .smlogo, .blackphone, .s5, .s6, .s7, .s8, .s4, .s3, .s2, .s1, .skype
+.r-trng, .l-trng, .ic-fb, .ic-gplus, .ic-twitter, .ic-email, .ic-lj, .ic-vk, .soc2, .soc1, .soc3, .soc4, .soc5, .eng, .rus, .ukr, .s-1, .ic-logo, .ic-phone, .zoom, .smlogo, .blackphone, .s5, .s6, .s7, .s8, .s4, .s3, .s2, .s1, .skype
 	background: url('http://justicon.ua/bitrix/templates/usticon/css/sprites.png') no-repeat
 
 .r-trng
@@ -2040,11 +2039,6 @@ body > .menu
 	background-position: -49px 0
 	width: 26px
 	height: 26px
-
-.close
-	background-position: 0 0
-	width: 30px
-	height: 30px
 
 .smlogo
 	background-position: -248px 0

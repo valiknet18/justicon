@@ -321,7 +321,7 @@ $(document).on('ready', function () {
 			
 		});
 
-		$('[data-close]').on('click', function (e) {
+		$('[data-close], .modal .close').on('click', function (e) {
 
 			e.preventDefault();
 
@@ -347,7 +347,7 @@ $(document).on('ready', function () {
 
 		});
 
-		$('.modal-holder').not('.fake').on('click', function (e) {
+		$('.modal').not('.fake').on('click', function (e) {
 
 			if (e.target === this) {
 
@@ -444,11 +444,11 @@ $(document).on('ready', function () {
 				modals[1] = $submenu;
 				level = 2;
 			});
-			$mobileMenu.find('.wrap > ul > li > a .block-item .title').on('click', function (e) {
+			$mobileMenu.find('.wrap > ul > li .block-item .title').on('click', function (e) {
 				var $submenu = $(this).next();
-				if ($submenu.length) e.preventDefault();
+				// if ($submenu.length) e.preventDefault();
 
-				console.log( $submenu );
+				// console.log( $submenu );
 
 				$submenu.addClass('opened');
 				$crossButton.addClass('back-state');
@@ -504,7 +504,8 @@ $(document).on('ready', function () {
 					$self
 						.addClass('opened');
 
-					openedSize = getActualSizes($content).height;
+					openedSize = getActualSizes($content).height + 20;
+					console.log( openedSize );
 
 					$content
 						.addClass('opened')
@@ -649,8 +650,8 @@ $(document).on('ready', function () {
 		(function () {
 
 			var $sidebar = $('#navigation-sidebar'),
-				$nav = $('body').find('.menu'),
-				$servicesLink = $nav.find('ul li:nth-child(2)');
+				$nav = $('body').find('> .menu'),
+				$servicesLink = $nav.find('ul > li:nth-child(2)');
 			$servicesLink.on('click', function (e) {
 				e.preventDefault();
 				$sidebar

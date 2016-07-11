@@ -1,28 +1,36 @@
 #calld.modal
-	h3
-		span Заказать обратный звонок
-	#callwrap
-		.mfeedback
-			form(action='/include/callback.php', method='POST')
-				input#sessid_1(type='hidden', name='sessid', value='6cc4b30ded9e68995805d92a7592f942')
-				.mf-name
-					.mf-text
-						| Ваше имя
-					input(type='text', name='user_name', value='')
-				.mf-name
-					.mf-text
-						| Контактный номер
-						span.mf-req *
-					input(type='text', name='user_cont', value='')
-				.mf-name
-					.mf-text
-						| Ваш вопрос
-						span.mf-req *
-					// <input type="text" name="user_time" value="">
-					textarea(name='MESSAGE', rows='5', cols='40')
-				input(type='hidden', name='PARAMS_HASH', value='e781470f86e5a39be0e28bb1a0bd4a33')
-				input(type='submit', name='submit', value='Отправить')
-	.close.button
+	// wrap modal content
+	.modal-wrapper
+		h3
+			// replace text
+			span Заказать
+		#callwrap
+			.mfeedback
+				form(action='/include/callback.php', method='POST')
+					input#sessid_1(type='hidden', name='sessid', value='6cc4b30ded9e68995805d92a7592f942')
+					.mf-name
+						.mf-text
+							| Ваше имя
+						// add placeholder
+						input(type='text', name='user_name', value='', placeholder="Ваше имя")
+					.mf-name
+						.mf-text
+							| Контактный номер
+							span.mf-req *
+						// add placeholder
+						input(type='text', name='user_cont', value='', placeholder="Контактный номер")
+					.mf-name
+						.mf-text
+							| Ваш вопрос
+							span.mf-req *
+						// <input type="text" name="user_time" value="">
+						// add placeholder
+						textarea(name='MESSAGE', rows='5', cols='40', placeholder="Ваш вопрос")
+					input(type='hidden', name='PARAMS_HASH', value='e781470f86e5a39be0e28bb1a0bd4a33')
+					input(type='submit', name='submit', value='Отправить')
+		// add attribuets
+		.close.button
+
 #zaprosd.modal
 	h3 Заказать услугу
 	#zaproswrap
@@ -46,6 +54,7 @@
 				input(type='hidden', name='PARAMS_HASH', value='72fe7e53c6b5d5dbed07f4c9e3169835')
 				input(type='submit', name='submit', value='Отправить')
 	.close.button
+
 #zaproscon.modal
 	h3 Заказать консультацию
 	#zaprosconwrap
@@ -69,6 +78,7 @@
 				input(type='hidden', name='PARAMS_HASH', value='72fe7e53c6b5d5dbed07f4c9e3169835')
 				input(type='submit', name='submit', value='Отправить')
 	.close.button
+
 #mobile-menu.mobile-menu.modal
 	.menu
 		.wrap
