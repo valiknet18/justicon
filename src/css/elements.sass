@@ -169,18 +169,26 @@
 				& > li
 					// display: inline-block
 					// vertical-align: top
-					width: 400px
-					width: 50%
+					width: 280px
+					// width: 48%
 					padding: 0 20px
+					margin-right: 40px
+					margin-bottom: 40px
+					float: left
 					img
 						width: 100%
 					& > a
+						border-bottom: 2px solid #333
 						text-transform: uppercase
 						font-weight: 700
 						display: block
 						width: 100%
 						&:hover
 							background: none
+					&:first-child
+						margin-bottom: 0
+						& > a
+							border: none
 					li
 						a
 							white-space: normal

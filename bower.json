@@ -29,6 +29,7 @@
     "animate.css": "animate-css#~3.5.1",
     "smoothscroll-for-websites": "~1.4.4",
     "bootstrap": "^3.3.6",
-    "bxslider": "*"
+    "bxslider": "*",
+    "masonry": "^4.1.0"
   }
 }

@@ -167,6 +167,9 @@ $(document).on('ready', function () {
 		// 	'slideClass': '.item'
 		// });
 
+		// MASONRY
+		$('#navigation-sidebar').find('.nav .inner-holder').masonry();
+
 		$('.top-news-holder').groupSlider({
 			'loop': false,
 			'mouseDrug': false,
@@ -605,41 +608,105 @@ $(document).on('ready', function () {
 		// sidebar navigation
 		(function () {
 
-			var state = 0,
+			var state = [],
 				$sidebar = $('#navigation-sidebar'),
 				$nav = $sidebar.find('.nav'),
 				$submenuTriggers = $nav.find('> li > a'),
 				$toggleNavCollapse = $sidebar.find('.toggle-nav-collapse');
+
 			$toggleNavCollapse.on('click', function (e) {
+
 				e.preventDefault();
+
+				if (state.length) {
+
+					for (var i = state.length - 1; i >= 0; i--) {
+						state[i].removeClass('opened');
+					}
+
+					state = [];
+
+					bodyOverflow.unfixBody();
+
+				}
+
+				$submenuTriggers
+					.removeClass('active');
+
 				$sidebar
 					.toggleClass('expanded')
 					.removeClass('opened');
 			});
+
 			$submenuTriggers.on('click', function (e) {
 				e.preventDefault();
-				if ($sidebar.hasClass('opened')) {
-					$sidebar.removeClass('opened');
+
+				var $self = $(this),
+					$active = $self
+						.siblings('.submenu');
+
+				// remove old actives
+				if (state.length) {
+
+					for (var i = state.length - 1; i >= 0; i--) {
+						state[i].removeClass('opened');
+					}
+
+					state = [];
+
 					bodyOverflow.unfixBody();
-					state = 1;
-					$submenuTriggers
-						.removeClass('active')
-						.find('.submenu')
-						.removeClass('opened');
+
 				} else {
-					$sidebar.addClass('opened expanded');
-					bodyOverflow.fixBody();
+					
 					if ($(document).scrollTop() < 80) {
 						$('body, html').animate({
 							'scrollTop': 80
 						});
 					}
-					$(this)
-						.addClass('active')
-						.siblings('.submenu')
-						.addClass('opened');
-					state = 2;
+
 				}
+
+				if ($self.hasClass('active')) {
+
+					$submenuTriggers
+						.removeClass('active');
+
+					$sidebar.removeClass('opened');
+
+					return;
+				}
+
+				if ($active.length) {
+
+					$submenuTriggers
+						.removeClass('active');
+
+					$active
+						.addClass('opened');
+					
+					$self
+						.addClass('active');
+
+					$sidebar.addClass('expanded opened');
+
+					bodyOverflow.fixBody();
+
+					state.push(
+						$active
+					);
+
+				} else {
+
+					$sidebar.removeClass('opened');
+					
+					$submenuTriggers
+						.removeClass('active');
+
+				}
+
+				//
+				// $sidebar.addClass('opened expanded');
+
 			});
 			// 	headerHeight = $header.height();
 			// });
