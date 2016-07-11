@@ -99,6 +99,7 @@ body > .menu
 	top: 0
 	width: 100%
 	height: 50px
+	z-index: 3
 	.wrap
 		background-color: #36393d
 		position: relative
@@ -114,7 +115,7 @@ body > .menu
 		.wrap
 			height: 50px
 			position: fixed
-			z-index: 2
+			z-index: 3
 	a
 		display: inline-block
 		color: white
@@ -150,15 +151,15 @@ body > .menu
 		// white-space: normal
 		padding: 18px
 		&::-webkit-scrollbar
-			height: 6px
-			width: 6px
+			height: 8px
+			width: 8px
 		&::-webkit-scrollbar-track
-			background-color: #444
-			border-left: 1px solid #ccc
-		&::-webkit-scrollbar-thumb
 			background-color: #fff
+			border-left: 1px solid #eee
+		&::-webkit-scrollbar-thumb
+			background-color: #6bb6ee
 		&::-webkit-scrollbar-thumb:hover
-			background-color: #aaa
+			background-color: #96c6ea
 		a
 			font-size: 12px
 		.title
@@ -663,6 +664,7 @@ body > .menu
 
 .search-section
 	background: url('../img/bg/search-bg.jpg') 50% 50% no-repeat
+	background: url('http://frontend.web1.com.ua/justicon/images/bg-seach-main.jpg') 50% 50% no-repeat
 	background-size: cover
 	margin-top: -16px
 	.wrap
@@ -1105,10 +1107,13 @@ body > .menu
 		overflow: height
 		position: relative
 		width: 50%
-		width: calc(50% - 18px)
+		width: calc(33.3% - 18px)
 		margin-left: calc(9px)
 		margin-right: calc(9px)
 		padding: 0 30px
+		@media (max-width: $tablet)
+			width: 50%
+			width: calc(50% - 18px)
 		@media (max-width: $mobile-large)
 			margin: 0 0 20px
 			width: 100%
@@ -1129,7 +1134,8 @@ body > .menu
 			z-index: 2
 			pointer-events: none
 			opacity: 0
-			transition: opacity .3s
+			// transition: opacity .3s
+			transition: none
 			white-space: nowrap
 		&:before
 			content: ''
@@ -1141,7 +1147,8 @@ body > .menu
 			height: 100%
 			width: 100%
 			z-index: 1
-			transition: background .3s
+			// transition: background .3s
+			transition: none
 		&:hover:before
 			background-color: rgba(241,241,241,0.9)
 		&:hover:after
@@ -1170,6 +1177,8 @@ body > .menu
 			max-width: 300px
 			margin: 0 auto 40px
 			min-height: 60px
+			@media (max-width: $tablet)
+				min-height: 0
 		img
 			// width: 100%
 		.open-cl
@@ -1186,6 +1195,7 @@ body > .menu
 			.modal-cl
 				background: rgba(204,204,204,0.5)
 				opacity: 1
+				visibility: visible
 				pointer-events: all
 				.cl-mod
 					transform: translate(0, 0)
@@ -1203,6 +1213,17 @@ body > .menu
 		overflow: auto
 		opacity: 0
 		transition: opacity 0.6s, background 0.6s
+		// visibility: hidden
+		&::-webkit-scrollbar
+			height: 8px
+			width: 8px
+		&::-webkit-scrollbar-track
+			background-color: #fff
+			border-left: 1px solid #eee
+		&::-webkit-scrollbar-thumb
+			background-color: #6bb6ee
+		&::-webkit-scrollbar-thumb:hover
+			background-color: #96c6eas
 		.close
 			position: absolute
 			right: 9px
@@ -1430,6 +1451,8 @@ body > .menu
 		@extend .allHeaders
 	pre
 		white-space: normal
+		font-family: "OpenSans", Arial, sans-serif
+		overflow: hidden
 		@media (max-width: $tablet)
 			display: block
 			width: 100%
@@ -1493,6 +1516,25 @@ body > .menu
 					font-size: 16px
 					font-weight: 600
 					line-height: 20px
+					position: relative
+					padding-left: 20px
+					pre
+						display: inline-block
+						vertical-align: middle
+					&:after
+						content: ''
+						display: inline-block
+						vertical-align: middle
+						height: 20px
+						width: 23px
+						margin-left: 10px
+						background: url('../img/icons/price-icbask.png') 50% 50% no-repeat
+
+						position: absolute
+						top: 50%
+						right: 10px
+						margin-top: -10px
+						
 					@media (max-width: $tablet)
 						padding-left: 0
 						white-space: nowrap

@@ -33,3 +33,198 @@
 		z-index: -1
 		@media (max-width: $tablet)
 			display: none
+
+// SIDEBAR NAVIGATION
+.navigation-sidebar
+	background-color: #f1f1f1
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.15)
+	position: fixed
+	left: 0
+	overflow: hidden
+	width: 80px
+	padding-top: 66px
+	transition: width .6s, left .6s
+	z-index: 2
+	height: calc(100vh - 50px)
+	overflow-x: hidden
+	overflow-y: auto
+	@media (max-width: $tablet)
+		display: none
+	&::-webkit-scrollbar
+		height: 8px
+		width: 8px
+	&::-webkit-scrollbar-track
+		background-color: #fff
+		border-left: 1px solid #eee
+	&::-webkit-scrollbar-thumb
+		background-color: #6bb6ee
+	&::-webkit-scrollbar-thumb:hover
+		background-color: #96c6ea
+	.nicescroll.sidebar-expanded.sidebar-wrapper
+	// .nav-header-btn.text-center.toggle-nav-collapse
+	.sr-only
+		display: none
+	.toggle-nav-collapse
+		position: absolute
+		right: 33px
+		top: 20px
+		svg
+			height: 13px
+			width: 12px
+			transform: rotateZ(0deg)
+			transition: transform .6s
+	.nav.nav-sidebar
+		width: 280px
+		li
+			display: block
+			width: auto
+			a
+				display: block
+				padding: 12px 0
+				overflow: hidden
+				width: 80px
+				white-space: nowrap
+				transition: background 0.1s, width 0.6s
+				&:hover, &.active
+					color: #000
+					background-color: #6bb6ee
+			.icon-container, span
+				display: inline-block
+				vertical-align: middle
+			.icon-container
+				font-size: 0
+				letter-spacing: 0
+				text-align: center
+				width: 80px
+				.sidebar-icon
+					display: inline-block
+					background: url('../img/icons/sidebar-navigation-spline.png') no-repeat
+					vertical-align: middle
+					&.icon-1
+						background-position: -6px 0px
+						width: 42px
+						height: 40px
+					&.icon-2
+						background-position: 0px -71px
+						width: 48px
+						height: 38px
+					&.icon-3
+						background-position: 0px -142px
+						width: 46px
+						height: 37px
+					&.icon-4
+						background-position: -6px -211px
+						width: 39px
+						height: 39px
+					&.icon-5
+						background-position: -8px -281px
+						width: 39px
+						height: 39px
+					&.icon-6
+						background-position: -8px -350px
+						width: 37px
+						height: 41px
+					&.icon-7
+						background-position: -8px -424px
+						width: 36px
+						height: 35px
+					&.icon-8
+						background-position: -5px -491px
+						width: 50px
+						height: 39px
+			span
+				overflow: hidden
+				display: inline-block
+				text-overflow: ellipsis
+				width: 180px
+				white-space: normal
+		.submenu
+			// display: none
+			position: absolute
+			top: 0
+			left: 80px
+			left: 280px
+			width: 100%
+			// width: 0
+			max-width: calc(100vw - 280px)
+			max-height: calc(100vh - 80px)
+			max-height: 100%
+			overflow: auto
+			// transition: width 0.6s
+			&::-webkit-scrollbar
+				height: 8px
+				width: 8px
+			&::-webkit-scrollbar-track
+				background-color: #fff
+				border-left: 1px solid #eee
+			&::-webkit-scrollbar-thumb
+				background-color: #6bb6ee
+			&::-webkit-scrollbar-thumb:hover
+				background-color: #96c6ea
+			&.opened
+				display: block
+			.inner-holder
+				width: calc(100vw - 300px)
+				display: flex
+				column-count: 4
+				& > li
+					display: inline-block
+					vertical-align: top
+					width: 400px
+					padding: 0 20px
+					& > a
+						text-transform: uppercase
+						font-weight: 700
+						&:hover
+							background: none
+					li
+						a
+							white-space: normal
+							line-height: 1
+							text-decoration: initial
+							&:hover
+								background: none
+								color: #6bb6ee
+								text-decoration: underline
+						// &:bl
+							// font-size: 18px
+	&.mainpage
+		left: -80px
+	&.expanded
+		left: 0
+		width: 280px
+		.nav.nav-sidebar
+			.submenu
+				left: 280px
+		.toggle-nav-collapse
+			right: 24px
+			svg
+				transform: rotateZ(180deg)
+		.nav.nav-sidebar
+			li
+				a
+					width: 270px
+	&.opened
+		// width: 100vw
+		overflow: hidden
+		width: 100%
+
+		&::-webkit-scrollbar
+			height: 0px
+			width: 0px
+		&::-webkit-scrollbar-track
+			background-color: #fff
+			border-left: 1px solid #eee
+		&::-webkit-scrollbar-thumb
+			background-color: #6bb6ee
+		&::-webkit-scrollbar-thumb:hover
+			background-color: #96c6ea
+		.toggle-nav-collapse
+			right: 24px
+			z-index: 2
+			svg
+				transform: rotateZ(180deg)
+		.nav.nav-sidebar
+			.submenu
+				width: 100%
+

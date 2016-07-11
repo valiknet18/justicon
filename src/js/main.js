@@ -482,19 +482,92 @@ $(document).on('ready', function () {
 		// fixed menu
 		(function () {
 
-			var $document = $(document),
+			var status,
+				$document = $(document),
 				$menu = $('.menu'),
 				$header = $('.header'),
-				headerHeight = $header.height();
+				// headerHeight = $header.height(),
+				headerHeight = 80,
+				$sidebarNavigation = $('#navigation-sidebar');
+				if ($sidebarNavigation.length === 0) {
+					$sidebarNavigation = null;
+				}
 			$document.on('scroll', function () {
 				var top = $document.scrollTop();
 				if (top > headerHeight) {
 					$menu.addClass('fixed');
+					if ($sidebarNavigation) {
+						$sidebarNavigation.css('top', 50);
+					}
 				} else {
 					$menu.removeClass('fixed');
+					if ($sidebarNavigation) {
+						$sidebarNavigation.css('top', 130 - top);
+					}
 				}
 			});
 			// .on('resize', function () {
+			// 	headerHeight = $header.height();
+			// });
+
+		})();
+
+		// sidebar navigation
+		(function () {
+
+			var state = 0,
+				$sidebar = $('#navigation-sidebar'),
+				$nav = $sidebar.find('.nav'),
+				$submenuTriggers = $nav.find('> li > a'),
+				$toggleNavCollapse = $sidebar.find('.toggle-nav-collapse');
+			$toggleNavCollapse.on('click', function (e) {
+				e.preventDefault();
+				$sidebar
+					.toggleClass('expanded')
+					.removeClass('opened');
+			});
+			$submenuTriggers.on('click', function (e) {
+				e.preventDefault();
+				if ($sidebar.hasClass('opened')) {
+					$sidebar.removeClass('opened');
+					bodyOverflow.unfixBody();
+					state = 1;
+					$submenuTriggers
+						.removeClass('active')
+						.find('.submenu')
+						.removeClass('opened');
+				} else {
+					$sidebar.addClass('opened expanded');
+					bodyOverflow.fixBody();
+					if ($(document).scrollTop() < 80) {
+						$('body, html').animate({
+							'scrollTop': 80
+						});
+					}
+					$(this)
+						.addClass('active')
+						.siblings('.submenu')
+						.addClass('opened');
+					state = 2;
+				}
+			});
+			// 	headerHeight = $header.height();
+			// });
+
+		})();
+
+		// main navigation
+		(function () {
+
+			var $sidebar = $('#navigation-sidebar'),
+				$nav = $('body').find('.menu'),
+				$servicesLink = $nav.find('ul li:nth-child(2)');
+			$servicesLink.on('click', function (e) {
+				e.preventDefault();
+				$sidebar
+					.toggleClass('expanded')
+					.removeClass('opened');
+			});
 			// 	headerHeight = $header.height();
 			// });
 
