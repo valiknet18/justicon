@@ -368,6 +368,95 @@ $(document).on('ready', function () {
 
 		});
 
+		// mobile modals
+		(function () {
+
+			var level = 0,
+				modals = [],
+				$crossButton,
+				$mobileMenu = $('#mobile-menu');
+
+			$('[data-mobile-modal]').on('click', function (e) {
+
+				e.preventDefault();
+
+				$crossButton = $(this);
+				var target = $crossButton.attr('data-mobile-modal'),
+					$target = $(target);
+
+				if ($target.length) {
+
+					if ( level === 1 ) {
+						bodyOverflow.unfixBody();
+						$crossButton.removeClass('cross-state back-state');
+						$target.addClass('clothing').one(animationPrefix, function () {
+							$target.removeClass('opened clothing');
+						});
+						level = 0;
+					} else if ( level === 0 ) {
+						$crossButton.addClass('cross-state');
+						$target.addClass('opened');
+						if ($(document).scrollTop() < 80) {
+							$('body, html').animate({
+								'scrollTop': 80
+							});
+						}
+						bodyOverflow.fixBody();
+						modals[0] = $target;
+						level = 1;
+					} else if ( level === 2 ) {
+						$crossButton.removeClass('back-state');
+						modals[1]
+							.addClass('clothing')
+							.one(animationPrefix, function () {
+								modals[1]
+									.removeClass('opened clothing');
+							});
+						level = 1;
+					} else if ( level === 3 ) {
+						modals[2]
+							.addClass('clothing')
+							.one(animationPrefix, function () {
+								modals[2]
+									.removeClass('opened clothing');
+							});
+						level = 2;
+					}
+
+				} else {
+
+					console.warn('Ошибка в элементе:');
+					console.log(this);
+					console.warn('Не найдены элементы с селектором ' + target);
+
+				}
+				
+			});
+
+			$mobileMenu.find('.wrap > ul > li > a').on('click', function (e) {
+
+				var $submenu = $(this).siblings('.submenu');
+
+				if ($submenu.length) e.preventDefault();
+
+				$submenu.addClass('opened');
+				$crossButton.addClass('back-state');
+				modals[1] = $submenu;
+				level = 2;
+			});
+			$mobileMenu.find('.wrap > ul > li > a .block-item .title').on('click', function (e) {
+				var $submenu = $(this).next();
+				if ($submenu.length) e.preventDefault();
+
+				console.log( $submenu );
+
+				$submenu.addClass('opened');
+				$crossButton.addClass('back-state');
+				modals[2] = $submenu;
+				level = 3;
+			});
+		})();
+
 
 		// shuffle array
 		Array.prototype.shuffle = function() {

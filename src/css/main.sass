@@ -59,6 +59,7 @@
 	cursor: pointer
 	display: none
 	float: left
+	transition: transform .3s
 	@media (max-width: $tablet)
 		display: block
 	span
@@ -67,10 +68,33 @@
 		height: 3px
 		margin: 6px 0
 		width: 30px
+		transition: all .3s
 		&:first-child
 			margin-top: 0
 		&:last-child
 			margin-bottom: 0
+	&.cross-state
+		transform: translateX(-14px)
+		span
+			&:first-child
+				transform: rotateZ(-45deg) translateY(13px)
+			&:nth-child(2)
+				opacity: 0
+			&:last-child
+				transform: rotateZ(45deg) translateY(-13px)
+	&.back-state
+		transform: translateX(0)
+		span
+			&:first-child
+				transform: rotateZ(-45deg) translateY(7px) translateX(-7px)
+				transform-origin: 0 50%
+				width: 18px
+			&:nth-child(2)
+				opacity: 1
+			&:last-child
+				transform: rotateZ(45deg) translateY(-7px) translateX(-7px)
+				transform-origin: 0 50%
+				width: 18px
 
 .paginator-holder, .controls
 	text-align: center
@@ -237,7 +261,7 @@ body > .menu
 					max-height: 600px
 					transition: max-height .9s
 					width: auto
-					z-index: 2
+					z-index: 4
 	.submenu, .submenu2
 		$invisible-paddings: 5px
 		width: 0
@@ -370,7 +394,7 @@ body > .menu
 			position: absolute
 			overflow: hidden
 			max-height: 0
-			z-index: 1
+			z-index: 4
 			transition: max-height .3s, padding .3s
 		.phones-list:hover, .mainphone:hover ~ .phones-list
 			padding: 10px 0
@@ -584,7 +608,7 @@ body > .menu
 					font-size: 14px
 					font-weight: 700
 					text-transform: uppercase
-					margin-bottom: 10px
+					margin-bottom: 20px
 					@media (max-width: $mobile-large)
 						font-size: 11px
 			.adc.pract
@@ -645,12 +669,18 @@ body > .menu
 					justify-content: center
 					align-items: center
 
+					margin-bottom: -30px
+
+
 					// TODO remove
 					// pointer-events: none
 					a
 						color: #36393d
 						font-size: 14px
-						line-height: 18px
+						// line-height: 18px
+						margin-bottom: 12px
+						line-height: 1.2em
+						display: block
 						@media (max-width: $mobile-large)
 							font-size: 11px
 				&:hover
@@ -990,6 +1020,7 @@ body > .menu
 	& > form
 		position: relative
 		padding: 15px 0
+		display: none
 		input
 			height: 50px
 			width: 50%
@@ -1038,6 +1069,12 @@ body > .menu
 					font-weight: 300
 					@media (max-width: $tablet)
 						font-size: 20px
+				a
+					color: #243e57
+					color: #6bb6ee
+					font-weight: 400
+					&:hover
+						text-decoration: underline
 			.search-preview
 				color: #666
 				font-size: 14px
@@ -1252,10 +1289,12 @@ body > .menu
 			font-weight: 300
 			line-height: 20px
 			display: block
-			margin: 120px auto 40px
+			margin: 90px auto 40px
 			transition: transform 0.6s
-			@media (max-width: 620px)
+			@media (max-width: 640px)
 				margin: 0
+				max-width: 100%
+				min-height: 100%
 			& > img
 				margin: 30px 0 30px 30px
 				display: inline-block
@@ -1283,7 +1322,7 @@ body > .menu
 				background-color: #f2f2f2
 				padding: 30px
 				display: none
-				max-height: 50vh
+				// max-height: 50vh
 				overflow: auto
 
 				&::-webkit-scrollbar
@@ -1298,6 +1337,7 @@ body > .menu
 					background-color: #96c6ea
 				&.active
 					display: block
+					color: #666
 				img
 					max-width: 100%
 					height: auto !important
@@ -1466,7 +1506,8 @@ body > .menu
 			max-height: 9999999px
 			transition: max-height 0.6s
 	.table-holder
-		padding-bottom: 14px
+		padding-top: 6px
+		padding-bottom: 6px
 	table
 		border-collapse: collapse
 		table-layout: fixed
@@ -1496,6 +1537,9 @@ body > .menu
 					// position: relative
 					@media (max-width: $tablet)
 						width: 100%
+					a
+						&:hover
+							text-decoration: underline
 				&:nth-child(2)
 					text-align: right
 					padding-right: 20px
@@ -1547,8 +1591,20 @@ body > .menu
 			background-color: #f9f9f9
 			background-color: red
 	.price-item
-		margin-top: 10px
-		margin-bottom: 10px
+		border: 1px solid #bed8f0
+		margin-top: -1px
+		padding: 10px
+		position: relative
+		&:first-child
+			margin-top: 15px
+			&:before
+				content: ''
+				position: absolute
+				background: url('../img/icons/table-dialog-1.png')
+				top: -15px
+				left: 38px
+				height: 16px
+				width: 15px
 		// tr
 			// padding-top: 20px
 	.price-title

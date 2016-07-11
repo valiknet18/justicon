@@ -1,5 +1,86 @@
 .modal
 	&.opened
 		animation: mobileMenuOpen 0.6s
+		animation: modalOpen 0.6s
 	&.clothing
 		animation: mobileMenuClose 0.6s
+		animation: modalClose 0.6s
+
+.mobile-menu
+	background-color: #4c5155
+	top: 50px
+	&.opened
+		animation: mobileMenuOpen 0.6s
+	&.clothing
+		animation: mobileMenuClose 0.6s
+	.first
+		display: none
+	.wrap
+		& > ul
+			& > li
+				a
+					padding: 0 20px
+					color: white
+					display: block
+					line-height: 40px
+					font-size: 18px
+					font-weight: 400
+					text-transform: uppercase
+					border-bottom: 1px solid rgba(255,255,255,0.1)
+					&:hover
+						background-color: #6bb6ee
+				& > .submenu
+					display: none
+					position: fixed
+					top: 50px
+					left: 0
+					right: 0
+					bottom: 0
+					z-index: 2
+					background-color: #f9f9f9
+					.close
+						display: none
+					&.opened
+						display: block
+						animation: mobileMenuOpen 0.6s
+					&.clothing
+						animation: mobileMenuClose 0.6s
+					.inner
+						overflow: auto
+						overflow-x: hidden
+						overflow-y: auto
+						height: 100%
+					.block-item
+						&, .title
+							font-size: 18px
+							font-weight: 400
+							color: #36393d
+							line-height: 20px
+							&:focus, &:active
+								color: white
+								background-color: #6bb6ee
+							.title
+								padding: 20px 20px
+								border-bottom: 1px solid #e2e2e2
+						& > ul
+							display: none
+							&.opened
+								display: block
+
+	.menu2
+		& > ul
+			& > li
+				display: block
+				padding: 0
+				a
+					padding: 0 20px
+					display: block
+					color: white
+					line-height: 40px
+					font-size: 16px
+					font-weight: 400
+					border-bottom: 1px solid rgba(255,255,255,0.1)
+					&:hover
+						background-color: #6bb6ee
+				& > .submenu
+					display: none
