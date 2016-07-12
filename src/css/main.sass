@@ -1866,6 +1866,42 @@ body > .menu
 		.consult-me-block
 			margin-top: 0
 
+// NEWS
+.news-list
+	margin-top: 80px
+	@media (max-width: $tablet)
+		padding: 0 20px
+	// @media (max-width: $mobile-large)
+	.news-item
+		font-weight: 300
+		margin-bottom: 60px
+		width: calc((100% - 140px) / 3)
+		@media (max-width: $tablet)
+			width: calc((100% - 110px) / 2)
+		@media (max-width: $mobile-large)
+			width: calc(100% - 40px)
+		img
+			display: block
+			height: auto
+			width: 100%
+		&, b
+			color: #666
+			font-size: 14px
+			line-height: 20px
+		.preview_picture
+			float: none !important
+			display: block
+			margin-bottom: 30px
+		a
+			display: block
+			& > b
+				color: #36393d
+				font-size: 20px
+				font-weight: 300
+				line-height: 24px
+				margin-bottom: 20px
+
+
 .footer
 	background-color: #bed8f0
 	.wrap

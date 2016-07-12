@@ -251,5 +251,86 @@
 				transform: rotateZ(180deg)
 		.nav.nav-sidebar
 			.submenu
-				width: 100%
+				min-width: 100%
 
+
+.categories-tabs
+	.tabs-holder
+		margin-top: -40px
+		font-size: 0
+		letter-spacing: 0
+		@media (max-width: $tablet)
+			margin-top: 0
+			padding: 0 20px
+		.tab
+			cursor: pointer
+			display: inline-block
+			vertical-align: bottom
+			padding: 12px 30px
+			margin-left: -1px
+			text-align: center
+			position: relative
+
+			color: #333
+			font-size: 14px
+			font-weight: 600
+			line-height: 1em
+			height: 40px
+			min-width: 160px
+
+			border: 1px solid #e2e2e2
+			background: #fff
+			@media (max-width: $tablet)
+				width: 50%
+			@media (max-width: $mobile-large)
+				display: block
+				width: 100%
+			span
+				text-overflow: ellipsis
+				overflow: hidden
+				max-width: 100%
+				white-space: nowrap
+			&.active
+				cursor: initial
+				&:before
+					content: ''
+					position: absolute
+					background-color: #6bb6ee
+					top: 0
+					left: 0
+					width: 100%
+					height: 4px
+
+.pagination
+	display: block
+	text-align: center
+	font-size: 0
+	letter-spacing: 0
+	margin-top: 21px
+	a, b
+		color: #243e57
+		display: inline-block
+		position: relative
+		font-size: 18px
+		font-weight: 300
+		line-height: 1em
+		line-height: 30px
+		margin: 0 3px
+		height: 30px
+		vertical-align: middle
+		width: 30px
+		// TODO remove it
+		&:nth-last-child(1), &:nth-last-child(2)
+			display: none
+	b
+		&:after
+			content: ''
+			position: absolute
+			z-index: -1
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			// width: 30px
+			// height: 30px
+			background-color: #bed8f0
