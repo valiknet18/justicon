@@ -36,6 +36,7 @@
 			display: none
 
 // SIDEBAR NAVIGATION
+// .navigation-sidebar .nav.nav-sidebar .submenu .inner-holder > li
 .navigation-sidebar
 	background-color: #f1f1f1
 	box-shadow: 0 0 0 rgba(0, 0, 0, 0.15)
@@ -141,6 +142,9 @@
 				white-space: normal
 		.submenu
 			// display: none
+			opacity: 0
+			pointer-events: none
+			transition: opacity .3s
 			position: absolute
 			top: 0
 			left: 80px
@@ -163,18 +167,23 @@
 			&::-webkit-scrollbar-thumb:hover
 				background-color: #96c6ea
 			&.opened
-				display: block
+				// display: block
+				opacity: 1
+				pointer-events: all
 			.inner-holder
+				display: block
 				width: calc(100vw - 300px)
 				& > li
-					// display: inline-block
+					display: block
+					float: left
 					// vertical-align: top
 					width: 280px
 					// width: 48%
 					padding: 0 20px
 					margin-right: 40px
-					margin-bottom: 40px
-					float: left
+					// margin-bottom: 40px
+					overflow: hidden
+					// border: 1px solid #000
 					img
 						width: 100%
 					& > a
@@ -194,6 +203,10 @@
 							white-space: normal
 							line-height: 1
 							text-decoration: initial
+							color: #369
+							font-size: 13px
+							font-weight: 400
+							line-height: 16px
 							&:hover
 								background: none
 								color: #6bb6ee
