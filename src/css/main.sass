@@ -17,6 +17,24 @@
 	// height: 0
 	// width: 0
 
+.wrap, .container
+	margin: 0 auto
+	width: 72.7%
+	transition: transform 0.8s
+	@media (max-width: $tablet)
+		width: 100%
+
+// .container
+// 	display: block
+// 	margin: 0 auto
+// 	width: 970px
+// 	@media (min-width: $large)
+// 		width: 1170px
+// 	@media (max-width: $tablet)
+// 		width: 750px
+// 	@media (max-width: $mobile-large)
+// 		width: 100%
+
 .modal-image
 	transform-origin: 50% 50%;
 	transform: scale(1);
@@ -38,23 +56,11 @@
 		opacity: 1
 		pointer-events: all
 
-.wrap
-	margin: 0 auto
-	width: 72.7%
-	transition: transform 0.8s
-	@media (max-width: $tablet)
-		width: 100%
-
 .sidebar-opened
 	.container
 		overflow: hidden
 		& > .wrap
 			transform: translateX(280px)
-
-
-.container
-	display: block
-
 
 .clear
 	display: table
@@ -483,7 +489,7 @@ body > .menu
 		display: inline-block
 		margin-right: 6px
 
-.promo
+.hero-section
 	background: url('https://unsplash.it/1600/800/?blur&image=223') 50% 50%
 	background: url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407') 50% 50%
 	background-size: cover
@@ -567,20 +573,19 @@ body > .menu
 		b
 			white-space: nowrap
 
-.mservices
-	.wrap
-		margin-top: 50px
+.categories-section
+	.categories-content
+		margin: 50px auto
 		width: 80%
+		font-size: 0
+		letter-spacing: 0
+		text-align: center
 		@media (max-width: $tablet)
 			overflow: hidden
 			padding: 0 10px
 			width: 100%
 			z-index: 1
-	.fl1
-		font-size: 0
-		letter-spacing: 0
-		text-align: center
-		.item
+		.item, .owl-item
 			display: inline-block
 			vertical-align: top
 			margin-bottom: 64px
@@ -705,21 +710,23 @@ body > .menu
 						opacity: 1
 						transform: scale(1)
 						pointer-events: all
-
+		.owl-item
+			display: block
+			margin-right: 0
 
 .search-section
 	background: url('../img/bg/search-bg.jpg') 50% 50% no-repeat
 	background: url('http://frontend.web1.com.ua/justicon/images/bg-seach-main.jpg') 50% 50% no-repeat
 	background-size: cover
 	margin-top: -16px
-	.wrap
+	.container
 		margin: 0 auto
 		padding: 81px 20px 90px
 		width: 100%
 		max-width: 882px
 	.search-wrapper
 		text-align: center
-		h1
+		h1, h2, h3, h4
 			line-height: 1em
 			margin: 0 0 22px
 			color: #333
@@ -751,8 +758,7 @@ body > .menu
 			&:hover
 				background-color: #d63d1a
 
-.partners
-	// .wrap
+.partners-section
 	.controls, .paginator-holder
 		margin-top: 58px
 	.label-holder
@@ -765,7 +771,6 @@ body > .menu
 			font-weight: 300
 			line-height: 1em
 	.parnters-holder
-		// .lnb.disabled
 		.caroufredsel_wrapper
 			overflow: hidden
 			overflow-x: auto
@@ -776,7 +781,7 @@ body > .menu
 			.parnters-container
 				white-space: nowrap
 				width: 300%
-				.part
+				.partner
 					display: inline-block
 					vertical-align: middle
 					// max-height: 100px
@@ -793,64 +798,67 @@ body > .menu
 	.top-news-holder
 		padding-top: 30px
 		padding-bottom: 14px
-		// .lnb.disabled
-		.caroufredsel_wrapper
+		overflow: auto
+		&::-webkit-scrollbar
+			height: 0
+			width: 0
+	.parnters-container
+		font-size: 0
+		letter-spacing: 0
+		white-space: nowrap
+	.new-item, .owl-item
+		margin-right: 21px
+		position: relative
+		display: inline-block
+		width: 325px
+		height: 300px
+		overflow: hidden
+		white-space: normal
+		&:before
+			background: #fff
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			width: 100%
+			opacity: 0.6
+		.label
+			color: #36393d
+			font-size: 20px
+			font-weight: 300
+			line-height: 24px
 			overflow: hidden
-			.parnters-container
-				width: 800%
-				font-size: 0
-				letter-spacing: 0
-				white-space: nowrap
-				.part
-					margin-right: 21px
-					position: relative
-					display: inline-block
-					width: 325px
-					height: 300px
-					overflow: hidden
-					&:before
-						background: #fff
-						content: ''
-						position: absolute
-						left: 0
-						top: 0
-						height: 100%
-						width: 100%
-						opacity: 0.6
-					.label
-						color: #36393d
-						font-size: 20px
-						font-weight: 300
-						line-height: 24px
-						overflow: hidden
-						max-height: 50%
-						position: absolute
-						left: 30px
-						right: 30px
-						top: 30px
-						white-space: normal
-					// img
-					.btn
-						color: white
-						font-size: 14px
-						font-weight: 400
-						text-transform: uppercase
-						background-color: transparent
-						border: 2px solid white
-						border-radius: 3px
-						padding: 8px 26px
-						position: absolute
-						bottom: 46px
-						white-space: nowrap
-						left: 50%
-						transform: translateX(-50%)
-						transition: background .3s, color .3s, border .3s
-					&:hover
-						.btn
-							background-color: #243e57
-							border-color: #243e57
-
-.about.opensans
+			max-height: 50%
+			position: absolute
+			left: 30px
+			right: 30px
+			top: 30px
+			white-space: normal
+		// img
+		.btn
+			color: white
+			font-size: 14px
+			font-weight: 400
+			text-transform: uppercase
+			background-color: transparent
+			border: 2px solid white
+			border-radius: 3px
+			padding: 8px 26px
+			position: absolute
+			bottom: 46px
+			white-space: nowrap
+			left: 50%
+			transform: translateX(-50%)
+			transition: background .3s, color .3s, border .3s
+		&:hover
+			.btn
+				background-color: #243e57
+				border-color: #243e57
+	.owl-item
+		display: block
+		margin-right: 0
+.about-container
 	@media (max-width: $tablet)
 		padding: 0 20px
 	&, p

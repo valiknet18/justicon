@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
 	jade = require('gulp-jade'),
 	sass = require('gulp-sass'),
+	sourcemaps = require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync'),
 	reload = require('browser-sync').reload;
@@ -42,9 +43,16 @@ var serverConfig = {
 
 // SASS
 gulp.task('sass', function () {
+	// outputStyle: 'expanded'
+	// outputStyle: 'compressed'
 	gulp.src(path.src.style)
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sourcemaps.init())
+		.pipe(sass({
+			soursemap: true,
+			outputStyle: 'expanded'
+		}).on('error', sass.logError))
 		.pipe(autoprefixer({browsers:['last 4 versions']}))
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.dist.css))
 		.pipe(reload({stream:true}));
 });

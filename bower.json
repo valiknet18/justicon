@@ -30,6 +30,7 @@
     "smoothscroll-for-websites": "~1.4.4",
     "bootstrap": "^3.3.6",
     "bxslider": "*",
-    "masonry": "^4.1.0"
+    "masonry": "^4.1.0",
+    "owl.carousel": "owl2#^0.1.0"
   }
 }

@@ -80,7 +80,6 @@ html(lang='en')
 								.clear
 						.rnb(style='display: block;')
 						.clear
-			.clear
 			.mservices
 				.wrap
 					.fl1
@@ -318,67 +317,6 @@ html(lang='en')
 						input.text(type='text', placeholder='Поиск')
 						input.submit(type='submit', value='найти')
 
-		noscript
-			| <div><img src="//mc.yandex.ru/watch/14609872" style="position:absolute; left:-9999px;" alt="" /></div>
-		// /Yandex.Metrika counter
-		// Start SiteHeart code
-		.title-search-result
-		#bx-admin-prefix.bx-core-window.bx-core-adm-dialog(style='z-index: 0; position: absolute; display: none; top: 10px; left: 0px;')
-			.bx-core-adm-dialog-head(style='cursor: move;')
-				span.bx-core-adm-dialog-head-inner Сообщение об ошибке
-				.bx-core-adm-dialog-head-icons
-					span.bx-core-adm-icon-close(title='Закрыть')
-			.bx-core-adm-dialog-content-wrap.adm-workarea
-				.bx-core-adm-dialog-content(style='height: 130px; width: 350px;')
-					.bx-core-adm-dialog-head-block(style='display: none;')  
-					.bx-core-adm-dialog-content-wrap-inner
-						div
-							#send-error
-								table.bx-width100
-									tbody
-										tr
-											td.no-bootom-border(valign='top', style='padding-top: 10px !important;')
-												img(src='/bitrix/images/altasib.errorsend/altasib.errorsend.ok.gif', style='float: left; margin-right: 8px')
-											td.no-bootom-border(width='90%', style='padding-top: 8px !important;')
-												span(style='color: green; font-size: 14px')
-													b                             Ваше сообщение отправлено.
-												span(style='font-size: 12px; color: #7d7d7d')
-													br
-													br
-													| Спасибо за внимание!
-				.bx-core-adm-dialog-buttons
-					input#close(type='button', name='close', value='Закрыть')
-		#bx-admin-prefix.bx-core-window.bx-core-adm-dialog(style='z-index: 0; position: absolute; display: none; top: 10px; left: 0px;')
-			.bx-core-adm-dialog-head(style='cursor: move;')
-				span.bx-core-adm-dialog-head-inner Сообщение об ошибке
-				.bx-core-adm-dialog-head-icons
-					span.bx-core-adm-icon-close(title='Закрыть')
-			.bx-core-adm-dialog-content-wrap.adm-workarea
-				.bx-core-adm-dialog-content(style='height: 300px; width: 510px;')
-					.bx-core-adm-dialog-head-block(style='display: none;')  
-					.bx-core-adm-dialog-content-wrap-inner
-						div
-							#send-error
-								img(style='float: left; margin-right: 15px;', src='/bitrix/images/altasib.errorsend/altasib.errorsend.png')
-								br
-								span(style='font-size: 16px; color: #143f6d')
-									b Послать сообщение об ошибке автору?
-									br
-									span(style='font-size: 10px; color: #7d7d7d') (ваш браузер останется на той же странице)
-								br(style='clear: both')
-								br
-								span(style='font-size: 13px; color: #000')
-									b Найденная Вами ошибка в тексте:
-								div(style='border: 1px solid #d1d1d1; background-color: #fafafa; width: 470px; padding: 8px; margin: 7px 0px 13px 0px; height: 55px; color: #7d7d7d; font-size: 12px;')
-									span#error_start
-									font#error_body(color='red')
-									span#error_end
-								small(style='color: #7d7d7d') Комментарий для автора (необязательно):
-								div(style='width: 470px; height: 55px; padding: 8px; border: 1px solid #4b4b4b; margin: 3px 0px 3px 0px;')
-									textarea#error-comment(name='comment', rows='3', cols='5', style='width: 100%; border: 0px;  height: 55px; padding: 0px')
-				.bx-core-adm-dialog-buttons
-					input#ok(type='button', name='ok', value='Отправить')
-					input#cancel(type='button', name='cancel', value='Отменить')
 
 		include ./partials/footer.jade
 		include ./partials/modals.jade
