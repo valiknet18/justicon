@@ -1544,86 +1544,86 @@ body > .menu
 			display: block
 			table-layout: auto
 			width: 100%
-		tr
-			vertical-align: top
-			@media (max-width: $tablet)
-				display: block
-				width: 100%
-			td
-				vertical-align: middle
-				@media (max-width: $tablet)
-					padding: 6px 0
-					display: block
-					width: 100%
-				&:nth-child(1)
-					width: 50%
-
-					color: #0093dd
-					font-size: 16px
-					font-weight: 400
-					line-height: 20px
-					padding-right: 20px
-					// position: relative
-					@media (max-width: $tablet)
-						width: 100%
-					a
-						&:hover
-							text-decoration: underline
-				&:nth-child(2)
-					text-align: right
-					padding-right: 20px
-					width: 30%
-
-					color: #999
-					font-size: 14px
-					font-weight: 400
-					line-height: 20px
-					@media (max-width: $tablet)
-						text-align: left
-						white-space: nowrap
-						width: 100%
-				&:nth-child(3)
-					width: 20%
-
-					color: #243e57
-					font-size: 16px
-					font-weight: 600
-					line-height: 20px
-					position: relative
-					padding-left: 20px
-					text-align: right
-					padding-right: 44px
-					pre
-						display: inline-block
-						vertical-align: middle
-						white-space: nowrap
-						text-overflow: ellipsis
-						max-width: 100%
-					&:after
-						content: ''
-						display: inline-block
-						vertical-align: middle
-						height: 20px
-						width: 23px
-						margin-left: 10px
-						background: url('../img/icons/price-icbask.png') 50% 50% no-repeat
-
-						position: absolute
-						top: 50%
-						right: 10px
-						margin-top: -10px
-						
-					@media (max-width: $tablet)
-						padding-left: 0
-						white-space: nowrap
-						width: 100%
-				&:nth-child(4)
-					width: 10%
 		&:nth-child(odd)
 			background-color: #ffffff
 		&:nth-child(even)
 			background-color: #f9f9f9
 			background-color: red
+	tr
+		vertical-align: top
+		@media (max-width: $tablet)
+			display: block
+			width: 100%
+	td
+		vertical-align: middle
+		@media (max-width: $tablet)
+			padding: 6px 0
+			display: block
+			width: 100%
+		&:nth-child(1)
+			width: 50%
+
+			color: #0093dd
+			font-size: 16px
+			font-weight: 400
+			line-height: 20px
+			padding-right: 20px
+			// position: relative
+			@media (max-width: $tablet)
+				width: 100%
+			a
+				&:hover
+					text-decoration: underline
+		&:nth-child(2)
+			text-align: right
+			padding-right: 20px
+			width: 30%
+
+			color: #999
+			font-size: 14px
+			font-weight: 400
+			line-height: 20px
+			@media (max-width: $tablet)
+				text-align: left
+				white-space: nowrap
+				width: 100%
+		&:nth-child(3)
+			width: 20%
+
+			color: #243e57
+			font-size: 16px
+			font-weight: 600
+			line-height: 20px
+			position: relative
+			padding-left: 20px
+			text-align: right
+			padding-right: 44px
+			pre
+				display: inline-block
+				vertical-align: middle
+				white-space: nowrap
+				text-overflow: ellipsis
+				max-width: 100%
+			&:after
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				height: 20px
+				width: 23px
+				margin-left: 10px
+				background: url('../img/icons/price-icbask.png') 50% 50% no-repeat
+
+				position: absolute
+				top: 50%
+				right: 10px
+				margin-top: -10px
+				
+			@media (max-width: $tablet)
+				padding-left: 0
+				white-space: nowrap
+				width: 100%
+		&:nth-child(4)
+			width: 10%
 	.price-item
 		border: 1px solid #bed8f0
 		margin-top: -1px
@@ -2116,3 +2116,112 @@ body > .menu
 	background-position: -126px 0px
 .soc5
 	background-position: -168px 0px
+
+
+.breadcrumb
+
+.service-tab-buttons
+	margin: -40px 0 40px
+	font-size: 0
+	@media (max-width: $tablet)
+		padding: 0 20px
+	@media (max-width: $mobile-large)
+		padding: 0 10px
+		text-align: center
+	li
+		background: white
+		display: inline-block
+		position: relative
+		height: 40px
+		color: #333
+		font-size: 14px
+		font-weight: 600
+		line-height: 20px
+		border: 1px solid #e2e2e2
+		&:not(:first-child)
+			border-left: none
+		&.active
+			border-bottom-color: transparent
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				height: 4px
+		a
+			display: block
+			height: 100%
+			padding: 10px 50px
+			@media (max-width: $mobile-large)
+				padding: 10px 25px
+			@media (max-width: $mobile-small)
+				padding: 10px
+
+
+.service-introduction
+	background: url('../img/bg/service-background-1.jpg') 50% 50% no-repeat
+	background-size: cover
+	padding: 40px 0
+	@media (max-width: $tablet)
+		padding: 40px 20px
+	.service-header
+		max-width: 600px
+		h1, h2, h3, h4, h5, h6
+			color: #243e57
+			font-size: 36px
+			font-weight: 300
+			line-height: 36px
+		&, p
+			color: #333
+			font-size: 16px
+			font-weight: 400
+			line-height: 20px
+	.service-price
+		color: #243e57
+		font-weight: 600
+		font-size: 14px
+		margin: 40px 0
+		b
+			font-size: 30px
+			@media (max-width: $mobile-large)
+				font-size: 22px
+		li
+			display: inline-block
+			margin: 10px 22px 10px 0
+		.zaprosconl, .zaprosl
+			border-radius: 3px
+			color: white
+			display: inline-block
+			font-size: 12px
+			font-weight: 400
+			min-width: 160px
+			text-align: center
+			text-transform: uppercase
+			margin-right: 8px
+			padding: 12px 24px
+		.zaprosconl
+			background-color: #f54f29
+		.zaprosl
+			background-color: #243e57
+		.buttons-holder
+			@media (max-width: $mobile-large)
+				display: block
+				margin-right: 0
+			@media (max-width: $mobile-small)
+				a
+					display: block
+					margin-top: 12px
+		
+	#servbuts
+		.servb1
+			span
+		.servb1
+			span
+		.servb2
+			.zaprosconl
+			.zaprosl
+
+.service-page-content
+	@media (max-width: $tablet)
+			padding: 0 20px
