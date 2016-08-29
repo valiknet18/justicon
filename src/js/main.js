@@ -661,9 +661,11 @@ $(document).on('ready', function () {
 				if ($sidebar.hasClass('expanded')) {
 					$body
 						.addClass('sidebar-opened');
+					$servicesLink.addClass('opened');
 				} else {
 					$body
 						.removeClass('sidebar-opened');
+					$servicesLink.removeClass('opened');
 				}
 			});
 

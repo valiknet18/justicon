@@ -20,9 +20,15 @@
 .wrap, .container
 	margin: 0 auto
 	width: 72.7%
-	transition: transform 0.8s
+	transition: transform 0.5s ease-out
 	@media (max-width: $tablet)
 		width: 100%
+.footer, .wrap > .consult-me-block
+	transition: transform 0.5s ease-out
+
+.sidebar-opened
+	.container > .wrap, & > .footer, .wrap > .consult-me-block
+		transform: translateX(280px)
 
 // .container
 // 	display: block
@@ -55,12 +61,6 @@
 	&.active
 		opacity: 1
 		pointer-events: all
-
-.sidebar-opened
-	.container
-		overflow: hidden
-		& > .wrap
-			transform: translateX(280px)
 
 .clear
 	display: table
@@ -156,6 +156,20 @@ body > .menu
 		& > ul
 			@media (max-width: $tablet)
 				display: none
+			& > li:nth-child(2)
+				position: relative
+				svg, img
+					position: absolute
+					top: 50%
+					left: -20px
+					height: 14px
+					width: 14px
+					transform: rotateZ(0deg)
+				&.opened
+					&, a
+						color: $main-color
+					svg, img
+						transform: rotateZ(90deg)
 	&.fixed
 		.wrap
 			height: 50px
