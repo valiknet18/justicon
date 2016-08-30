@@ -657,6 +657,7 @@ $(document).on('ready', function () {
 				$sidebar
 					.toggleClass('expanded')
 					.removeClass('opened');
+				$servicesLink.removeClass('opened');
 
 				if ($sidebar.hasClass('expanded')) {
 					$body
@@ -665,7 +666,7 @@ $(document).on('ready', function () {
 				} else {
 					$body
 						.removeClass('sidebar-opened');
-					$servicesLink.removeClass('opened');
+					// $servicesLink.removeClass('opened');
 				}
 			});
 
@@ -688,6 +689,7 @@ $(document).on('ready', function () {
 
 					$body
 						.addClass('sidebar-opened');
+					$servicesLink.addClass('opened');
 
 					bodyOverflow.unfixBody();
 
@@ -700,9 +702,11 @@ $(document).on('ready', function () {
 					if ($sidebar.hasClass('expanded')) {
 						$body
 							.addClass('sidebar-opened');
+						$servicesLink.addClass('opened');
 					} else {
 						$body
 							.removeClass('sidebar-opened');
+						$servicesLink.removeClass('opened');
 					}
 
 				}
