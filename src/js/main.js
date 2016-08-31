@@ -208,7 +208,11 @@ $(document).on('ready', function () {
 
 	})();
 
-		//
+		// tabs
+		$('.tabs-holder a').click(function (e) {
+			e.preventDefault();
+			$(this).tab('show');
+		});
 
 		// modals
 		var modals = {

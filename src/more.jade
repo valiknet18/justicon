@@ -44,68 +44,58 @@ html(lang='en')
 				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
 					span(itemprop='title') Представительство в исполнительном производстве
 
-			ul.service-tab-buttons
-				li#tbd1.active
-					a(href='#') Все
-				li#tbd7
-					a(href='#') Подробно
-				li#tbd3
-					a(href='#') Цены
-				li#tbd4
-					a(href='#') Алгоритм
+			ul.service-tab-buttons.tabs-holder
+				li.active
+					a(href='#tbd1' aria-controls="profile" role="tab" data-toggle="tab") Все
+				li
+					a(href='#tbd7' aria-controls="profile" role="tab" data-toggle="tab") Подробно
+				li
+					a(href='#tbd3' aria-controls="profile" role="tab" data-toggle="tab") Цены
+				li
+					a(href='#tbd4' aria-controls="profile" role="tab" data-toggle="tab") Алгоритм
 			.main-container.service-page-content
-				.inner
-					.tabd.tbd1.tabact
+				.tab-content
+					.tab-pane#tbd1.active
 						.prevt
-							div(align='left')
-								font(color='#0054A5', size='4')
-									b
-										font(color='#FF0000') ? 
-										| ЗАДАЧА
-							p(align='justify')  Вы получили решение суда, но не знаете, что делать дальше?! 
-							p(align='justify')  У Вас есть необходимость выполнить решение иностранного суда?! 
-							p(align='justify')
-								| Пришло постановление об открытии исполнительного производства в отношении Вас как должника?!
-							p(align='justify')  Исполнительное производство «стоит на месте» и нет результата?! 
-							p(align='left')
-								font(color='#0054A5', size='4')
-									b
-										font(color='#FF0000')
-											br
-							p(align='left')
-								font(color='#0054A5', size='4')
-									b
-										font(color='#FF0000') ! 
-										| ОПТИМАЛЬНОЕ РЕШЕНИЕ
-							p(align='justify')
+							h2
+								font(color='#FF0000') ? 
+								| ЗАДАЧА
+							p.
+								Вы получили решение суда, но не знаете, что делать дальше?! 
+								У Вас есть необходимость выполнить решение иностранного суда?! 
+								Пришло постановление об открытии исполнительного производства в отношении Вас как должника?!
+								Исполнительное производство «стоит на месте» и нет результата?! 
+							h2
+								font(color='#FF0000') ! 
+								| ОПТИМАЛЬНОЕ РЕШЕНИЕ
+							p
 								b
 									| В такой ситуации, лучшим решением будет привлечение опытных специалистов для представительства Ваших интересов в исполнительном производстве!
-							p(align='justify')
+							p
 								| Участие в исполнительном производстве - финишная прямая получения нужного Вам результата в процессе защиты Ваших интересов и прав!
-							p(align='justify')
 								b
 									| Заказав у нас услугу представительства интересов в исполнительном производстве, Вы получаете ряд преимуществ:
-							p(align='justify')  
-							div(align='justify')
+							p
+							div
 								ul
 									li Представительство интересов осуществляется опытными специалистами 
 									li Вы не тратите свое время на постоянное общение с исполнителями 
 									li Возможность повлиять на ход исполнения решения 
 									li Высокие шансы на получение нужного Вам результата 
 								|  Если Вы получили решение суда, следующим этапом будет его выполнение. Вы можете - либо заниматься этим самостоятельно, либо заказать сопровождение этого процесса у специалистов с опытом работы и пониманием законодательства. Мы не отговариваем Вас от первого варианта, но
-							p(align='justify')
+							p
 								b Самостоятельное участие в исполнительном производстве это: 
-							p(align='justify')
+							p
 								font(color='#0054A5') –
 								i  "Риск утери исполнительного дела " 
-							p(align='justify')
+							p
 								i
 									font(color='#0054A5') –
 									|  "Возможность затягивания исполнительного производства "
-							p(align='justify')
+							p
 								i
 									| – "Вариант не выполнения судебного решения"
-							p(align='justify')
+							p
 								i
 									font(color='#0054A5') –
 									|  "Риск ошибки в процедуре выполнения судебного решения"
@@ -135,7 +125,7 @@ html(lang='en')
 								font(color='#0054A5', size='4')
 									b
 										| Предоставьте общение с исполнительной службой нашим специалистам, и мы гарантированно достигнем результата!
-					.tabd.tbd7
+					.tab-pane#tbd7
 						.tabpl Подробно
 						div(align='justify')
 							| Исполнительное производство как завершающая стадия судебного производства и принудительное выполнение решений других органов (должностных лиц) – это совокупность действий органов и должностных лиц, определенных в Законе Украины «Об исполнительном производстве», направленных на принудительное выполнение решений судов и других органов.
@@ -214,7 +204,7 @@ html(lang='en')
 								li
 									| участие в исполнительных действиях (наложение ареста (опись), выезд на место нахождения должника, розыск должника, реализация имущества, выселение, принудительное вхождение);
 								li составление документов (жалоба, заявление, возражение, отвод и др.). 
-					.tabd.tbd3
+					.tab-pane#tbd3
 						.tabpl Цены
 						div(style='margin-top: 25px')
 						.table-holder
@@ -233,7 +223,7 @@ html(lang='en')
 							a.view-all-price-list(href='/prays-list/')
 								| Посмотреть весь прайс-лист
 								span.arrow-down
-					.tabd.tbd4
+					.tab-pane#tbd4
 						.tabpl Алгоритм
 						.table-holder
 							table.table.docs
@@ -306,38 +296,7 @@ html(lang='en')
 											ul
 												li непосредственное участие в ходе проведения исполнительных действий 
 										td(align='center', colspan='1') 1 р.д.
-					.bottom
-						script(type='text/javascript').
-							(function() {
-							if (window.pluso)if (typeof window.pluso.start == "function") return;
-							if (window.ifpluso==undefined) { window.ifpluso = 1;
-							var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-							s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-							s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-							var h=d[g]('body')[0];
-							h.appendChild(s);
-							}})();
 						.pluso(data-background='transparent', data-options='medium,square,line,horizontal,nocounter,theme=06', data-services='facebook,twitter,google,vkontakte,print')
-						.clear
-					// 'start_frame_cache_KeBBtj'
-					#disqus_thread
-					script(type='text/javascript').
-						/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-						var disqus_shortname = 'justicon'; // Required - Replace example with your forum shortname
-						/* * * DON'T EDIT BELOW THIS LINE * * */
-						(function() {
-						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-						})();
-					noscript
-						| Please enable JavaScript to view the 
-						a(href='http://disqus.com/?ref_noscript') comments powered by Disqus.
-					a.dsq-brlink(href='http://disqus.com')
-						| comments powered by 
-						span.logo-disqus Disqus
-					// 'end_frame_cache_KeBBtj'
-					.clear
 
 
 
