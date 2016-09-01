@@ -6,6 +6,27 @@ html(lang='en')
 	body
 		include ./partials/navigation.jade
 
+		.container
+			.breadcrumb
+				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+					a(itemprop='url', href='/', title='Главная')
+						span(itemprop='title') Главная
+				div  / 
+				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+					a(itemprop='url', href='/uslugi/', title='Услуги')
+						span(itemprop='title') Услуги
+				div  / 
+				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+					a(itemprop='url', href='/uslugi/sud/', title='Судебная практика')
+						span(itemprop='title') Судебная практика
+				div  / 
+				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+					a(itemprop='url', href='/uslugi/sud/ispoln/', title='Представительство в исполнительном производстве')
+						span(itemprop='title') Представительство в исполнительном производстве
+				div  / 
+				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+					span(itemprop='title') Представительство в исполнительном производстве
+
 		.service-introduction
 			.container
 				.service-header
@@ -16,34 +37,14 @@ html(lang='en')
 					li
 						b 30
 						|  р. дней
-					li
-						b от 1000
+					li от 
+						b 1000
 						|  грн.
 					li.buttons-holder
 						a.zaprosconl(href='#') Заказать консультацию
 						a.zaprosl(href='#') Заказать услугу
 
 		.container
-			.breadcrumb.hidden
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					a(itemprop='url', href='/', title='Главная')
-						span(itemprop='title') Главная
-				div  » 
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					a(itemprop='url', href='/uslugi/', title='Услуги')
-						span(itemprop='title') Услуги
-				div  » 
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					a(itemprop='url', href='/uslugi/sud/', title='Судебная практика')
-						span(itemprop='title') Судебная практика
-				div  » 
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					a(itemprop='url', href='/uslugi/sud/ispoln/', title='Представительство в исполнительном производстве')
-						span(itemprop='title') Представительство в исполнительном производстве
-				div  » 
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					span(itemprop='title') Представительство в исполнительном производстве
-
 			ul.service-tab-buttons.tabs-holder
 				li.active
 					a(href='#tbd1' aria-controls="profile" role="tab" data-toggle="tab") Все
@@ -56,18 +57,15 @@ html(lang='en')
 			.main-container.service-page-content
 				.tab-content
 					.tab-pane#tbd1.active
-						.prevt
-							h2
-								font(color='#FF0000') ? 
-								| ЗАДАЧА
+						.service-page-task
+							h2 ЗАДАЧА
 							p.
 								Вы получили решение суда, но не знаете, что делать дальше?! 
 								У Вас есть необходимость выполнить решение иностранного суда?! 
 								Пришло постановление об открытии исполнительного производства в отношении Вас как должника?!
 								Исполнительное производство «стоит на месте» и нет результата?! 
-							h2
-								font(color='#FF0000') ! 
-								| ОПТИМАЛЬНОЕ РЕШЕНИЕ
+						.service-page-optimal
+							h2 ОПТИМАЛЬНОЕ РЕШЕНИЕ
 							p
 								b
 									| В такой ситуации, лучшим решением будет привлечение опытных специалистов для представительства Ваших интересов в исполнительном производстве!
