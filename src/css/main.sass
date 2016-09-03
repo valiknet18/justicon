@@ -225,7 +225,7 @@ body > .menu
 			background-color: #fff
 			border-left: 1px solid #eee
 		&::-webkit-scrollbar-thumb
-			background-color: #6bb6ee
+			background-color: $main-color
 		&::-webkit-scrollbar-thumb:hover
 			background-color: #96c6ea
 		a
@@ -477,7 +477,7 @@ body > .menu
 		height: 50px
 		vertical-align: middle
 		&[type="submit"]
-			background: #6bb6ee url('../img/icons/search-icon-1.svg') 50% 50% no-repeat
+			background: $main-color url('../img/icons/search-icon-1.svg') 50% 50% no-repeat
 			position: absolute
 			right: 0
 			top: 0
@@ -1079,7 +1079,7 @@ body > .menu
 			border: 1px solid #e2e2e2
 			box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.06)
 		input[type="submit"]
-			background: #6bb6ee url('../img/icons/search-icon-1.svg') 50% 50% no-repeat
+			background: $main-color url('../img/icons/search-icon-1.svg') 50% 50% no-repeat
 			border: none
 			position: absolute
 			right: 0
@@ -1117,7 +1117,7 @@ body > .menu
 						font-size: 20px
 				a
 					color: #243e57
-					color: #6bb6ee
+					color: $main-color
 					font-weight: 400
 					&:hover
 						text-decoration: underline
@@ -1304,7 +1304,7 @@ body > .menu
 			background-color: #fff
 			border-left: 1px solid #eee
 		&::-webkit-scrollbar-thumb
-			background-color: #6bb6ee
+			background-color: $main-color
 		&::-webkit-scrollbar-thumb:hover
 			background-color: #96c6eas
 		.close
@@ -1316,7 +1316,7 @@ body > .menu
 			background: url('../img/icons/cross-button-4.svg') 50% 50% no-repeat
 			background-size: contain
 			cursor: pointer
-			// background-color: #6bb6ee
+			// background-color: $main-color
 		.cl-mod
 			box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3)
 			border-radius: 3px
@@ -1378,7 +1378,7 @@ body > .menu
 					background-color: #fff
 					border-left: 1px solid #eee
 				&::-webkit-scrollbar-thumb
-					background-color: #6bb6ee
+					background-color: $main-color
 				&::-webkit-scrollbar-thumb:hover
 					background-color: #96c6ea
 				&.active
@@ -1432,7 +1432,7 @@ body > .menu
 		font-size: 38px
 		font-weight: 300
 		line-height: 48px
-		background-color: #6bb6ee
+		background-color: $main-color
 		text-align: center
 		border-radius: 50%
 		@media (max-width: $tablet)
@@ -1454,12 +1454,12 @@ body > .menu
 	.pseudo-plus-icon
 		&:before
 			content: ''
-			// background-color: #6bb6ee
+			// background-color: $main-color
 			display: inline-block
 			font-family: FontAwesome
 			border-radius: 50%
 			// color: #fff
-			color: #6bb6ee
+			color: $main-color
 			font-size: 16px
 			position: relative
 			margin-right: 18px
@@ -1720,9 +1720,9 @@ body > .menu
 		&:before
 			content: "\f0e3"
 			display: block
-			border: 1px solid #6bb6ee
+			border: 1px solid $main-color
 			border-radius: 50%
-			color: #6bb6ee
+			color: $main-color
 			font-family: FontAwesome
 			font-size: 24px
 			text-align: center
@@ -2261,78 +2261,57 @@ body > .menu
 		padding: 0 20px
 	.tab-pane
 		margin-bottom: 40px
+		padding-left: 60px
 	&, p, span
 		color: #666
 		font-size: 14px
 		font-weight: 400
 		line-height: 1.5em
-	%pseudos
-		&:before
-			display: inline-block
-			border-radius: 50%
-			text-align: center
-			width: 50px
-			height: 50px
-			line-height: 50px
-			background-color: #6bb6ee
-			border: 4px solid #6bb6ee
-			color: white
-			font-size: 38px
-			font-weight: 300
-			margin-right: 10px
-			vertical-align: top
-		& + p
-			margin-top: -10px
+	a
+		color: $main-color
 	h1, h2, h3, h4
 		color: #243e57
 		font-size: 28px
 		font-weight: 300
 		line-height: 1.5em
 		vertical-align: top
-	.service-page-task,
-	.service-page-optimal,
-	.service-page-advantages,
-	.service-page-important,
-	.service-page-law,
-	.service-page-base
-		h1, h2, h3, h4
-			margin-top: 20px
-			@extend %pseudos
-		p
-			padding-left: 70px
-		ul
-			padding-left: 100px
-			li
-				margin: 10px 0
-				&:before
-					content: ''
-					display: inline-block
-					margin-right: 10px
-					background: url('../img/icons/list-done-1.svg') 50% 50% no-repeat
-					background-size: contain
-					height: 12px
-					width: 12px
-	.service-page-task
-		h1, h2, h3, h4
+		margin-top: 20px
+		position: relative
+		i
+			position: absolute
+			left: -60px
+			top: 4px
+			display: inline-block
+			border-radius: 50%
+			text-align: center
+			width: 50px
+			height: 50px
+			line-height: 1em
+			line-height: 50px
+			background-color: $main-color
+			// border: 2px solid $main-color
+			padding: 0
+			color: white
+			font-size: 38px
+			font-weight: 300
+			margin: 0 10px 0 0
+			vertical-align: middle
+			font-style: normal
+	// p
+	ul
+		padding-left: 30px
+		li
+			margin: 10px 0
+			position: relative
+			padding-left: 12px
 			&:before
-				content: '?'
-	.service-page-optimal
-		h1, h2, h3, h4
-			&:before
-				content: '!'
-	.service-page-advantages
-		h1, h2, h3, h4
-			&:before
-				content: '+'
-	.service-page-important
-		h1, h2, h3, h4
-			&:before
-				content: '!'
-	.service-page-law
-		h1, h2, h3, h4
-			&:before
-				content: '§'
-	.service-page-base
-		h1, h2, h3, h4
-			&:before
-				content: 'Ξ'
+				position: absolute
+				top: 6px
+				left: -12px
+				content: ''
+				display: inline-block
+				margin-right: 10px
+				background: url('../img/icons/list-done-1.svg') 50% 50% no-repeat
+				background-size: contain
+				height: 12px
+				width: 12px
