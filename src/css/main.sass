@@ -602,6 +602,147 @@ body > .menu
 			white-space: nowrap
 
 .categories-section
+	// .categories-content
+	// 	margin: 50px auto
+	// 	width: 80%
+	// 	font-size: 0
+	// 	letter-spacing: 0
+	// 	text-align: center
+	// 	@media (max-width: $tablet)
+	// 		overflow: hidden
+	// 		padding: 0 10px
+	// 		width: 100%
+	// 		z-index: 1
+	// 	.item, .owl-item
+	// 		display: inline-block
+	// 		vertical-align: top
+	// 		margin-bottom: 64px
+	// 		position: relative
+	// 		width: 25%
+	// 		@media (max-width: $tablet)
+	// 			width: 50%
+	// 		@media (max-width: $mobile-large)
+	// 			width: 100%
+	// 			width: 50%
+	// 			padding: 0 5px
+	// 			margin-bottom: 40px
+	// 			position: relative
+	// 		.title
+	// 			&, & a
+	// 				color: #36393d
+	// 				font-size: 14px
+	// 				font-weight: 700
+	// 				text-transform: uppercase
+	// 				text-align: center
+	// 				padding-top: 6px
+	// 				@media (max-width: $mobile-large)
+	// 					margin-top: -20px
+	// 					padding-top: 0
+	// 					font-size: 11px
+	// 			&:before
+	// 				// content: ''
+	// 				$pseudo-width: 190px
+	// 				background: #000
+	// 				display: inline-block
+	// 				left: 50%
+	// 				position: absolute
+	// 				margin-left: $pseudo-width / -2
+	// 				top: -1px
+	// 				height: 1px
+	// 				width: $pseudo-width
+	// 		.title-hover
+	// 			&, & a
+	// 				color: #36393d
+	// 				font-size: 14px
+	// 				font-weight: 700
+	// 				text-transform: uppercase
+	// 				margin-bottom: 20px
+	// 				@media (max-width: $mobile-large)
+	// 					font-size: 11px
+	// 		.adc.pract
+	// 			.s-all
+	// 				border-radius: 50%
+	// 				height: 130px
+	// 				width: 130px
+	// 				display: inline-block
+	// 				@media (max-width: $mobile-large)
+	// 					transform: scale(0.6)
+	// 			.s1
+	// 				@extend .s-all
+	// 				background-position: -1px -98px
+	// 			.s2
+	// 				@extend .s-all
+	// 				background-position: -199px -100px
+	// 			.s3
+	// 				@extend .s-all
+	// 				background-position: -399px -100px
+	// 			.s4
+	// 				@extend .s-all
+	// 				background-position: -1px -271px
+	// 			.s5
+	// 				@extend .s-all
+	// 				background-position: -198px -438px
+	// 			.s6
+	// 				@extend .s-all
+	// 				background-position: 0 -438px
+	// 			.s7
+	// 				@extend .s-all
+	// 				background-position: -396px -272px
+	// 			.s8
+	// 				@extend .s-all
+	// 				background-position: -197px -271px
+	// 			.text
+	// 				pointer-events: none
+
+	// 				position: absolute
+	// 				left: 0
+	// 				top: 0
+	// 				background: transparent
+	// 				// right: 0
+	// 				// bottom: 0
+	// 				height: 100%
+	// 				width: 100%
+	// 				opacity: 0
+	// 				text-align: center
+	// 				transform: scale(1.6)
+	// 				transform-origin: 50% 50%
+	// 				transition: transform .3s, opacity .3s, background .3s
+	// 				// border-radius: 50%
+	// 				z-index: 1
+
+	// 				// display: table-cell
+	// 				// vertical-align: middle
+
+	// 				display: flex
+	// 				justify-content: center
+	// 				align-items: center
+
+	// 				margin-bottom: -30px
+
+
+	// 				// TODO remove
+	// 				// pointer-events: none
+	// 				a
+	// 					color: #36393d
+	// 					font-size: 14px
+	// 					// line-height: 18px
+	// 					margin-bottom: 12px
+	// 					line-height: 1.2em
+	// 					display: block
+	// 					@media (max-width: $mobile-large)
+	// 						font-size: 11px
+	// 			&:hover
+	// 				// border-radius: 50%
+	// 				.text
+	// 					background: #fff
+	// 					opacity: 1
+	// 					transform: scale(1)
+	// 					pointer-events: all
+	// 	.owl-item
+	// 		display: block
+	// 		margin-right: 0
+
+.categories-section
 	.categories-content
 		margin: 50px auto
 		width: 80%
@@ -613,10 +754,10 @@ body > .menu
 			padding: 0 10px
 			width: 100%
 			z-index: 1
-		.item, .owl-item
+		.item
 			display: inline-block
 			vertical-align: top
-			margin-bottom: 64px
+			padding: 32px 
 			position: relative
 			width: 25%
 			@media (max-width: $tablet)
@@ -627,6 +768,25 @@ body > .menu
 				padding: 0 5px
 				margin-bottom: 40px
 				position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				opacity: 0.8
+			&:hover
+				background: $main-color
+				&:before
+					background: $main-color
+				.title
+					opacity: 0
+				.adc.pract
+					.text
+						opacity: 1
+						transform: scale(1)
+						pointer-events: all
 			.title
 				&, & a
 					color: #36393d
@@ -653,6 +813,7 @@ body > .menu
 			.title-hover
 				&, & a
 					color: #36393d
+					color: #fff
 					font-size: 14px
 					font-weight: 700
 					text-transform: uppercase
@@ -661,38 +822,48 @@ body > .menu
 						font-size: 11px
 			.adc.pract
 				.s-all
-					border-radius: 50%
+					display: inline-block
+					background-size: contain
 					height: 130px
 					width: 130px
-					display: inline-block
 					@media (max-width: $mobile-large)
 						transform: scale(0.6)
 				.s1
 					@extend .s-all
-					background-position: -1px -98px
+					background: url('../img/content/category-icon-1.png') 50% 50% no-repeat
+					background-size: contain
 				.s2
 					@extend .s-all
-					background-position: -199px -100px
+					background: url('../img/content/category-icon-2.png') 50% 50% no-repeat
+					background-size: contain
 				.s3
 					@extend .s-all
-					background-position: -399px -100px
+					background: url('../img/content/category-icon-3.png') 50% 50% no-repeat
+					background-size: contain
 				.s4
 					@extend .s-all
-					background-position: -1px -271px
+					background: url('../img/content/category-icon-4.png') 50% 50% no-repeat
+					background-size: contain
 				.s5
 					@extend .s-all
-					background-position: -198px -438px
+					background: url('../img/content/category-icon-5.png') 50% 50% no-repeat
+					background-size: contain
 				.s6
 					@extend .s-all
-					background-position: 0 -438px
+					background: url('../img/content/category-icon-6.png') 50% 50% no-repeat
+					background-size: contain
 				.s7
 					@extend .s-all
-					background-position: -396px -272px
+					background: url('../img/content/category-icon-7.png') 50% 50% no-repeat
+					background-size: contain
 				.s8
 					@extend .s-all
-					background-position: -197px -271px
+					background: url('../img/content/category-icon-8.png') 50% 50% no-repeat
+					background-size: contain
 				.text
 					pointer-events: none
+
+					padding: 0 10px
 
 					position: absolute
 					left: 0
@@ -724,6 +895,7 @@ body > .menu
 					// pointer-events: none
 					a
 						color: #36393d
+						color: #fff
 						font-size: 14px
 						// line-height: 18px
 						margin-bottom: 12px
@@ -731,13 +903,8 @@ body > .menu
 						display: block
 						@media (max-width: $mobile-large)
 							font-size: 11px
-				&:hover
-					// border-radius: 50%
-					.text
-						background: #fff
-						opacity: 1
-						transform: scale(1)
-						pointer-events: all
+						&:hover
+							text-decoration: underline
 		.owl-item
 			display: block
 			margin-right: 0
@@ -849,15 +1016,6 @@ body > .menu
 		height: 300px
 		overflow: hidden
 		white-space: normal
-		&:before
-			background: #fff
-			content: ''
-			position: absolute
-			left: 0
-			top: 0
-			height: 100%
-			width: 100%
-			opacity: 0.6
 		.label
 			color: #36393d
 			font-size: 20px
@@ -893,6 +1051,18 @@ body > .menu
 	.owl-item
 		display: block
 		margin-right: 0
+		.item
+			& > *
+				z-index: 1
+			&:after
+				background: #fff
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				height: 100%
+				width: 100%
+				opacity: 0.6
 	.owl-carousel
 		display: block
 		font-size: 0
@@ -912,6 +1082,7 @@ body > .menu
 		// padding-left: 120px
 		@media (max-width: $tablet)
 			padding-left: 20px
+
 
 .main.wide-l
 	.main-container
@@ -2334,3 +2505,106 @@ body > .menu
 				background-size: contain
 				height: 12px
 				width: 12px
+
+.full-article
+	h1, h2
+		color: #36393d
+		font-size: 36px
+		font-weight: 300
+	p
+		color: #666
+		font-size: 14px
+		font-weight: 300
+		line-height: 1.5em
+		margin-bottom: 1em
+		overflow: hidden
+	.article-header
+		margin-top: 60px
+	.article-content
+		margin: 30px auto 60px
+		img
+			float: left
+			margin: 6px 50px 20px 0
+			max-width: 50%
+	.tags-cloud
+		border: 1px solid #e2e2e2
+		padding: 6px 10px
+		margin: 30px 0 0 0
+		.tag
+			color: #6bb6ee
+			font-size: 13px
+			font-style: italic
+			line-height: 20px
+			margin: 0 10px
+			&:hover
+				text-decoration: underline
+	& + .top-news
+		background-color: transparent
+		margin-top: 0
+		.top-news-holder
+			padding-top: 0
+
+.about-page
+	img
+		float: left
+		margin: 6px 60px 20px 0
+		max-width: 50%
+	h1
+		color: $main-color
+		font-size: 32px
+		font-weight: 400
+		line-height: 1.5em
+		// margin: 0
+	h3
+		color: $main-color
+		font-size: 26px
+		font-weight: 400
+		line-height: 1.5em
+		margin: 0
+	h4
+		font-size: 22px
+		font-weight: 400
+		line-height: 1.5em
+		margin: 0 0 1em
+	p
+		color: #666
+		font-size: 14px
+		font-weight: 400
+		line-height: 1.5em
+		margin: 1em 0
+	ol
+		counter-reset: aboutPageList
+		padding-left: 40px
+		margin-bottom: 30px
+		li
+			list-style: none
+			padding-left: 28px
+			position: relative
+			margin: 0 0 6px
+			color: #666
+			font-size: 15px
+			font-weight: 400
+			line-height: 1.5em
+			&:before
+				counter-increment: aboutPageList
+				content: counter(aboutPageList) ". "
+				position: absolute
+				left: 0
+				top: 0
+				width: 28px
+	table
+		border-collapse: collapse
+		// border: 1px solid $main-color
+		thead
+			text-align: center
+			font-size: 26px
+		td
+			border: 1px solid $main-color
+			padding: 20px 40px
+			vertical-align: top
+		h3
+			margin-top: 0
+			font-size: 20px
+		h4
+			margin-top: 0
+			font-size: 20px

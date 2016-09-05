@@ -42,30 +42,22 @@ var loading = {
 		// });
 
 		// OWL INIT
-		// $('.partners-section .owl-carousel').owlCarousel({
-		// 	loop: true,
-		// 	autoWidth: true
-		// });
-		// $('.top-news .owl-carousel').owlCarousel({
-		// 	loop: true,
-		// 	autoWidth: true
-		// });
-		$('.owl-carousel').owlCarousel({
+		$('.partners-section .owl-carousel').owlCarousel({
 			loop: true,
-			nav:true,
+			navigation : true,
 			autoWidth: true
-			// responsive:{
-			// 	0:{
-			// 		items:1
-			// 	},
-			// 	600:{
-			// 		items:3
-			// 	},
-			// 	1000:{
-			// 		items:4
-			// 	}
-			// }
 		});
+		$('.top-news .owl-carousel').owlCarousel({
+			loop: true,
+			navigation : true,
+			autoWidth: true
+		});
+		// $('.owl-carousel').owlCarousel({
+		// 	loop: true,
+		// 	nav: true,
+		// 	navigation : true,
+		// 	autoWidth: true
+		// });
 
 		// MASONRY INIT
 		(function () {

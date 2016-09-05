@@ -75,6 +75,24 @@ html(lang='en')
 									.more
 										a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/skidka-na-kompleks-razreshenie-na-rabotu-vid-na-zhitelstvo.html?clear_cache=Y') Узнать больше
 
+		section.categories-interactive.hidden
+			.content
+				mixin item (name)
+					.item
+						h3
+							a(href='http://justicon.ua/uslugi/korp/')= name
+						.categories
+							a(href='http://justicon.ua/uslugi/korp/registratsiya/', target='_self') Регистрация
+							a(href='http://justicon.ua/uslugi/korp/izmeneniya/', target='_self') Изменения
+							a(href='http://justicon.ua/uslugi/korp/likvidatsiya/', target='_self') Ликвидация
+							a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') Сопутствующие и
+							a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') дополнительные
+							a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') услуги
+
+				+item(
+					'Корпоративные правоотношения'
+				)
+
 		section.categories-section
 			.categories-content
 				.item
@@ -319,8 +337,8 @@ html(lang='en')
 				.parnters-container.owl-carousel
 					mixin new-item (name, img, href)
 						.item.new-item
-							span.label= name
 							img(src= img)
+							span.label= name
 							a.btn(href= href) Узнать больше
 					+new-item(
 						'Хочу оформить частное предприятие',
