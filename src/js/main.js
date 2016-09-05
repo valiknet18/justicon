@@ -200,6 +200,23 @@ $(document).on('ready', function () {
 
 	})();
 
+		// categories
+		(function () {
+			var $section = $('.categories-click'),
+				$categories = $section.find('.category');
+			$categories.find('.sub-categories').wrapInner('<div class="content-holder"></div>');
+			$categories.hover(function () {
+				var $self = $(this);
+				$self.addClass('active');
+				$section.addClass('hovered');
+			},
+			function () {
+				var $self = $(this);
+				$self.removeClass('active');
+				$section.removeClass('hovered');
+			});
+		})();
+
 		// tabs
 		$('.tabs-holder a').click(function (e) {
 			e.preventDefault();

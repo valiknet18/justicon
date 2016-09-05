@@ -179,27 +179,17 @@ html(lang='en')
 						h2
 							i $
 							| Цены
-						.table-holder
-							table
-								tbody
-									tr
-										td.price-title Представительство в исполнительном производстве
-										td.price-term
-											pre.
-										td.price-value
-											pre.
-												\nот 1000 грн.                      
-						#pricedesc
-						.mt10
-							a(href="#").btn Заказать услугу
+						.price-title Представительство в исполнительном производстве
+							b  oт 1000 грн.
+						p
 							a.view-all-price-list(href='/prays-list/')
 								| Посмотреть весь прайс-лист
 								span.arrow-down
+						a(href="#").btn Заказать услугу
 					.tab-pane#tbd4
-						.tabpl Алгоритм
 						.table-holder
-							table.table.docs
-								tbody
+							table.algorythm-table
+								thead
 									tr
 										th
 											b
@@ -214,6 +204,7 @@ html(lang='en')
 											span(style='color: rgb(0, 84, 165);')  		
 											b
 												span(style='color: rgb(0, 84, 165);') СРОКИ
+								tbody
 									tr
 										td(style='text-align: left;')
 											b

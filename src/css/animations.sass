@@ -79,6 +79,42 @@
 	to
 		transform: translate(0, 60px)
 
+@keyframes submenuShow
+	from
+		opacity: 0
+		transform: translate(-60px, 0)
+
+	to
+		opacity: 1
+		transform: translate(0, 0)
+
+@keyframes submenuHide
+	from
+		opacity: 1
+		transform: translate(0, 0)
+
+	to
+		opacity: 0
+		transform: translate(-60px, 0)
+
+@keyframes zoomShow
+	from
+		opacity: 0
+		transform: scale(2)
+
+	to
+		opacity: 1
+		transform: scale(1)
+
+@keyframes zoomHide
+	from
+		opacity: 1
+		transform: scale(1)
+
+	to
+		opacity: 0
+		transform: scale(2)
+
 @keyframes crossIn
 	from
 		opacity: 0

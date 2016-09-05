@@ -77,17 +77,20 @@ html(lang='en')
 
 		section.categories-interactive
 			.container
-				mixin category (name, categories)
+				mixin category (name, image, categories)
 					.category
 						h3
-							a(href='#')= name
+							a(href='#')
+								img(src= 'img/content/' + image + '.png', alt= name)
+								span= name
 						.sub-categories
 							each category in categories
-								a(href='#')= category
+								a(href='#')!= category
 
 				.categories-holder
 					+category(
 						'Корпоративные правоотношения',
+						'category-icon-1',
 						[
 							'Регистрация',
 							'Изменения',
@@ -96,6 +99,7 @@ html(lang='en')
 					)
 					+category(
 						'Лицензии, разрешения, сертификация',
+						'category-icon-2',
 						[
 							'Лицензии',
 							'Разрешения',
@@ -104,6 +108,7 @@ html(lang='en')
 					)
 					+category(
 						'Судебная практика',
+						'category-icon-3',
 						[
 							'Представительство интересов в судах',
 							'Представительство в исполнительном производстве',
@@ -113,6 +118,7 @@ html(lang='en')
 					)
 					+category(
 						'Недвижимость, строительство, земельное право',
+						'category-icon-4',
 						[
 							'Недвижимость',
 							'Сстроительство',
@@ -121,6 +127,7 @@ html(lang='en')
 					)
 					+category(
 						'Миграционное право',
+						'category-icon-5',
 						[
 							'Иммиграция в Украину',
 							'Эмиграция из Украины',
@@ -129,6 +136,7 @@ html(lang='en')
 					)
 					+category(
 						'Интеллектуальное право',
+						'category-icon-6',
 						[
 							'Регистрация торговых марок',
 							'Патентование',
@@ -137,6 +145,7 @@ html(lang='en')
 					)
 					+category(
 						'Абонентское обслуживание',
+						'category-icon-7',
 						[
 							'Абонентское обслуживание',
 							'Бухгалтерские услуги. Аутсорсинг',
@@ -146,6 +155,7 @@ html(lang='en')
 					)
 					+category(
 						'Юридический и налоговый консалтинг',
+						'category-icon-8',
 						[
 							'Налоговый консалтинг',
 							'Юридический консалтинг',
@@ -256,6 +266,182 @@ html(lang='en')
 								a(href='http://justicon.ua/uslugi/konsalting/antimonopolnoe-pravo/', target='_self') Антимонопольное право
 					.title
 						a(href='http://justicon.ua/uslugi/konsalting/') Юридический и налоговый консалтинг
+
+		section.categories-click
+			.container
+				mixin category (name, image, categories)
+					.category
+						h3
+							a(href='#')
+								img(src= 'img/content/' + image + '.png', alt= name)
+								span= name
+						.sub-categories
+							each category in categories
+								a(href='#')!= category
+
+				.categories-holder
+					+category(
+						'Корпоративные правоотношения',
+						'category-icon-1',
+						[
+							'Регистрация',
+							'Изменения',
+							'Дополнительно'
+						]
+					)
+					+category(
+						'Лицензии, разрешения, сертификация',
+						'category-icon-2',
+						[
+							'Лицензии',
+							'Разрешения',
+							'Сертификация'
+						]
+					)
+					+category(
+						'Судебная практика',
+						'category-icon-3',
+						[
+							'Представительство интересов в судах',
+							'Представительство в исполнительном производстве',
+							'Возврат долгов',
+							'Судебные практики'
+						]
+					)
+					+category(
+						'Недвижимость, строительство, земельное право',
+						'category-icon-4',
+						[
+							'Недвижимость',
+							'Сстроительство',
+							'Земельное право'
+						]
+					)
+					+category(
+						'Миграционное право',
+						'category-icon-5',
+						[
+							'Иммиграция в Украину',
+							'Эмиграция из Украины',
+							'Сопутствующие услуги'
+						]
+					)
+					+category(
+						'Интеллектуальное право',
+						'category-icon-6',
+						[
+							'Регистрация торговых марок',
+							'Патентование',
+							'Авторское право'
+						]
+					)
+					+category(
+						'Абонентское обслуживание',
+						'category-icon-7',
+						[
+							'Абонентское обслуживание',
+							'Бухгалтерские услуги. Аутсорсинг',
+							'Дополнительные бухгалтерские услуги',
+							'Кадровое сопровождение'
+						]
+					)
+					+category(
+						'Юридический и налоговый консалтинг',
+						'category-icon-8',
+						[
+							'Налоговый консалтинг',
+							'Юридический консалтинг',
+							'Антимонопольное право'
+						]
+					)
+
+		section.categories-jump
+			.container
+				mixin category (name, image, categories)
+					.category
+						h3
+							a(href='#')
+								img(src= 'img/content/' + image + '.png', alt= name)
+								span= name
+						.sub-categories
+							each category in categories
+								a(href='#')!= category
+
+				.categories-holder
+					+category(
+						'Корпоративные правоотношения',
+						'category-icon-1',
+						[
+							'Регистрация',
+							'Изменения',
+							'Дополнительно'
+						]
+					)
+					+category(
+						'Лицензии, разрешения, сертификация',
+						'category-icon-2',
+						[
+							'Лицензии',
+							'Разрешения',
+							'Сертификация'
+						]
+					)
+					+category(
+						'Судебная практика',
+						'category-icon-3',
+						[
+							'Представительство интересов в судах',
+							'Представительство в исполнительном производстве',
+							'Возврат долгов',
+							'Судебные практики'
+						]
+					)
+					+category(
+						'Недвижимость, строительство, земельное право',
+						'category-icon-4',
+						[
+							'Недвижимость',
+							'Сстроительство',
+							'Земельное право'
+						]
+					)
+					+category(
+						'Миграционное право',
+						'category-icon-5',
+						[
+							'Иммиграция в Украину',
+							'Эмиграция из Украины',
+							'Сопутствующие услуги'
+						]
+					)
+					+category(
+						'Интеллектуальное право',
+						'category-icon-6',
+						[
+							'Регистрация торговых марок',
+							'Патентование',
+							'Авторское право'
+						]
+					)
+					+category(
+						'Абонентское обслуживание',
+						'category-icon-7',
+						[
+							'Абонентское обслуживание',
+							'Бухгалтерские услуги. Аутсорсинг',
+							'Дополнительные бухгалтерские услуги',
+							'Кадровое сопровождение'
+						]
+					)
+					+category(
+						'Юридический и налоговый консалтинг',
+						'category-icon-8',
+						[
+							'Налоговый консалтинг',
+							'Юридический консалтинг',
+							'Антимонопольное право'
+						]
+					)
 
 		section.search-section
 			.container
