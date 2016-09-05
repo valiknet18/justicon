@@ -75,23 +75,83 @@ html(lang='en')
 									.more
 										a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/skidka-na-kompleks-razreshenie-na-rabotu-vid-na-zhitelstvo.html?clear_cache=Y') Узнать больше
 
-		section.categories-interactive.hidden
-			.content
-				mixin item (name)
-					.item
+		section.categories-interactive
+			.container
+				mixin category (name, categories)
+					.category
 						h3
-							a(href='http://justicon.ua/uslugi/korp/')= name
-						.categories
-							a(href='http://justicon.ua/uslugi/korp/registratsiya/', target='_self') Регистрация
-							a(href='http://justicon.ua/uslugi/korp/izmeneniya/', target='_self') Изменения
-							a(href='http://justicon.ua/uslugi/korp/likvidatsiya/', target='_self') Ликвидация
-							a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') Сопутствующие и
-							a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') дополнительные
-							a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') услуги
+							a(href='#')= name
+						.sub-categories
+							each category in categories
+								a(href='#')= category
 
-				+item(
-					'Корпоративные правоотношения'
-				)
+				.categories-holder
+					+category(
+						'Корпоративные правоотношения',
+						[
+							'Регистрация',
+							'Изменения',
+							'Дополнительно'
+						]
+					)
+					+category(
+						'Лицензии, разрешения, сертификация',
+						[
+							'Лицензии',
+							'Разрешения',
+							'Сертификация'
+						]
+					)
+					+category(
+						'Судебная практика',
+						[
+							'Представительство интересов в судах',
+							'Представительство в исполнительном производстве',
+							'Возврат долгов',
+							'Судебные практики'
+						]
+					)
+					+category(
+						'Недвижимость, строительство, земельное право',
+						[
+							'Недвижимость',
+							'Сстроительство',
+							'Земельное право'
+						]
+					)
+					+category(
+						'Миграционное право',
+						[
+							'Иммиграция в Украину',
+							'Эмиграция из Украины',
+							'Сопутствующие услуги'
+						]
+					)
+					+category(
+						'Интеллектуальное право',
+						[
+							'Регистрация торговых марок',
+							'Патентование',
+							'Авторское право'
+						]
+					)
+					+category(
+						'Абонентское обслуживание',
+						[
+							'Абонентское обслуживание',
+							'Бухгалтерские услуги. Аутсорсинг',
+							'Дополнительные бухгалтерские услуги',
+							'Кадровое сопровождение'
+						]
+					)
+					+category(
+						'Юридический и налоговый консалтинг',
+						[
+							'Налоговый консалтинг',
+							'Юридический консалтинг',
+							'Антимонопольное право'
+						]
+					)
 
 		section.categories-section
 			.categories-content

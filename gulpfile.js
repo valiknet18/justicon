@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer'),
-	browserSync = require('browser-sync'),
+	browserSync = require('browser-sync').create(),
 	reload = require('browser-sync').reload;
 
 var path = {
@@ -54,7 +54,7 @@ gulp.task('sass', function () {
 		.pipe(autoprefixer({browsers:['last 4 versions']}))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.dist.css))
-		.pipe(reload({stream:true}));
+		.pipe(browserSync.stream());
 });
 
 // JADE
@@ -64,14 +64,14 @@ gulp.task('jade', function(){
 			pretty: true
 		}))
 		.pipe(gulp.dest(path.dist.html))
-		.pipe(reload({stream:true}));
+		.pipe(browserSync.stream());
 });
 
 // SCRIPTS
 gulp.task('scripts', function(){
 	gulp.src(path.src.js)
 		.pipe(gulp.dest(path.dist.js))
-		.pipe(reload({stream:true}));
+		.pipe(browserSync.stream());
 });
 
 // IMAGES
@@ -96,7 +96,7 @@ gulp.task('watch', function(){
 	gulp.watch(path.watch.html, ['jade']);
 	gulp.watch(path.watch.style, ['sass']);
 	gulp.watch(path.watch.js, ['scripts']);
-	gulp.watch(path.watch.img, ['images']);
+	// gulp.watch(path.watch.img, ['images']);
 });
 
 gulp.task('default', ['sass', 'jade', 'scripts', 'images', 'fonts', 'browser-sync', 'watch']);
