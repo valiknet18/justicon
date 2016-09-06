@@ -5,376 +5,379 @@ html(lang='en')
 		include ./partials/head.jade
 	body
 		include ./partials/navigation.jade
-
-		.container
-			.wrap
-				.bc
+		
+		section.page-label
+			.container
+				h2 Адреса тер.подразделений Миграционной службы в городе Киеве
+		section.breadcrumb-section
+			.container
+				.breadcrumb
 					div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-						a(itemprop='url', href='/', title='Главная')
+						a(itemprop='url', href='#', title='Главная')
 							span(itemprop='title') Главная
-					div  » 
+					div  / 
 					div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-						a(itemprop='url', href='/inform-byuro/', title='Информ-бюро')
+						a(itemprop='url', href='#', title='Услуги')
 							span(itemprop='title') Информ-бюро
-					div  » 
+					div  / 
 					div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-						a(itemprop='url', href='/inform-byuro/adresnaya-kniga/', title='Адресная книга')
+						a(itemprop='url', href='#', title='Судебная практика')
 							span(itemprop='title') Адресная книга
-					div  » 
+					div  / 
 					div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-						span(itemprop='title') Адреса тер.подразделений Миграционной службы в городе Киеве
-				.tophr
-				.main.wide-l
-					h1#page-tit Адреса тер.подразделений Миграционной службы в городе Киеве
-					.main-container
-						// replace inline styles by classes
-						// and wrap element .additional-services
-						.additional-services
-							// reorganize DOM
-							h3 Возможно Вас заинтересуют следующие услуги:
-							p
-								font(color='#ff0000') - 
-								a(href='http://justicon.ua/uslugi/migr/immigr/ukr-vizy/', target='_self') оформление приглашений иностранцам
-							p
-								font(color='#ff0000') - 
-								a(href='http://justicon.ua/uslugi/migr/immigr/grazhd-ukr/', target='_self') получение гражданства Украины
-							p
-								font(color='#ff0000') - 
-								a(href='http://justicon.ua/uslugi/migr/immigr/legal-v-ukr/razreshenie-na-trudoustroystvo-v-ukraine.html', target='_self') разрешение на трудоустройство
-							p
-								font(color='#ff0000') - 
-								a(href='http://justicon.ua/uslugi/migr/immigr/legal-v-ukr/vid-na-vremennoe-prozhivanie-v-ukraine-dlya-rabotayushchikh.html', target='_self') временный вид на жительство в Украине
-							p
-								font(color='#ff0000') - 
-								a(href='http://justicon.ua/uslugi/migr/immigr/legal-v-ukr/vid-na-postoyannoe-prozhivanie-v-ukraine.html', target='_self') постоянный вид на жительство в Украине
-							p
-								font(color='#ff0000') - 
-								a(href='http://justicon.ua/uslugi/migr/', target='_self') другие вопросы в сфере миграционного права
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 Отдел обеспечения выдачи паспортных документов в централизованном порядке ДД ГИВФО МВД Украины
-										p
-											strong Адрес:
-											|  город Киев, ул. Саксаганского, 4
-										p
-											strong Телефон:
-											|  (044) 254-97-66
-										p
-											strong Время работы:
-										p
-											| Понедельник
-											b  - 
-											| 10:00-19:00
-										p Вторник        - 10:00-19:00
-										p Среда           - 10:00-19:00
-										p Четверг        - 10:00-19:00
-										p Пятница       - 09:00-17:00
-										p Перерыв      - 13:00-14:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.2644608005094!2d30.519997150000002!3d50.43617449999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cefdedb86e41%3A0x4464289f766fef78!2z0LLRg9C7LiDQodCw0LrRgdCw0LPQsNC90YHRjNC60L7Qs9C-LCA0LCDQmtC40ZfQsiwg0LzRltGB0YLQviDQmtC40ZfQsg!5e0!3m2!1sru!2sua!4v1410420265556', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС (УГИРФО) Киев (городской)
-										p
-											strong Адрес:
-											|  ул. Березняковская, 4А
-										p
-											strong Телефон
-											|  : (044) 271-93-73
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p
-											| Понедельник 
-											b - 
-											| 09:00-18:00
-										p Вторник        - 09:00-18:00
-										p Среда           - 09:00-18:00
-										p Четверг        - 09:00-18:00
-										p
-											| Пятница       - 09:00-18:00 
-											br
-										p Перерыв      - 13:00-14:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.330087766286!2d30.610697999999992!3d50.434952!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c566be96c803%3A0x63f89ed45bf3608c!2z0LLRg9C7LiDQkdC10YDQtdC30L3Rj9C60ZbQstGB0YzQutCwLCA00JAsINCa0LjRl9CyLCDQvNGW0YHRgtC-INCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1410420549995', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС Голосеевского района
-										p
-											strong Адрес:
-											|  ул. Голосеевская, 15
-										p
-											strong Телефон
-											|  : (044) 525-17-97
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p Вторник  - 10:00-18:00   
-										p Четверг   - 10:00-18:00   
-										p Пятница  - 10:00-18:00
-										p  Суббота  - 10:00-18:00
-										p Перерыв - 13:00-14:00,
-										p В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2543.2489432256225!2d30.5181765!3d50.399198!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4abc3a8da3%3A0x51b2ca91a840d974!2z0LLRg9C7LiDQk9C-0LvQvtGB0ZbRl9Cy0YHRjNC60LAsIDE1LCDQmtC40ZfQsiwg0LzRltGB0YLQviDQmtC40ZfQsg!5e0!3m2!1sru!2sua!4v1410420647701', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС Дарницкого района
-										p
-											strong Адрес:
-											|  проспект Бажана, 3
-										p
-											strong Телефон
-											|  : (044) 560-98-40
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p Вторник  - 10:00-18:00   
-										p Четверг   - 10:00-18:00   
-										p Пятница  - 10:00-18:00   
-										p Суббота  - 10:00-18:00
-										p
-											| Перерыв - 13:00-14:00, 
-											br
-											br
-											|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.07263059403!2d30.655361999999986!3d50.402484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c457c08b16d9%3A0xcf3ea72a3129c51e!2z0L_RgNC-0YHQvy4g0JzQuNC60L7Qu9C4INCR0LDQttCw0L3QsCwgMywg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1410420838586', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС Деснянского района
-										p
-											strong Адрес:
-											|  ул. Драйзера, 22
-										p
-											strong Телефон
-											|  : (044) 546-86-13
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p Вторник  - 10:00-18:00   
-										p Четверг   - 10:00-18:00   
-										p Пятница  - 10:00-18:00   
-										p Суббота  - 10:00-18:00
-										p
-											| Перерыв - 13:00-14:00, 
-											br
-											br
-											|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2537.3833295630216!2d30.599913999999995!3d50.508434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1aa325ea219%3A0x2edb996b35d459f4!2z0LLRg9C7LiDQotC10L7QtNC-0YDQsCDQlNGA0LDQudC30LXRgNCwLCAyMiwg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1410420922769', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС Днепровского района
-										p
-											strong Адрес:
-											|  ул. Лебедева, 15
-										p
-											strong Телефоны
-											|  : (044) 552-13-30, 567-63-08
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p Вторник  - 10:00-18:00   
-										p Четверг   - 10:00-18:00   
-										p Пятница  - 10:00-18:00   
-										p Суббота  - 10:00-18:00
-										p
-											| Перерыв - 13:00-14:00, 
-											br
-											br
-											|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2540.213254446586!2d30.628261549999998!3d50.455753449999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5551f500791%3A0x88e620e3d22d3d1c!2z0LLRg9C7LiDQnNC40LrQvtC70Lgg0JvQtdCx0LXQtNGU0LLQsCwgMTUsINCa0LjRl9CyLCDQvNGW0YHRgtC-INCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1410421391776', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС Оболонского района
-										p
-											strong Адрес:
-											|  ул. Автозаводская, 25-А
-										p
-											strong Телефон
-											|  : (044) 430-48-08
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p Вторник  - 10:00-18:00   
-										p Четверг   - 10:00-18:00   
-										p Пятница  - 10:00-18:00   
-										p Суббота  - 10:00-18:00
-										p
-											| Перерыв - 13:00-14:00,  
-											br
-											br
-											|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2537.496609567272!2d30.457794999999997!3d50.506326!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cd80ab49c549%3A0xeb98e6ed08c1801e!2z0LLRg9C7LiDQkNCy0YLQvtC30LDQstC-0LTRgdGM0LrQsCwgMjUsINCa0LjRl9CyLCDQvNGW0YHRgtC-INCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1410421481365', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС Печерского района
-										p
-											strong Адрес:
-											|  ул. Суворова, 14/12
-										p
-											strong Телефоны
-											|  : (044) 280-33-34, 280-01-10
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p Вторник  - 10:00-18:00   
-										p Четверг   - 10:00-18:00   
-										p Пятница  - 10:00-18:00   
-										p Суббота  - 10:00-18:00
-										p
-											| Перерыв - 13:00-14:00, 
-											br
-											br
-											|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.152771513067!2d30.547006000000003!3d50.438255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c3803cc667b5%3A0xbcc01789c26486fb!2z0J7QktCY0KAg0J_QtdGH0LXRgNGB0LrQvtCz0L4g0YDQsNC50L7QvdCwICjQv9C10YfQtdGA0YHQutC40Lkg0L7QstC40YAp!5e0!3m2!1sru!2sua!4v1410421578700', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС Подольского района
-										p
-											strong Адрес:
-											|  ул. Межигорская, 30
-										p
-											strong Телефон
-											|  : (044) 425-40-67
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p Вторник  - 10:00-18:00
-										p  Четверг   - 10:00-18:00   
-										p Пятница  - 10:00-18:00   
-										p Суббота  - 10:00-18:00
-										p
-											| Перерыв - 13:00-14:00, 
-											br
-											br
-											|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2539.496687590599!2d30.5126165!3d50.4690965!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce14a371ae5d%3A0xde0a54a7d220e9f4!2z0LLRg9C7LiDQnNC10LbQuNCz0ZbRgNGB0YzQutCwLCAzMCwg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1410421646784', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС Святошинского района
-										p
-											strong Адрес:
-											|  ул. Г. Юры, 9  
-											strong  
-										p
-											strong Телефон
-											|  : (044) 403-08-76
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p Вторник  - 10:00-18:00   
-										p Четверг   - 10:00-18:00   
-										p Пятница  - 10:00-18:00   
-										p Суббота  - 10:00-18:00
-										p
-											| Перерыв - 13:00-14:00, 
-											br
-											br
-											|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.5189098215287!2d30.3850175!3d50.4314345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cb89375d78c3%3A0x164e37b8333b9bb8!2z0LLRg9C7LiDQk9C90LDRgtCwINCu0YDQuCwgOSwg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1410421731002', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС Соломенского района
-										p
-											strong Адрес:
-											|  ул. Ереванская, 25
-										p
-											strong Телефон
-											|  : (044) 242-54-51
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p Вторник  - 10:00-18:00   
-										p Четверг   - 10:00-18:00   
-										p Пятница  - 10:00-18:00   
-										p Суббота  - 10:00-18:00
-										p
-											| Перерыв - 13:00-14:00, 
-											br
-											br
-											|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.164260015424!2d30.463005499999994!3d50.438041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce981645d667%3A0xc7f5e7ee39c1b750!2z0LLRg9C7LiDQhNGA0LXQstCw0L3RgdGM0LrQsCwgMjUsINCa0LjRl9CyLCDQvNGW0YHRgtC-INCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1410421864146', width='400', height='300', frameborder='0', style='border: 0px;')
-						table.mceThingTable
-							tbody
-								tr
-									td
-										h3 ГМС Шевченковского района
-										p
-											strong Адрес:
-											|  ул. Герцена, 9
-										p
-											strong Телефон
-											|  : (044) 483-72-48
-										p
-											strong Время работы 
-											strong ГМС
-											strong :
-										p Вторник  - 10:00-18:00   
-										p Четверг   - 10:00-18:00   
-										p Пятница  - 10:00-18:00   
-										p Суббота  - 10:00-18:00
-										p
-											| Перерыв - 13:00-14:00, 
-											br
-											br
-											|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
-									td
-										.show-schedule-and-map график приема и карта проезда 
-										iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2539.475150404155!2d30.471715500000002!3d50.4694975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdda19ed7d99%3A0xca3d297e18e9993a!2z0LLRg9C7LiDQk9C10YDRhtC10L3QsCwgOSwg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1410423073970', width='400', height='300', frameborder='0', style='border: 0px;')
-						p(style='font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px;')  
-				.clear
-			.pd10.hg1
+						a(itemprop='url', href='#', title='Представительство в исполнительном производстве')
+							span(itemprop='title') Адреса тер.подразделений Миграционной службы в городе Киеве
+
+
+			.container
+				.main-container
+					// replace inline styles by classes
+					// and wrap element .additional-services
+					.additional-services
+						// reorganize DOM
+						h3 Возможно Вас заинтересуют следующие услуги:
+						p
+							font(color='#ff0000') - 
+							a(href='http://justicon.ua/uslugi/migr/immigr/ukr-vizy/', target='_self') оформление приглашений иностранцам
+						p
+							font(color='#ff0000') - 
+							a(href='http://justicon.ua/uslugi/migr/immigr/grazhd-ukr/', target='_self') получение гражданства Украины
+						p
+							font(color='#ff0000') - 
+							a(href='http://justicon.ua/uslugi/migr/immigr/legal-v-ukr/razreshenie-na-trudoustroystvo-v-ukraine.html', target='_self') разрешение на трудоустройство
+						p
+							font(color='#ff0000') - 
+							a(href='http://justicon.ua/uslugi/migr/immigr/legal-v-ukr/vid-na-vremennoe-prozhivanie-v-ukraine-dlya-rabotayushchikh.html', target='_self') временный вид на жительство в Украине
+						p
+							font(color='#ff0000') - 
+							a(href='http://justicon.ua/uslugi/migr/immigr/legal-v-ukr/vid-na-postoyannoe-prozhivanie-v-ukraine.html', target='_self') постоянный вид на жительство в Украине
+						p
+							font(color='#ff0000') - 
+							a(href='http://justicon.ua/uslugi/migr/', target='_self') другие вопросы в сфере миграционного права
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 Отдел обеспечения выдачи паспортных документов в централизованном порядке ДД ГИВФО МВД Украины
+									p
+										strong Адрес:
+										|  город Киев, ул. Саксаганского, 4
+									p
+										strong Телефон:
+										|  (044) 254-97-66
+									p
+										strong Время работы:
+									p
+										| Понедельник
+										b  - 
+										| 10:00-19:00
+									p Вторник        - 10:00-19:00
+									p Среда           - 10:00-19:00
+									p Четверг        - 10:00-19:00
+									p Пятница       - 09:00-17:00
+									p Перерыв      - 13:00-14:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.2644608005094!2d30.519997150000002!3d50.43617449999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cefdedb86e41%3A0x4464289f766fef78!2z0LLRg9C7LiDQodCw0LrRgdCw0LPQsNC90YHRjNC60L7Qs9C-LCA0LCDQmtC40ZfQsiwg0LzRltGB0YLQviDQmtC40ZfQsg!5e0!3m2!1sru!2sua!4v1410420265556', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС (УГИРФО) Киев (городской)
+									p
+										strong Адрес:
+										|  ул. Березняковская, 4А
+									p
+										strong Телефон
+										|  : (044) 271-93-73
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p
+										| Понедельник 
+										b - 
+										| 09:00-18:00
+									p Вторник        - 09:00-18:00
+									p Среда           - 09:00-18:00
+									p Четверг        - 09:00-18:00
+									p
+										| Пятница       - 09:00-18:00 
+										br
+									p Перерыв      - 13:00-14:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.330087766286!2d30.610697999999992!3d50.434952!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c566be96c803%3A0x63f89ed45bf3608c!2z0LLRg9C7LiDQkdC10YDQtdC30L3Rj9C60ZbQstGB0YzQutCwLCA00JAsINCa0LjRl9CyLCDQvNGW0YHRgtC-INCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1410420549995', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС Голосеевского района
+									p
+										strong Адрес:
+										|  ул. Голосеевская, 15
+									p
+										strong Телефон
+										|  : (044) 525-17-97
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p Вторник  - 10:00-18:00   
+									p Четверг   - 10:00-18:00   
+									p Пятница  - 10:00-18:00
+									p  Суббота  - 10:00-18:00
+									p Перерыв - 13:00-14:00,
+									p В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2543.2489432256225!2d30.5181765!3d50.399198!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4abc3a8da3%3A0x51b2ca91a840d974!2z0LLRg9C7LiDQk9C-0LvQvtGB0ZbRl9Cy0YHRjNC60LAsIDE1LCDQmtC40ZfQsiwg0LzRltGB0YLQviDQmtC40ZfQsg!5e0!3m2!1sru!2sua!4v1410420647701', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС Дарницкого района
+									p
+										strong Адрес:
+										|  проспект Бажана, 3
+									p
+										strong Телефон
+										|  : (044) 560-98-40
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p Вторник  - 10:00-18:00   
+									p Четверг   - 10:00-18:00   
+									p Пятница  - 10:00-18:00   
+									p Суббота  - 10:00-18:00
+									p
+										| Перерыв - 13:00-14:00, 
+										br
+										br
+										|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.07263059403!2d30.655361999999986!3d50.402484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c457c08b16d9%3A0xcf3ea72a3129c51e!2z0L_RgNC-0YHQvy4g0JzQuNC60L7Qu9C4INCR0LDQttCw0L3QsCwgMywg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1410420838586', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС Деснянского района
+									p
+										strong Адрес:
+										|  ул. Драйзера, 22
+									p
+										strong Телефон
+										|  : (044) 546-86-13
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p Вторник  - 10:00-18:00   
+									p Четверг   - 10:00-18:00   
+									p Пятница  - 10:00-18:00   
+									p Суббота  - 10:00-18:00
+									p
+										| Перерыв - 13:00-14:00, 
+										br
+										br
+										|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2537.3833295630216!2d30.599913999999995!3d50.508434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d1aa325ea219%3A0x2edb996b35d459f4!2z0LLRg9C7LiDQotC10L7QtNC-0YDQsCDQlNGA0LDQudC30LXRgNCwLCAyMiwg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1410420922769', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС Днепровского района
+									p
+										strong Адрес:
+										|  ул. Лебедева, 15
+									p
+										strong Телефоны
+										|  : (044) 552-13-30, 567-63-08
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p Вторник  - 10:00-18:00   
+									p Четверг   - 10:00-18:00   
+									p Пятница  - 10:00-18:00   
+									p Суббота  - 10:00-18:00
+									p
+										| Перерыв - 13:00-14:00, 
+										br
+										br
+										|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2540.213254446586!2d30.628261549999998!3d50.455753449999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5551f500791%3A0x88e620e3d22d3d1c!2z0LLRg9C7LiDQnNC40LrQvtC70Lgg0JvQtdCx0LXQtNGU0LLQsCwgMTUsINCa0LjRl9CyLCDQvNGW0YHRgtC-INCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1410421391776', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС Оболонского района
+									p
+										strong Адрес:
+										|  ул. Автозаводская, 25-А
+									p
+										strong Телефон
+										|  : (044) 430-48-08
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p Вторник  - 10:00-18:00   
+									p Четверг   - 10:00-18:00   
+									p Пятница  - 10:00-18:00   
+									p Суббота  - 10:00-18:00
+									p
+										| Перерыв - 13:00-14:00,  
+										br
+										br
+										|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2537.496609567272!2d30.457794999999997!3d50.506326!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cd80ab49c549%3A0xeb98e6ed08c1801e!2z0LLRg9C7LiDQkNCy0YLQvtC30LDQstC-0LTRgdGM0LrQsCwgMjUsINCa0LjRl9CyLCDQvNGW0YHRgtC-INCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1410421481365', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС Печерского района
+									p
+										strong Адрес:
+										|  ул. Суворова, 14/12
+									p
+										strong Телефоны
+										|  : (044) 280-33-34, 280-01-10
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p Вторник  - 10:00-18:00   
+									p Четверг   - 10:00-18:00   
+									p Пятница  - 10:00-18:00   
+									p Суббота  - 10:00-18:00
+									p
+										| Перерыв - 13:00-14:00, 
+										br
+										br
+										|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.152771513067!2d30.547006000000003!3d50.438255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c3803cc667b5%3A0xbcc01789c26486fb!2z0J7QktCY0KAg0J_QtdGH0LXRgNGB0LrQvtCz0L4g0YDQsNC50L7QvdCwICjQv9C10YfQtdGA0YHQutC40Lkg0L7QstC40YAp!5e0!3m2!1sru!2sua!4v1410421578700', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС Подольского района
+									p
+										strong Адрес:
+										|  ул. Межигорская, 30
+									p
+										strong Телефон
+										|  : (044) 425-40-67
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p Вторник  - 10:00-18:00
+									p  Четверг   - 10:00-18:00   
+									p Пятница  - 10:00-18:00   
+									p Суббота  - 10:00-18:00
+									p
+										| Перерыв - 13:00-14:00, 
+										br
+										br
+										|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2539.496687590599!2d30.5126165!3d50.4690965!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce14a371ae5d%3A0xde0a54a7d220e9f4!2z0LLRg9C7LiDQnNC10LbQuNCz0ZbRgNGB0YzQutCwLCAzMCwg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1410421646784', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС Святошинского района
+									p
+										strong Адрес:
+										|  ул. Г. Юры, 9  
+										strong  
+									p
+										strong Телефон
+										|  : (044) 403-08-76
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p Вторник  - 10:00-18:00   
+									p Четверг   - 10:00-18:00   
+									p Пятница  - 10:00-18:00   
+									p Суббота  - 10:00-18:00
+									p
+										| Перерыв - 13:00-14:00, 
+										br
+										br
+										|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.5189098215287!2d30.3850175!3d50.4314345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cb89375d78c3%3A0x164e37b8333b9bb8!2z0LLRg9C7LiDQk9C90LDRgtCwINCu0YDQuCwgOSwg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1410421731002', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС Соломенского района
+									p
+										strong Адрес:
+										|  ул. Ереванская, 25
+									p
+										strong Телефон
+										|  : (044) 242-54-51
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p Вторник  - 10:00-18:00   
+									p Четверг   - 10:00-18:00   
+									p Пятница  - 10:00-18:00   
+									p Суббота  - 10:00-18:00
+									p
+										| Перерыв - 13:00-14:00, 
+										br
+										br
+										|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2541.164260015424!2d30.463005499999994!3d50.438041!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce981645d667%3A0xc7f5e7ee39c1b750!2z0LLRg9C7LiDQhNGA0LXQstCw0L3RgdGM0LrQsCwgMjUsINCa0LjRl9CyLCDQvNGW0YHRgtC-INCa0LjRl9Cy!5e0!3m2!1sru!2sua!4v1410421864146', width='400', height='300', frameborder='0', style='border: 0px;')
+					table.mceThingTable
+						tbody
+							tr
+								td
+									h3 ГМС Шевченковского района
+									p
+										strong Адрес:
+										|  ул. Герцена, 9
+									p
+										strong Телефон
+										|  : (044) 483-72-48
+									p
+										strong Время работы 
+										strong ГМС
+										strong :
+									p Вторник  - 10:00-18:00   
+									p Четверг   - 10:00-18:00   
+									p Пятница  - 10:00-18:00   
+									p Суббота  - 10:00-18:00
+									p
+										| Перерыв - 13:00-14:00, 
+										br
+										br
+										|          В некоторые дни, кроме субботы, рабочий день продлевается до 19:00
+								td
+									.show-schedule-and-map график приема и карта проезда 
+									iframe(fake-src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2539.475150404155!2d30.471715500000002!3d50.4694975!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdda19ed7d99%3A0xca3d297e18e9993a!2z0LLRg9C7LiDQk9C10YDRhtC10L3QsCwgOSwg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1410423073970', width='400', height='300', frameborder='0', style='border: 0px;')
+					p(style='font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px;')  
+			.clear
 
 
 		include ./partials/footer.jade

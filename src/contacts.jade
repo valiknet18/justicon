@@ -6,17 +6,11 @@ html(lang='en')
 	body
 		include ./partials/navigation.jade
 
-		.wrap
-			//- .bc
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					a(itemprop='url', href='/', title='Главная')
-						span(itemprop='title') Главная
-				div  » 
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					span(itemprop='title') Контакты
-			.tophr
+		section.page-label
+			.container
+				h2 Контакты
+		.container
 			.main.wide-l
-				h1#page-tit Контакты
 				.main-container
 					.contacts
 						table.address

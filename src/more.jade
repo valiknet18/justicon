@@ -6,26 +6,27 @@ html(lang='en')
 	body
 		include ./partials/navigation.jade
 
-		.container
-			.breadcrumb
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					a(itemprop='url', href='/', title='Главная')
-						span(itemprop='title') Главная
-				div  / 
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					a(itemprop='url', href='/uslugi/', title='Услуги')
-						span(itemprop='title') Услуги
-				div  / 
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					a(itemprop='url', href='/uslugi/sud/', title='Судебная практика')
-						span(itemprop='title') Судебная практика
-				div  / 
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					a(itemprop='url', href='/uslugi/sud/ispoln/', title='Представительство в исполнительном производстве')
+		section.breadcrumb-section
+			.container
+				.breadcrumb
+					div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+						a(itemprop='url', href='/', title='Главная')
+							span(itemprop='title') Главная
+					div  / 
+					div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+						a(itemprop='url', href='/uslugi/', title='Услуги')
+							span(itemprop='title') Услуги
+					div  / 
+					div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+						a(itemprop='url', href='/uslugi/sud/', title='Судебная практика')
+							span(itemprop='title') Судебная практика
+					div  / 
+					div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
+						a(itemprop='url', href='/uslugi/sud/ispoln/', title='Представительство в исполнительном производстве')
+							span(itemprop='title') Представительство в исполнительном производстве
+					div  / 
+					div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
 						span(itemprop='title') Представительство в исполнительном производстве
-				div  / 
-				div(itemtype='http://data-vocabulary.org/Breadcrumb', itemscope='')
-					span(itemprop='title') Представительство в исполнительном производстве
 
 		.service-introduction
 			.container
@@ -187,7 +188,7 @@ html(lang='en')
 								span.arrow-down
 						a(href="#").btn Заказать услугу
 					.tab-pane#tbd4
-						.table-holder
+						.table-holder.hidden
 							table.algorythm-table
 								thead
 									tr
@@ -259,7 +260,52 @@ html(lang='en')
 											ul
 												li непосредственное участие в ходе проведения исполнительных действий 
 										td(align='center', colspan='1') 1 р.д.
-						.pluso(data-background='transparent', data-options='medium,square,line,horizontal,nocounter,theme=06', data-services='facebook,twitter,google,vkontakte,print')
+						.table-holder
+							.algorythm-block-1
+								ul
+									li
+										.step-col
+											.name Анализ документов и подготовка заявления
+											.time от 1 р.д.
+										.description-col
+											ul
+												li
+													| анализ исполнительного производства (в случае его наличия) 
+												li
+													| подготовка заявления об открытии исполнительного производства
+									li
+										.step-col
+											.name Сопровождение исполнительного производства
+											.time от 1 р.д.
+										.description-col
+											ul
+												li
+													| контроль действий исполнителя 
+												li
+													| подготовка необходимых документов (заявлений, ходатайств, жалоб…)
+									li
+										.step-col
+											.name Сопровождение исполнительного производства
+											.time от 1 р.д.
+										.description-col
+											ul
+												li
+													| контроль действий исполнителя 
+												li
+													| подготовка необходимых документов (заявлений, ходатайств, жалоб…)
+									tr
+										td(colspan='1')
+											b
+												span(style='color: rgb(0, 84, 165);')
+													span(style='color: rgb(255, 0, 0);') 3.
+												b
+													font(color='#0054a5')
+														| Участие исполнительных действиях 
+														br
+										td(colspan='1')
+											ul
+												li непосредственное участие в ходе проведения исполнительных действий 
+										td(align='center', colspan='1') 1 р.д.
 
 
 
