@@ -200,7 +200,7 @@ $(document).on('ready', function () {
 
 	})();
 
-		// categories
+		// categories 1
 		(function () {
 			var $section = $('.categories-click'),
 				$categories = $section.find('.category');
@@ -214,6 +214,23 @@ $(document).on('ready', function () {
 				var $self = $(this);
 				$self.removeClass('active');
 				$section.removeClass('hovered');
+			});
+		})();
+
+		// categories 2
+		(function () {
+			var $_ = $('.categories-slider');
+			$_.find('[data-category]').on('click', function (e) {
+				var $self = $(this);
+				var $target = $( '#' + $self.attr('data-category') );
+				if ($target.length) {
+					$self.addClass('active').siblings().removeClass('active')
+					$target.removeClass('hidden').siblings().addClass('hidden');
+				}
+			});
+			$_.find('.next-slide').on('click', function () {
+			});
+			$_.find('.prev-slide').on('click', function () {
 			});
 		})();
 

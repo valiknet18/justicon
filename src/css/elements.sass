@@ -107,6 +107,12 @@
 				&:hover, &.active
 					color: #000
 					background-color: #6bb6ee
+			span
+				overflow: hidden
+				display: inline-block
+				text-overflow: ellipsis
+				width: 180px
+				white-space: normal
 			.icon-container, span
 				display: inline-block
 				vertical-align: middle
@@ -151,12 +157,6 @@
 						background-position: -5px -491px
 						width: 50px
 						height: 39px
-			span
-				overflow: hidden
-				display: inline-block
-				text-overflow: ellipsis
-				width: 180px
-				white-space: normal
 		.submenu
 			// display: none
 			opacity: 0
@@ -189,6 +189,7 @@
 				pointer-events: all
 			.inner-holder
 				display: block
+				background: #e0eaf1
 				width: calc(100vw - 300px)
 				& > li
 					display: block
@@ -245,7 +246,7 @@
 		.nav.nav-sidebar
 			li
 				a
-					width: 270px
+					width: 280px
 	&.opened
 		// width: 100vw
 		overflow: hidden

@@ -1,323 +1,641 @@
 - var page = 'main'
+
 doctype html
 html(lang='en')
 	head
 		title Justicon
+
 		include ./partials/head.jade
+
 	body
+
 		include ./partials/navigation.jade
-		.container
-			.promo
-				.wrap2
-					.inner
-						.lnb(style='display: block;')
-						.hero
-							.caroufredsel_wrapper
-								.carousel
-									.item
-										img(src="img/content/user-1.png", alt="test")
-										h1
-											div
-												font(color='#ff0000') СКИДКА 5%
-												|  при заказе комплекса услуг!
-										h2
-											| При заказе комплекса услуг по легализации нерезидента  
-											div
-												| (Разрешение на работу+Вид на жительство) - мы подарим Вам 
-												font(color='#ff0000')
-													b 5% скидку!
-										.more
-											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/skidka-na-kompleks-razreshenie-na-rabotu-vid-na-zhitelstvo.html?clear_cache=Y') Узнать больше
-									.item
-										h1
-											font(size='4') Минус
-											span(style='text-align: justify;')
-												font(color='#ff0000', size='4')  
-												font(color='#ff0000')
-													| 5000
-													font(size='4') грн.
-												font(size='4')
-													| при
-													font(color='#ff0000')  
-											| Регистрации Представительства
-										h2
-											div(style='text-align: left;')
-												span(style='font-size: small;')
-													| При заказе регистрации представительства служебную карточку на КАЖДОГО иностранного сотрудника мы оформим Вам
-												font(color='#ff0000', style='font-size: small;') БЕСПЛАТНО!
-										.more
-											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/vygodnye-usloviya-po-registratsii-predstavitelstva.html?clear_cache=Y') Узнать больше
-									.item
-										h1
-											div(style='text-align: left;') Разрешение на опасные работы
-										h2
-											div
-												font(size='5')
-													span(style='color: rgb(255, 0, 0);') «АКЦИЯ» 
-												| при заказе Разрешения на опасные работы – супервыгодные условия!
-										.more
-											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/aktsiya-po-oformleniyu-razresheniya-na-opasnye-raboty.html') Узнать больше
-									.item
-										h1
-											div
-												font(color='#ff0000') СКИДКА 5%
-												|  при заказе комплекса услуг!
-										h2
-											| При заказе комплекса услуг по легализации нерезидента  
-											div
-												| (Разрешение на работу+Вид на жительство) - мы подарим Вам 
-												font(color='#ff0000')
-													b 5% скидку!
-										.more
-											a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/skidka-na-kompleks-razreshenie-na-rabotu-vid-na-zhitelstvo.html?clear_cache=Y') Узнать больше
-							.clear
-							.swicher
-								.outer-center
-									.inner-center
-										.l-trng.fl
-										.pagination.fl
-										.r-trng.fl
-								.clear
-						.rnb(style='display: block;')
-						.clear
-			.mservices
-				.wrap
-					.fl1
-						.item
-							.adc.pract
-								.s1.adc
-								.text
-									.text-wrap
-										.title-hover
-											a(href='http://justicon.ua/uslugi/korp/') Корпоративные правоотношения
-										a(href='http://justicon.ua/uslugi/korp/registratsiya/', target='_self') Регистрация
-										a(href='http://justicon.ua/uslugi/korp/izmeneniya/', target='_self') Изменения
-										a(href='http://justicon.ua/uslugi/korp/likvidatsiya/', target='_self') Ликвидация
-										a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') Сопутствующие и
-										a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') дополнительные
-										a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') услуги
-							.title
-								a(href='http://justicon.ua/uslugi/korp/') Корпоративные правоотношения
-						.item
-							.adc.pract
-								.s2.adc
-								.text
-									.text-wrap
-										.title-hover
-											a(href='http://justicon.ua/uslugi/lits/') Лицензии, разрешения, сертификация
-										a(href='http://justicon.ua/uslugi/lits/litsenzii/', target='_self') Лицензии 
-										a(href='http://justicon.ua/uslugi/lits/razresheniya/', target='_self') Разрешения
-										a(href='http://justicon.ua/uslugi/lits/sertifikatsiya/', target='_self') Сертификация
-							.title
-								a(href='http://justicon.ua/uslugi/lits/') Лицензии, разрешения, сертификация
-						.item
-							.adc.pract
-								.s3.adc
-								.text
-									.text-wrap
-										.title-hover
-											a(href='http://justicon.ua/uslugi/sud/') Судебная практика
-										a(href='http://justicon.ua/uslugi/sud/predst/', target='_self') Представительство интересов в судах
-										a(href='http://justicon.ua/uslugi/sud/predstavitelstvo-v-ispolnitelnom-proizvodstve.html', target='_self') Представительство в исполнительном производстве 
-										a(href='http://justicon.ua/uslugi/sud/vozvrat-dolgov.html', target='_self') Возврат долгов
-										a(href='http://justicon.ua/uslugi/sud/praktiki/', target='_self') Судебные практики
-							.title
-								a(href='http://justicon.ua/uslugi/sud/') Судебная практика
-						.item
-							.adc.pract
-								.s4.adc
-								.text
-									.text-wrap
-										.title-hover
-											a(href='http://justicon.ua/uslugi/zem/') Недвижимость, строительство, земельное право
-										a(href='http://justicon.ua/uslugi/zem/nedv/', target='_self') Недвижимость
-										a(href='http://justicon.ua/uslugi/zem/stroi/', target='_self') Строительство
-										a(href='http://justicon.ua/uslugi/zem/zem-pr/', target='_self') Земельное право
-								.title
+
+		section.hero-section.hidden
+			.wrap2
+				.inner
+					.lnb(style='display: block;')
+					.hero
+						.caroufredsel_wrapper
+							.carousel
+								.item
+									img(src="img/content/user-1.png", alt="test")
+									h1
+										div
+											font(color='#ff0000') СКИДКА 5%
+											|  при заказе комплекса услуг!
+									h2
+										| При заказе комплекса услуг по легализации нерезидента  
+										div
+											| (Разрешение на работу+Вид на жительство) - мы подарим Вам 
+											font(color='#ff0000')
+												b 5% скидку!
+									.more
+										a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/skidka-na-kompleks-razreshenie-na-rabotu-vid-na-zhitelstvo.html?clear_cache=Y') Узнать больше
+								.item
+									h1
+										font(size='4') Минус
+										span(style='text-align: justify;')
+											font(color='#ff0000', size='4')  
+											font(color='#ff0000')
+												| 5000
+												font(size='4') грн.
+											font(size='4')
+												| при
+												font(color='#ff0000')  
+										| Регистрации Представительства
+									h2
+										div(style='text-align: left;')
+											span(style='font-size: small;')
+												| При заказе регистрации представительства служебную карточку на КАЖДОГО иностранного сотрудника мы оформим Вам
+											font(color='#ff0000', style='font-size: small;') БЕСПЛАТНО!
+									.more
+										a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/vygodnye-usloviya-po-registratsii-predstavitelstva.html?clear_cache=Y') Узнать больше
+								.item
+									h1
+										div(style='text-align: left;') Разрешение на опасные работы
+									h2
+										div
+											font(size='5')
+												span(style='color: rgb(255, 0, 0);') «АКЦИЯ» 
+											| при заказе Разрешения на опасные работы – супервыгодные условия!
+									.more
+										a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/aktsiya-po-oformleniyu-razresheniya-na-opasnye-raboty.html') Узнать больше
+								.item
+									h1
+										div
+											font(color='#ff0000') СКИДКА 5%
+											|  при заказе комплекса услуг!
+									h2
+										| При заказе комплекса услуг по легализации нерезидента  
+										div
+											| (Разрешение на работу+Вид на жительство) - мы подарим Вам 
+											font(color='#ff0000')
+												b 5% скидку!
+									.more
+										a.btn.btn-custom.btn-large(href='http://justicon.ua/aktsii-i-predlozheniya/skidka-na-kompleks-razreshenie-na-rabotu-vid-na-zhitelstvo.html?clear_cache=Y') Узнать больше
+
+		section.categories-interactive
+			.container
+				mixin category (name, image, categories)
+					.category
+						h3
+							a(href='#')
+								img(src= 'img/content/' + image + '.png', alt= name)
+								span= name
+						.sub-categories
+							each category in categories
+								a(href='#')!= category
+
+				.categories-holder
+					+category(
+						'Корпоративные правоотношения',
+						'category-icon-1',
+						[
+							'Регистрация',
+							'Изменения',
+							'Дополнительно'
+						]
+					)
+					+category(
+						'Лицензии, разрешения, сертификация',
+						'category-icon-2',
+						[
+							'Лицензии',
+							'Разрешения',
+							'Сертификация'
+						]
+					)
+					+category(
+						'Судебная практика',
+						'category-icon-3',
+						[
+							'Представительство интересов в судах',
+							'Представительство в исполнительном производстве',
+							'Возврат долгов',
+							'Судебные практики'
+						]
+					)
+					+category(
+						'Недвижимость, строительство, земельное право',
+						'category-icon-4',
+						[
+							'Недвижимость',
+							'Сстроительство',
+							'Земельное право'
+						]
+					)
+					+category(
+						'Миграционное право',
+						'category-icon-5',
+						[
+							'Иммиграция в Украину',
+							'Эмиграция из Украины',
+							'Сопутствующие услуги'
+						]
+					)
+					+category(
+						'Интеллектуальное право',
+						'category-icon-6',
+						[
+							'Регистрация торговых марок',
+							'Патентование',
+							'Авторское право'
+						]
+					)
+					+category(
+						'Абонентское обслуживание',
+						'category-icon-7',
+						[
+							'Абонентское обслуживание',
+							'Бухгалтерские услуги. Аутсорсинг',
+							'Дополнительные бухгалтерские услуги',
+							'Кадровое сопровождение'
+						]
+					)
+					+category(
+						'Юридический и налоговый консалтинг',
+						'category-icon-8',
+						[
+							'Налоговый консалтинг',
+							'Юридический консалтинг',
+							'Антимонопольное право'
+						]
+					)
+
+		section.categories-section
+			.categories-content
+				.item
+					.adc.pract
+						.s1.adc
+						.text
+							.text-wrap
+								.title-hover
+									a(href='http://justicon.ua/uslugi/korp/') Корпоративные правоотношения
+								a(href='http://justicon.ua/uslugi/korp/registratsiya/', target='_self') Регистрация
+								a(href='http://justicon.ua/uslugi/korp/izmeneniya/', target='_self') Изменения
+								a(href='http://justicon.ua/uslugi/korp/likvidatsiya/', target='_self') Ликвидация
+								a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') Сопутствующие и
+								a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') дополнительные
+								a(href='http://justicon.ua/uslugi/korp/soputstv/', target='_self') услуги
+					.title
+						a(href='http://justicon.ua/uslugi/korp/') Корпоративные правоотношения
+				.item
+					.adc.pract
+						.s2.adc
+						.text
+							.text-wrap
+								.title-hover
+									a(href='http://justicon.ua/uslugi/lits/') Лицензии, разрешения, сертификация
+								a(href='http://justicon.ua/uslugi/lits/litsenzii/', target='_self') Лицензии 
+								a(href='http://justicon.ua/uslugi/lits/razresheniya/', target='_self') Разрешения
+								a(href='http://justicon.ua/uslugi/lits/sertifikatsiya/', target='_self') Сертификация
+					.title
+						a(href='http://justicon.ua/uslugi/lits/') Лицензии, разрешения, сертификация
+				.item
+					.adc.pract
+						.s3.adc
+						.text
+							.text-wrap
+								.title-hover
+									a(href='http://justicon.ua/uslugi/sud/') Судебная практика
+								a(href='http://justicon.ua/uslugi/sud/predst/', target='_self') Представительство интересов в судах
+								a(href='http://justicon.ua/uslugi/sud/predstavitelstvo-v-ispolnitelnom-proizvodstve.html', target='_self') Представительство в исполнительном производстве 
+								a(href='http://justicon.ua/uslugi/sud/vozvrat-dolgov.html', target='_self') Возврат долгов
+								a(href='http://justicon.ua/uslugi/sud/praktiki/', target='_self') Судебные практики
+					.title
+						a(href='http://justicon.ua/uslugi/sud/') Судебная практика
+				.item
+					.adc.pract
+						.s4.adc
+						.text
+							.text-wrap
+								.title-hover
 									a(href='http://justicon.ua/uslugi/zem/') Недвижимость, строительство, земельное право
-						.item
-							.adc.pract
-								.s5.adc
-								.text
-									.text-wrap
-										.title-hover
-											a(href='http://justicon.ua/uslugi/migr/') Миграционное право
-										a(href='http://justicon.ua/uslugi/migr/immigr/', target='_self') Иммиграция в Украину
-										a(href='http://justicon.ua/uslugi/migr/emigr/', target='_self') Эмиграция из Украины
-										a(href='http://justicon.ua/uslugi/migr/soputstv-uslugi/', target='_self') Сопутствующие услуги
-							.title
-								a(href='http://justicon.ua/uslugi/migr/') Миграционное право
-						.item
-							.adc.pract
-								.s6.adc
-								.text
-									.text-wrap
-										.title-hover
-											a(href='http://justicon.ua/uslugi/int/') Интеллектуальное право
-										a(href='http://justicon.ua/uslugi/int/reg/', target='_self') Регистрация торговых марок
-										a(href='http://justicon.ua/uslugi/int/patent/', target='_self') Патентование
-										a(href='http://justicon.ua/uslugi/int/avtor/', target='_self') Авторское право
-							.title
-								a(href='http://justicon.ua/uslugi/int/') Интеллектуальное право
-						.item
-							.adc.pract
-								.s7.adc
-								.text
-									.text-wrap
-										.title-hover
-											a(href='http://justicon.ua/uslugi/abon/') Абонентское обслуживание
-										a(href='http://justicon.ua/uslugi/abon/a-y/abonentskoe-yuridicheskoe-obsluzhivanie.html', target='_self') Абонентское обслуживание
-										a(href='http://justicon.ua/uslugi/abon/b-u/bukhgalterskie-uslugi-autsorsing.html', target='_self') Бухгалтерские услуги. Аутсорсинг
-										a(href='http://justicon.ua/uslugi/abon/d-b/dopolnitelnye-bukhgalterskie-uslugi.html', target='_self') Дополнительные бухгалтерские услуги
-										a(href='http://justicon.ua/uslugi/abon/k-s/kadrovoe-soprovozhdenie.html', target='_self') Кадровое сопровождение
-							.title
-								a(href='http://justicon.ua/uslugi/abon/') Абонентское обслуживание
-						.item
-							.adc.pract
-								.s8.adc
-								.text
-									.text-wrap
-										.title-hover
-											a(href='http://justicon.ua/uslugi/konsalting/') Юридический и налоговый консалтинг
-										a(href='http://justicon.ua/uslugi/konsalting/nalog/', target='_self') Налоговый консалтинг
-										a(href='http://justicon.ua/uslugi/konsalting/yur/', target='_self') Юридический консалтинг
-										a(href='http://justicon.ua/uslugi/konsalting/antimonopolnoe-pravo/', target='_self') Антимонопольное право
-							.title
-								a(href='http://justicon.ua/uslugi/konsalting/') Юридический и налоговый консалтинг
-					.clear
-			.search-section
-				.wrap
-					form(action="#").search-wrapper
-						h1 Некогда разбираться? Мы поможем.
-						.input-form
-							input(type="text" placeholder="Введите основные ключевые слова вашего вопроса")
-						button(type="submit") Найти решение
-			.partners
-				.wrap
-					.label-holder
-						h1 Нам доверяют
-					.parnters-holder
-						.lnb.disabled
-						.caroufredsel_wrapper
-							.parnters-container
-								.part
-									img(src='http://justicon.ua/upload/iblock/4b3/HyundaiLogo.png', data-href='/nashi-klienty/?client=472')
-								.part
-									img(src='http://justicon.ua/upload/iblock/22a/KIA.png', data-href='/nashi-klienty/?client=471')
-								.part
-									img(src='http://justicon.ua/upload/iblock/995/Luxoft_logo.png', data-href='/nashi-klienty/?client=470')
-								.part
-									img(src='http://justicon.ua/upload/iblock/219/EPAM_logo.png', data-href='/nashi-klienty/?client=469')
-								.part
-									img(src='http://justicon.ua/upload/iblock/543/yandex2.png', data-href='/nashi-klienty/?client=487')
-								.part
-									img(src='http://justicon.ua/upload/iblock/474/Metinvest_Logo_Ukr2.png', data-href='/nashi-klienty/?client=474')
-								.part
-									img(src='http://justicon.ua/upload/iblock/797/carlsberg_crown_logo_on_green.jpg', data-href='/nashi-klienty/?client=488')
-								.part
-									img(src='http://justicon.ua/upload/iblock/f97/Logo_OTIS300dpi.png', data-href='/nashi-klienty/?client=486')
-								.part
-									img(src='http://justicon.ua/upload/iblock/0fc/new_csa_logo_mar_2008.png', data-href='/nashi-klienty/?client=490')
-								.part
-									img(src='http://justicon.ua/upload/iblock/c78/Лисод.png', data-href='/nashi-klienty/?client=473')
-								.part
-									img(src='http://justicon.ua/upload/iblock/293/Кировский завод ОЦМ.png', data-href='/nashi-klienty/?client=475')
-								.part
-									img(src='http://justicon.ua/upload/iblock/bad/ЕВРАЗ.png', data-href='/nashi-klienty/?client=489')
-								.part
-									img(src='http://justicon.ua/upload/iblock/033/uralremont.png', data-href='/nashi-klienty/?client=477')
-								.part
-									img(src='http://justicon.ua/upload/iblock/b18/ukrdom.png', data-href='/nashi-klienty/?client=479')
-								.part
-									img(src='http://justicon.ua/upload/iblock/bca/КРИВБАССПЕЦПРОЕКТ.png', data-href='/nashi-klienty/?client=478')
-								.part
-									img(src='http://justicon.ua/upload/iblock/49e/vse-logo.png', data-href='/nashi-klienty/?client=480')
-								.part
-									img(src='http://justicon.ua/upload/iblock/72b/ua-tenders.gif', data-href='/nashi-klienty/?client=481')
-								.part
-									img(src='http://justicon.ua/upload/iblock/966/TENTE.png', data-href='/nashi-klienty/?client=492')
-								.part
-									img(src='http://justicon.ua/upload/iblock/fb3/TMM.png', data-href='/nashi-klienty/?client=493')
-								.part
-									img(src='http://justicon.ua/upload/iblock/b68/horizont.png', data-href='/nashi-klienty/?client=482')
-								.part
-									img(src='http://justicon.ua/upload/iblock/f80/ЕБЕРСПЕХЕР-logo.png', data-href='/nashi-klienty/?client=495')
-								.part
-									img(src='http://justicon.ua/upload/iblock/abc/asmap_1.png', data-href='/nashi-klienty/?client=496')
-								.part
-									img(src='http://justicon.ua/upload/iblock/2ec/14284.png', data-href='/nashi-klienty/?client=497')
-								.part
-									img(src='http://justicon.ua/upload/iblock/b9a/DEC.gif', data-href='/nashi-klienty/?client=498')
-								.part
-									img(src='http://justicon.ua/upload/iblock/a96/ITK-logo-ua.gif', data-href='/nashi-klienty/?client=483')
-								.part
-									img(src='http://justicon.ua/upload/iblock/241/gazetaua.png', data-href='/nashi-klienty/?client=484')
-								.part
-									img(src='http://justicon.ua/upload/iblock/9c1/site2.fd968aa3e6db262dda98d05d1cfd7f0d[1].jpg', data-href='/nashi-klienty/?client=491')
-								.part
-									img(src='http://justicon.ua/upload/iblock/52a/kmv.png', data-href='/nashi-klienty/?client=485')
-								.part
-									img(src='http://justicon.ua/upload/iblock/0e2/gagarin.jpg', data-href='/nashi-klienty/?client=494')
-						.rnb
-						// .controls
-							.page.active
-							.page
-							.page
-							.page
-						.clear
+								a(href='http://justicon.ua/uslugi/zem/nedv/', target='_self') Недвижимость
+								a(href='http://justicon.ua/uslugi/zem/stroi/', target='_self') Строительство
+								a(href='http://justicon.ua/uslugi/zem/zem-pr/', target='_self') Земельное право
+						.title
+							a(href='http://justicon.ua/uslugi/zem/') Недвижимость, строительство, земельное право
+				.item
+					.adc.pract
+						.s5.adc
+						.text
+							.text-wrap
+								.title-hover
+									a(href='http://justicon.ua/uslugi/migr/') Миграционное право
+								a(href='http://justicon.ua/uslugi/migr/immigr/', target='_self') Иммиграция в Украину
+								a(href='http://justicon.ua/uslugi/migr/emigr/', target='_self') Эмиграция из Украины
+								a(href='http://justicon.ua/uslugi/migr/soputstv-uslugi/', target='_self') Сопутствующие услуги
+					.title
+						a(href='http://justicon.ua/uslugi/migr/') Миграционное право
+				.item
+					.adc.pract
+						.s6.adc
+						.text
+							.text-wrap
+								.title-hover
+									a(href='http://justicon.ua/uslugi/int/') Интеллектуальное право
+								a(href='http://justicon.ua/uslugi/int/reg/', target='_self') Регистрация торговых марок
+								a(href='http://justicon.ua/uslugi/int/patent/', target='_self') Патентование
+								a(href='http://justicon.ua/uslugi/int/avtor/', target='_self') Авторское право
+					.title
+						a(href='http://justicon.ua/uslugi/int/') Интеллектуальное право
+				.item
+					.adc.pract
+						.s7.adc
+						.text
+							.text-wrap
+								.title-hover
+									a(href='http://justicon.ua/uslugi/abon/') Абонентское обслуживание
+								a(href='http://justicon.ua/uslugi/abon/a-y/abonentskoe-yuridicheskoe-obsluzhivanie.html', target='_self') Абонентское обслуживание
+								a(href='http://justicon.ua/uslugi/abon/b-u/bukhgalterskie-uslugi-autsorsing.html', target='_self') Бухгалтерские услуги. Аутсорсинг
+								a(href='http://justicon.ua/uslugi/abon/d-b/dopolnitelnye-bukhgalterskie-uslugi.html', target='_self') Дополнительные бухгалтерские услуги
+								a(href='http://justicon.ua/uslugi/abon/k-s/kadrovoe-soprovozhdenie.html', target='_self') Кадровое сопровождение
+					.title
+						a(href='http://justicon.ua/uslugi/abon/') Абонентское обслуживание
+				.item
+					.adc.pract
+						.s8.adc
+						.text
+							.text-wrap
+								.title-hover
+									a(href='http://justicon.ua/uslugi/konsalting/') Юридический и налоговый консалтинг
+								a(href='http://justicon.ua/uslugi/konsalting/nalog/', target='_self') Налоговый консалтинг
+								a(href='http://justicon.ua/uslugi/konsalting/yur/', target='_self') Юридический консалтинг
+								a(href='http://justicon.ua/uslugi/konsalting/antimonopolnoe-pravo/', target='_self') Антимонопольное право
+					.title
+						a(href='http://justicon.ua/uslugi/konsalting/') Юридический и налоговый консалтинг
 
-			.top-news
-				.wrap
-					.top-news-holder
-						.lnb.disabled
-						.caroufredsel_wrapper
-							.parnters-container
-								.part
-									span.label Хочу оформить частное предприятие
-									img(src='https://unsplash.it/325/300?image=1059', data-href='/nashi-klienty/?client=472')
-									a.btn(href="#") Узнать больше
-								.part
-									span.label Что необходимо учитывать при оформлении документов
-									img(src='https://unsplash.it/325/300?image=1048', data-href='/nashi-klienty/?client=471')
-									a.btn(href="#") Узнать больше
-								.part
-									span.label Лицензирование и сертификация
-									img(src='https://unsplash.it/325/300?image=998', data-href='/nashi-klienty/?client=470')
-									a.btn(href="#") Узнать больше
-								.part
-									span.label Хочу оформить частное предприятие
-									img(src='https://unsplash.it/325/300?image=983', data-href='/nashi-klienty/?client=469')
-									a.btn(href="#") Узнать больше
-								.part
-									span.label Хочу оформить частное предприятие
-									img(src='https://unsplash.it/325/300?image=972', data-href='/nashi-klienty/?client=487')
-									a.btn(href="#") Узнать больше
-								.part
-									span.label Хочу оформить частное предприятие
-									img(src='https://unsplash.it/325/300?image=885', data-href='/nashi-klienty/?client=474')
-									a.btn(href="#") Узнать больше
-								.part
-									span.label Хочу оформить частное предприятие
-									img(src='https://unsplash.it/325/300?image=679', data-href='/nashi-klienty/?client=488')
-									a.btn(href="#") Узнать больше
-						.rnb
-						// .controls
-							.page.active
-							.page
-							.page
-							.page
-						.clear
+		section.categories-click
+			.container
+				mixin category (name, image, categories)
+					.category
+						h3
+							a(href='#')
+								img(src= 'img/content/' + image + '.png', alt= name)
+								span= name
+						.sub-categories
+							each category in categories
+								a(href='#')!= category
 
-				.about.opensans
-					.wrap
+				.categories-holder
+					+category(
+						'Корпоративные правоотношения',
+						'category-icon-1',
+						[
+							'Регистрация',
+							'Изменения',
+							'Дополнительно'
+						]
+					)
+					+category(
+						'Лицензии, разрешения, сертификация',
+						'category-icon-2',
+						[
+							'Лицензии',
+							'Разрешения',
+							'Сертификация'
+						]
+					)
+					+category(
+						'Судебная практика',
+						'category-icon-3',
+						[
+							'Представительство интересов в судах',
+							'Представительство в исполнительном производстве',
+							'Возврат долгов',
+							'Судебные практики'
+						]
+					)
+					+category(
+						'Недвижимость, строительство, земельное право',
+						'category-icon-4',
+						[
+							'Недвижимость',
+							'Сстроительство',
+							'Земельное право'
+						]
+					)
+					+category(
+						'Миграционное право',
+						'category-icon-5',
+						[
+							'Иммиграция в Украину',
+							'Эмиграция из Украины',
+							'Сопутствующие услуги'
+						]
+					)
+					+category(
+						'Интеллектуальное право',
+						'category-icon-6',
+						[
+							'Регистрация торговых марок',
+							'Патентование',
+							'Авторское право'
+						]
+					)
+					+category(
+						'Абонентское обслуживание',
+						'category-icon-7',
+						[
+							'Абонентское обслуживание',
+							'Бухгалтерские услуги. Аутсорсинг',
+							'Дополнительные бухгалтерские услуги',
+							'Кадровое сопровождение'
+						]
+					)
+					+category(
+						'Юридический и налоговый консалтинг',
+						'category-icon-8',
+						[
+							'Налоговый консалтинг',
+							'Юридический консалтинг',
+							'Антимонопольное право'
+						]
+					)
+
+		section.categories-jump
+			.container
+				mixin category (name, image, categories)
+					.category
+						h3
+							a(href='#')
+								img(src= 'img/content/' + image + '.png', alt= name)
+								span= name
+						.sub-categories
+							each category in categories
+								a(href='#')!= category
+
+				.categories-holder
+					+category(
+						'Корпоративные правоотношения',
+						'category-icon-1',
+						[
+							'Регистрация',
+							'Изменения',
+							'Дополнительно'
+						]
+					)
+					+category(
+						'Лицензии, разрешения, сертификация',
+						'category-icon-2',
+						[
+							'Лицензии',
+							'Разрешения',
+							'Сертификация'
+						]
+					)
+					+category(
+						'Судебная практика',
+						'category-icon-3',
+						[
+							'Представительство интересов в судах',
+							'Представительство в исполнительном производстве',
+							'Возврат долгов',
+							'Судебные практики'
+						]
+					)
+					+category(
+						'Недвижимость, строительство, земельное право',
+						'category-icon-4',
+						[
+							'Недвижимость',
+							'Сстроительство',
+							'Земельное право'
+						]
+					)
+					+category(
+						'Миграционное право',
+						'category-icon-5',
+						[
+							'Иммиграция в Украину',
+							'Эмиграция из Украины',
+							'Сопутствующие услуги'
+						]
+					)
+					+category(
+						'Интеллектуальное право',
+						'category-icon-6',
+						[
+							'Регистрация торговых марок',
+							'Патентование',
+							'Авторское право'
+						]
+					)
+					+category(
+						'Абонентское обслуживание',
+						'category-icon-7',
+						[
+							'Абонентское обслуживание',
+							'Бухгалтерские услуги. Аутсорсинг',
+							'Дополнительные бухгалтерские услуги',
+							'Кадровое сопровождение'
+						]
+					)
+					+category(
+						'Юридический и налоговый консалтинг',
+						'category-icon-8',
+						[
+							'Налоговый консалтинг',
+							'Юридический консалтинг',
+							'Антимонопольное право'
+						]
+					)
+
+		section.search-section
+			.container
+				form(action="#").search-wrapper
+					h2 Некогда разбираться? Мы поможем.
+					.input-form
+						input(type="text" placeholder="Введите основные ключевые слова вашего вопроса")
+					button(type="submit") Найти решение
+
+		section.partners-section
+			.container
+				.label-holder
+					h2 Нам доверяют
+				.parnters-holder
+					.caroufredsel_wrapper
+						.parnters-container.owl-carousel
+							mixin partner (img, href)
+								.partner.item
+									img(src= img)
+							+partner(
+								'http://justicon.ua/upload/iblock/4b3/HyundaiLogo.png',
+								'/nashi-klienty/?client=472'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/22a/KIA.png',
+								'/nashi-klienty/?client=471'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/995/Luxoft_logo.png',
+								'/nashi-klienty/?client=470'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/219/EPAM_logo.png',
+								'/nashi-klienty/?client=469'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/543/yandex2.png',
+								'/nashi-klienty/?client=487'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/474/Metinvest_Logo_Ukr2.png',
+								'/nashi-klienty/?client=474'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/797/carlsberg_crown_logo_on_green.jpg',
+								'/nashi-klienty/?client=488'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/f97/Logo_OTIS300dpi.png',
+								'/nashi-klienty/?client=486'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/0fc/new_csa_logo_mar_2008.png',
+								'/nashi-klienty/?client=490'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/c78/Лисод.png',
+								'/nashi-klienty/?client=473'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/293/Кировский завод ОЦМ.png',
+								'/nashi-klienty/?client=475'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/bad/ЕВРАЗ.png',
+								'/nashi-klienty/?client=489'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/033/uralremont.png',
+								'/nashi-klienty/?client=477'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/b18/ukrdom.png',
+								'/nashi-klienty/?client=479'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/bca/КРИВБАССПЕЦПРОЕКТ.png',
+								'/nashi-klienty/?client=478'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/49e/vse-logo.png',
+								'/nashi-klienty/?client=480'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/72b/ua-tenders.gif',
+								'/nashi-klienty/?client=481'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/966/TENTE.png',
+								'/nashi-klienty/?client=492'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/fb3/TMM.png',
+								'/nashi-klienty/?client=493'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/b68/horizont.png',
+								'/nashi-klienty/?client=482'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/f80/ЕБЕРСПЕХЕР-logo.png',
+								'/nashi-klienty/?client=495'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/abc/asmap_1.png',
+								'/nashi-klienty/?client=496'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/2ec/14284.png',
+								'/nashi-klienty/?client=497'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/b9a/DEC.gif',
+								'/nashi-klienty/?client=498'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/a96/ITK-logo-ua.gif',
+								'/nashi-klienty/?client=483'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/241/gazetaua.png',
+								'/nashi-klienty/?client=484'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/9c1/site2.fd968aa3e6db262dda98d05d1cfd7f0d[1].jpg',
+								'/nashi-klienty/?client=491'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/52a/kmv.png',
+								'/nashi-klienty/?client=485'
+							)
+							+partner(
+								'http://justicon.ua/upload/iblock/0e2/gagarin.jpg',
+								'/nashi-klienty/?client=494'
+							)
+
+		section.top-news
+			.container.top-news-holder
+				.parnters-container.owl-carousel
+					mixin new-item (name, img, href)
+						.item.new-item
+							img(src= img)
+							span.label= name
+							a.btn(href= href) Узнать больше
+					+new-item(
+						'Хочу оформить частное предприятие',
+						'https://unsplash.it/325/300?image=1059',
+						'/nashi-klienty/?client=472'
+					)
+					+new-item(
+						'Что необходимо учитывать при оформлении документов',
+						'https://unsplash.it/325/300?image=1048',
+						'/nashi-klienty/?client=471'
+					)
+					+new-item(
+						'Лицензирование и сертификация',
+						'https://unsplash.it/325/300?image=998',
+						'/nashi-klienty/?client=470'
+					)
+					+new-item(
+						'Хочу оформить частное предприятие',
+						'https://unsplash.it/325/300?image=983',
+						'/nashi-klienty/?client=469'
+					)
+					+new-item(
+						'Хочу оформить частное предприятие',
+						'https://unsplash.it/325/300?image=972',
+						'/nashi-klienty/?client=487'
+					)
+					+new-item(
+						'Хочу оформить частное предприятие',
+						'https://unsplash.it/325/300?image=885',
+						'/nashi-klienty/?client=474'
+					)
+					+new-item(
+						'Хочу оформить частное предприятие',
+						'https://unsplash.it/325/300?image=679',
+						'/nashi-klienty/?client=488'
+					)
+
+			.about-container
+				.container
+					p
 						| Юридическая компания «ЮСТИКОН» была основана в Киеве в 2008 году. За время работы была сформирована команда юристов, ориентированных на достижение результата в любом юридическом вопросе. На сегодня компания объединяет около 20 специалистов в различных отраслях права. Благодаря опыту работы и успешной реализации проектов компания существенно расширила спектр предоставляемых услуг. Была разработана идеология, созданная основательная ресурсная база. Все это позволило занять собственную нишу на рынке юридических услуг. Компания «ЮСТИКОН» стала надежным юридическим консультантом для малого и среднего бизнеса в Украине, что подтверждается доверием постоянных клиентов.
 
-				form(action="#").search-input-1
-					.wrap
+			form(action="#").search-input-1
+				.container
+					.form-group
 						input.text(type='text', placeholder='Поиск')
-						input.submit(type='submit', value='найти')
+						button.submit(type='submit')
 
 
 		include ./partials/footer.jade
+
 		include ./partials/modals.jade
+
 	include ./partials/scripts.jade

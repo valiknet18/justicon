@@ -471,6 +471,7 @@ body > .menu
 		@media (max-width: $tablet)
 			display: none
 
+
 .search
 	& > *
 		position: relative
@@ -516,6 +517,119 @@ body > .menu
 	> *
 		display: inline-block
 		margin-right: 6px
+
+.categories-slider
+	background: $main-color 50% 50% no-repeat
+	padding: 20px 0 40px
+	.categories-label
+		color: #fff
+		float: left
+		text-transform: uppercase
+		font-size: 12px
+		font-weight: 100
+		padding-right: 60px
+		margin-top: 10px
+	.categories-line
+		overflow: auto
+		// white-space: nowrap
+		&::-webkit-scrollbar
+			width: 0
+			height: 0
+		li
+			display: inline-block
+			margin-right: 40px
+			cursor: pointer
+
+			color: whitesmoke
+			font-weight: 700
+			font-size: 18px
+			line-height: 2em
+			transition: all .2s
+			&:not(.active)
+				opacity: .5
+			&:hover
+				opacity: 1
+			a
+				color: whitesmoke
+				font-weight: 700
+				font-size: 18px
+				line-height: 2em
+				&:hover
+					color: white
+	.contents-container
+		font-size: 0
+		letter-spacing: 0
+		h2
+			color: white
+			font-weight: 700
+			font-size: 48px
+			letter-spacing: -1.9px
+			line-height: 1
+			margin-top: 20px
+			margin-bottom: 0
+			margin-right: -4px
+		p
+			color: white
+			font-size: 16px
+			line-height: 1.2
+			margin-top: 20px
+		.btn
+			background: #fff
+			border-radius: 4px
+			margin: 40px 10px 0 0
+			padding: 10px 20px
+			color: $main-color
+			font-weight: 600
+			text-transform: uppercase
+			&:hover
+				background: #e3f3ff
+		.left-col,
+		.right-col
+			display: inline-block
+			vertical-align: top
+			width: 50%
+		.left-col
+			width: 60%
+		.right-col
+			text-align: right
+			width: 40%
+		.services-list
+			color: #fff
+			font-size: 14px
+			margin-top: 40px
+			li
+				display: inline-block
+				margin-right: 40px
+				white-space: nowrap
+				border-right: 2px solid #fff
+				padding-right: 40px
+				text-align: center
+				animation: mobileMenuOpen 1s
+				animation-fill-mode: both
+				&:nth-child(2)
+					animation-delay: .3s
+				&:nth-child(3)
+					animation-delay: .6s
+				&:nth-child(4)
+					animation-delay: .9s
+				&:nth-child(5)
+					animation-delay: 1.2s
+				*
+					vertical-align: middle
+				a
+					color: inherit
+					font-size: inherit
+				b
+					font-size: 26px
+				img, svg
+					display: inline-block
+					margin-right: 10px
+					margin-bottom: 20px
+					width: 46px
+				&:last-child
+					border-right: 0
+					margin-right: 0
+					padding-right: 0
 
 .categories-interactive
 	// display: none
@@ -1145,7 +1259,7 @@ body > .menu
 	background: url('../img/bg/search-bg.jpg') 50% 50% no-repeat
 	background: url('http://frontend.web1.com.ua/justicon/images/bg-seach-main.jpg') 50% 50% no-repeat
 	background-size: cover
-	margin-top: -16px
+	// margin-top: -16px
 	.container
 		margin: 0 auto
 		padding: 81px 20px 90px
