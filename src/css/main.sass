@@ -521,6 +521,8 @@ body > .menu
 .categories-slider
 	background: $main-color 50% 50% no-repeat
 	padding: 20px 0 40px
+	.container
+		position: relative
 	.categories-label
 		color: #fff
 		float: left
@@ -529,6 +531,31 @@ body > .menu
 		font-weight: 100
 		padding-right: 60px
 		margin-top: 10px
+	.prev-slide,
+	.next-slide
+		border-radius: 3px
+		cursor: pointer
+		top: 0
+		bottom: 0
+		opacity: .4
+		position: absolute
+		background: rgba(255, 255, 255, 0.3)
+		width: 40px
+		transition: all 0.2s
+		&:hover
+			opacity: 1
+		span
+			color: #fff
+			font-size: 20px
+			font-weight: bold
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+	.prev-slide
+		left: -60px
+	.next-slide
+		right: -60px
 	.categories-line
 		overflow: auto
 		// white-space: nowrap
@@ -581,6 +608,17 @@ body > .menu
 			color: $main-color
 			font-weight: 600
 			text-transform: uppercase
+			&
+				animation: modalOpen 1s
+				animation-fill-mode: both
+				&:nth-child(1)
+					animation-delay: 0.3s
+				&:nth-child(2)
+					animation-delay: 0.6s
+				&:nth-child(3)
+					animation-delay: 0.9s
+				&:nth-child(4)
+					animation-delay: 1.2s
 			&:hover
 				background: #e3f3ff
 		.left-col,
@@ -593,6 +631,49 @@ body > .menu
 		.right-col
 			text-align: right
 			width: 40%
+			.image-holder
+				margin-top: 40px
+				height: 340px
+				animation: modalOpen 0.4s
+				animation-fill-mode: both
+		.slide-description
+			& > *
+				animation: modalOpen 0.4s
+				animation-fill-mode: both
+				&:nth-child(2)
+					animation-delay: .15s
+				&:nth-child(3)
+					animation-delay: .3s
+				&:nth-child(4)
+					animation-delay: .45s
+				&:nth-child(5)
+					animation-delay: .6s
+		.additional
+			margin-top: 40px
+			animation: modalOpen 1s
+			animation-fill-mode: both
+			li
+				color: #fff
+				display: block
+				margin-bottom: 10px
+				font-size: 16px
+				&:before
+					content: '-'
+					margin-right: 10px
+					font-size: 20px
+					line-height: 0
+			// & > *
+			// 	animation: modalOpen 0.4s
+			// 	animation-fill-mode: both
+			// 	&:nth-child(2)
+			// 		animation-delay: .15s
+			// 	&:nth-child(3)
+			// 		animation-delay: .3s
+			// 	&:nth-child(4)
+			// 		animation-delay: .45s
+			// 	&:nth-child(5)
+			// 		animation-delay: .6s
+
 		.services-list
 			color: #fff
 			font-size: 14px
@@ -1299,6 +1380,21 @@ body > .menu
 			&:hover
 				background-color: #d63d1a
 
+.owl-controls
+	.owl-dots
+		margin-top: 20px
+		text-align: center
+	.owl-dot
+		display: inline-block
+		vertical-align: middle
+		margin: 0 5px
+		height: 10px
+		width: 10px
+		border: 1px solid #243e57
+		border-radius: 50%
+		&.active
+			background-color: #243e57
+
 .partners-section
 	.controls, .paginator-holder
 		margin-top: 58px
@@ -1328,7 +1424,6 @@ body > .menu
 				width: 0
 			.parnters-container
 				white-space: nowrap
-				width: 300%
 				.partner
 					display: inline-block
 					vertical-align: middle
@@ -1398,6 +1493,12 @@ body > .menu
 		display: block
 		margin-right: 0
 		.item
+			background-size: cover
+			background-position: 50% 50%
+			padding: 0 10px
+			width: 100%
+			img
+				opacity: 0.01
 			& > *
 				z-index: 1
 			&:after
