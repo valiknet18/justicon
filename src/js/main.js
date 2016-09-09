@@ -166,64 +166,42 @@ $(document).on('ready', function () {
 		winHeight = $window.height(),
 		bodyHeight = $('body').height(),
 		goUp = (function () {
-
 			var $el = $('#to-top'),
 				state = false,
 				speed = 900,
 				paused = false,
 				plg = {
 					up: function () {
-
 						paused = true;
 						state = true;
 
 						$("html, body").stop().animate({scrollTop:0}, speed, 'swing', function () {
-
 							paused = false;
-
 						}).one('touchstart mousewheel DOMMouseScroll wheel', function () {
-
 							$(this).stop(false, false).off('touchstart mousewheel DOMMouseScroll wheel');
 							paused = false;
-
 						});
-
 						plg.hide();
-
 					},
 					show: function () {
-
 						if (!state && !paused) {
-
 							$el.addClass('opened');
-
 							state = true;
-
 						}
-
 					},
 					hide: function () {
-
 						if (state) {
-
 							$el.removeClass('opened');
-
 							state = false;
-
 						}
-
 					},
 					$el: $el
 				};
 
 			$el.on('click', function () {
-
 				plg.up();
-
 			});
-
 			return plg;
-
 	})();
 
 		// categories 1
@@ -255,10 +233,20 @@ $(document).on('ready', function () {
 				}
 			});
 			$_.find('.next-slide').on('click', function () {
-				console.log( $_.find('[data-category].active').next().trigger('click') );
+				var $target = $_.find('[data-category].active').next();
+				if ($target.length) {
+					$target.trigger('click');
+				} else {
+					$_.find('[data-category]:first').trigger('click');
+				}
 			});
 			$_.find('.prev-slide').on('click', function () {
-				console.log( $_.find('[data-category].active').prev().trigger('click') );
+				var $target = $_.find('[data-category].active').prev();
+				if ($target.length) {
+					$target.trigger('click');
+				} else {
+					$_.find('[data-category]:last').trigger('click');
+				}
 			});
 		})();
 
@@ -272,136 +260,84 @@ $(document).on('ready', function () {
 		var modals = {
 			opened: [],
 			openModal: function ( $modal ) {
-
 				if (!$modal.data('modal-ununique') && this.opened.length > 0) {
 					modals.closeModal( this.opened[this.opened.length - 1], true );
 				}
 				this.opened.push( $modal );
 				// $modal.addClass('opened').one( transitionPrefix, bodyOverflow.fixBody );
-
 				$modal.off( transitionPrefix ).addClass('opened');
 				bodyOverflow.fixBody();
-
 				if ( $modal.is('[data-cross]') ) {
-
 					this.$cross = $('<div>').addClass('cross-top-fixed animated ' + $modal.attr('data-cross') ).one('click', function () {
-
 						modals.closeModal();
-
 					}).one(animationPrefix, function () {
-
 						$(this).removeClass( 'animated' );
-
 					}).appendTo('body');
-
 				}
-
 			},
 			closeModal: function ($modal, alt) {
-
 				if ( this.opened.length > 0 && !$modal ) {
-
 					for ( var y = 0; y < this.opened.length; y++ ) {
-
 						this.closeModal( this.opened[y] );
-
 					}
-
 					return;
-
 				} else if ( $modal && !($modal instanceof jQuery) ) {
-
 					$modal = $( $modal );
-
 				} else if ( $modal === undefined ) {
-
 					throw 'something went wrong';
-
 				}
 
 				try {
-
 					$modal
 						.addClass('clothing')
 						.one( animationPrefix, function () {
 							$(this)
 								.removeClass('opened clothing');
 						});
-
 				} catch (e) {
-
 					console.error(e);
-
 					this.closeModal();
-
 					return;
-
 				}
 
 				this.opened.pop();
 
 				if (!alt) {
-
 					$modal.one( animationPrefix, bodyOverflow.unfixBody );
-
 					try {
-
 						if (!this.$cross) return;
-
 						this.$cross.addClass('fadeOut').one(animationPrefix, function () {
-
 							$(this).remove();
-
 						});
-
 					} catch (e) {
-
 						console.error(e);
-
 					}
-
 				} else {
-
 					try {
-
 						this.$cross.remove();
-
 					} catch (e) {
-
 						console.error(e);
-
 					}
-
 				}
-
 			}
-
 		};
 
 		$('[data-modal]').on('click', function (e) {
-
 			e.preventDefault();
-
 			var $self = $(this),
 				target = $self.attr('data-modal'),
 				$target = $(target);
 
 			if ($target.length) {
-
 				modals.openModal($target);
-
 			} else {
-
 				console.warn('Ошибка в элементе:');
 				console.log(this);
 				console.warn('Не найдены элементы с селектором ' + target);
-
 			}
-			
 		});
 
 		$('[data-close], .modal .close').on('click', function (e) {
-
 			e.preventDefault();
 
 			var $self = $(this),
@@ -409,42 +345,26 @@ $(document).on('ready', function () {
 				$target;
 
 			if (target) {
-
 				$target = $(target);
-
 				if ($target.length) {
-
 					modals.closeModal( $target );
-
 				}
-
 			} else {
-
 				modals.closeModal( $self.closest('.opened') );
-
 			}
-
 		});
 
 		$('.modal').not('.fake').on('click', function (e) {
-
 			if (e.target === this) {
-
 				modals.closeModal( $(this) );
-
 			}
-
 		});
 
 		$window.on('keyup', function (e) {
-
 			// esc pressed
 			if (e.keyCode == '27') {
-
 				modals.closeModal();
-
 			}
-
 		});
 
 		// mobile modals
@@ -578,7 +498,6 @@ $(document).on('ready', function () {
 					openedSize;
 
 				if (!$self.hasClass('opened')) {
-
 
 					$self
 						.addClass('opened');

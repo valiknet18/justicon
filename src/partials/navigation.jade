@@ -11,7 +11,7 @@
 			.logo.logo-ru.invisible Justicon
 			img(src="http://justicon.ua/bitrix/templates/usticon/i/logo.png", alt="Justicon")
 		.bccall#cellphones-list
-			.phones-holder
+			.phones-holder.hidden
 				.mainphone.fl (044) 221 4000
 				.phones-list
 					.life.fl
@@ -22,11 +22,14 @@
 					.clear
 					.kyivstar.fl
 						|  (098) 1000 176
-			span.blue
+			span.blue.hidden
 				a.r-pimp.calll(href='#', data-modal="#calld") Обратный звонок
 
-		.menu2
+		.main-navigation
 			ul
+				li
+					a(href='about.html')
+						span Про BONO
 				li
 					a(href='#')
 						span Почему мы
@@ -68,62 +71,12 @@
 				li
 					a(href='contacts.html')
 						span Контакты
-					.submenu2
-						a.close(href='#')
-						.header
-							a(href='#')
-								span Контакты
-						.inner
-							.title Телефоны для связи
-							.subphones
-								.blackphone.fl
-								span +38 (044) 221-4000
-								div
-									span      
-									.clear
-									.life.fl
-									span +38 (093) 1000 176
-									br
-									.viber.fl
-									span +38 (093) 1000 176
-								div
-									br
-									.clear
-									.kyivstar.fl
-									span +38 (098) 1000 176
-									.clear
-							.hr.separate10
-							span.blue
-								a.r-pimp.calll(href='#') Заказать обратный звонок
-							span.blue
-								a.r-pimp(href='#') Позвонить с сайта
-							br
-							span.blue
-								a.r-pimp.zaprosl(href='#') Заказать услугу
-							br
-							span.blue
-								a.r-pimp.zaprosconl(href='#') Заказать консультацию
-							.hr.separate10
-							|                             Email: 
-							span.blue
-								a.r-pimp(href='#') info@justicon.ua
-							br
-							|                             Skype 
-							span.blue
-								a.r-pimp(href='#') justicon.ua
-							.hr.separate10
-							.separate10.hg1
-							span.blue
-								a.r-pimp(href='contacts.html') Посмотреть больше контактов
 
-		.langs
-			a.rus.actlang(href='/') RU
-			a.ukr(href='/ua/') UA
-			a.eng(href='#') EN
-			.clear
-	.clear
-.fill
-.menu
+		.lang-switcher
+			a.ukr(href='/ua/') Укр
+			a.rus.actlang(href='/') Рус
+			a.eng(href='#') En
+.navigation-bar
 	.wrap
 		.gamburger(data-mobile-modal="#mobile-menu")
 			span
@@ -149,11 +102,6 @@
 					.inner
 						.block-item
 							.title Адресная книга
-							//
-								<ul>
-								<li><a href="/inform-byuro/adresnaya-kniga/adresa-ovir/">Адреса ОВИР</a></li>
-								<li><a href="/inform-byuro/adresnaya-kniga/adresa-sudy/">Адреса суды</a></li>
-								</ul>
 							ul
 								li
 									a.root-item(href='/inform-byuro/adresnaya-kniga/adresa-ovir/') Адреса ОВИР
@@ -162,12 +110,6 @@
 							.menu-clear-left
 						.block-item
 							.title Справочная информация
-							//
-								<ul>
-								<li><a href="/inform-byuro/spravochnaya-informatsiya/kved-2012/">Квед 2012</a></li>
-								<li><a href="/inform-byuro/spravochnaya-informatsiya/kvota-immigratsii/">Квота иммиграции</a></li>
-								<li><a href="/inform-byuro/spravochnaya-informatsiya/kodifikator-stroitelnykh-rabot/">Кодификатор строительных работ</a></li>
-								</ul>
 							ul
 								li
 									a.root-item(href='/inform-byuro/spravochnaya-informatsiya/kved-2012/') Квед 2012
@@ -178,15 +120,11 @@
 							.menu-clear-left
 						.block-item
 							.title Архив
-			li
-				a(href='about.html')
-					span Про BONO
 		.search
 			#title-search
 				form#searchform(action='/search/index.php')
 					input#title-search-input(type='text', name='q', value='', autocomplete='off')
 					input.zoom(name='s', type='submit', value='')
-		.clear
 
 .navigation-sidebar#navigation-sidebar(class= page === 'main' ? 'mainpage' : '')
 	.nicescroll.sidebar-expanded.sidebar-wrapper
