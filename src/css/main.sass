@@ -167,23 +167,23 @@
 		& > ul
 			@media (max-width: $tablet)
 				display: none
-			& > li:nth-child(2)
-				position: relative
-				svg, img
-					display: block
-					position: absolute
-					margin-top: -6px
-					top: 50%
-					left: -20px
-					height: 12px
-					width: 12px
-					transform: rotateZ(0deg)
-					transition: transform .5s
-				&.opened
-					&, a
-						color: $main-color
-					svg, img
-						transform: rotateZ(90deg)
+	.services-trigger
+		position: relative
+		svg, img
+			display: block
+			position: absolute
+			margin-top: -6px
+			top: 50%
+			left: -20px
+			height: 12px
+			width: 12px
+			transform: rotateZ(0deg)
+			transition: transform .5s
+		&.opened
+			&, a
+				color: $main-color
+			svg, img
+				transform: rotateZ(90deg)
 	&.fixed
 		.wrap
 			height: 50px
@@ -550,13 +550,14 @@
 		right: -60px
 	.categories-line
 		overflow: auto
-		// white-space: nowrap
+		overflow: visible
+		white-space: nowrap
 		&::-webkit-scrollbar
 			width: 0
 			height: 0
 		li
 			display: inline-block
-			margin-right: 40px
+			margin-right: 30px
 			cursor: pointer
 
 			color: whitesmoke
@@ -564,10 +565,14 @@
 			font-size: 18px
 			line-height: 2em
 			transition: all .2s
-			&:not(.active)
-				opacity: .5
-			&:hover
+
+			overflow: hidden
+			max-width: 120px
+			text-overflow: ellipsis
+			opacity: .5
+			&:hover, &.active
 				opacity: 1
+				max-width: 50%
 			a
 				color: whitesmoke
 				font-weight: 700
