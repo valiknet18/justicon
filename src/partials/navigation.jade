@@ -71,11 +71,18 @@
 				li
 					a(href='contacts.html')
 						span Контакты
+				li
+					a(href='#')
+						span Укр
+					.submenu
+						.inner
+							.block-item
+								.title
+									a(href='/') Рус
+							.block-item
+								.title
+									a(href='#') En
 
-		.lang-switcher
-			a.ukr(href='/ua/') Укр
-			a.rus.actlang(href='/') Рус
-			a.eng(href='#') En
 .navigation-bar
 	.wrap
 		.gamburger(data-mobile-modal="#mobile-menu")
@@ -118,6 +125,14 @@
 						.block-item
 							.title Архив
 		.search
+			.phones-holder
+				ul
+					li
+						svg(version="1.1" x="0px" y="0px" viewBox="0 0 12 13" enable-background="new 0 0 12 13" xml:space="preserve")
+							path(fill="#ffffff" d="M0,12.3L0.7,13L7,6.5l0,0l0,0L0.7,0L0,0.7l5.7,5.8L0,12.3z M5,12.3L5.7,13L12,6.5l0,0 l0,0L5.7,0L5,0.7l5.7,5.8L5,12.3z")
+						a(href="tel:0442214000") (093) 1000 176
+					li
+						a(href="tel:0442214000") (044) 221-4000
 			#title-search
 				form#searchform(action='/search/index.php')
 					input#title-search-input(type='text', name='q', value='', autocomplete='off')

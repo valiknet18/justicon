@@ -285,6 +285,31 @@
 		position: absolute
 		right: 0
 		top: 0
+		white-space: nowrap
+		& > *
+			display: inline-block
+			vertical-align: middle
+		.phones-holder
+			// font-size: 20px
+			position: relative
+			svg, img
+				display: block
+				position: absolute
+				margin-top: -6px
+				top: 50%
+				left: -20px
+				height: 12px
+				width: 12px
+				transform: rotateZ(0deg)
+				transition: transform .5s
+			&.opened
+				&, a
+					color: $main-color
+				svg, img
+					transform: rotateZ(90deg)
+		.title-search
+			height: 50px
+			overflow: hidden
 
 // .main-navigation
 .main-navigation
@@ -363,7 +388,28 @@
 				background: #f9f9f9
 				color: #333
 
-.lang-switcher
+// .lang-switcher
+// 	position: relative
+// 	z-index: 2
+// 	li
+// 		background: #fff
+// 		display: block
+// 		& > *
+// 			display: inline-block
+// 			vertical-align: middle
+// 	.lang-switcher-dropdown
+// 		display: none
+// 		position: absolute
+// 		top: 0
+// 		left: 0
+// 		right: 0
+// 		padding-top: 50px
+// 		&:hover
+// 			display: block
+// 	.active
+// 		&:hover
+// 			& + .lang-switcher-dropdown
+// 				display: block
 
 .header
 	.logo.invisible
@@ -598,13 +644,18 @@
 			line-height: 1.2
 			margin-top: 20px
 		.btn
-			background: #fff
-			border-radius: 4px
-			margin: 40px 10px 0 0
+			border-radius: 0px
+			border: 1px solid #fff
+			margin: 40px -1px 0 0
 			padding: 10px 20px
-			color: $main-color
 			font-weight: 600
-			text-transform: uppercase
+			// text-transform: uppercase
+			color: white
+			font-size: 14px
+			line-height: 40px
+			padding: 0 30px
+			min-width: 180px
+			text-align: center
 			&
 				animation: modalOpen 1s
 				animation-fill-mode: both
@@ -618,6 +669,7 @@
 					animation-delay: 1.2s
 			&:hover
 				background: #e3f3ff
+				color: $main-color
 		.left-col,
 		.right-col
 			display: inline-block
@@ -660,17 +712,6 @@
 					margin-right: 10px
 					font-size: 20px
 					line-height: 0
-			// & > *
-			// 	animation: modalOpen 0.4s
-			// 	animation-fill-mode: both
-			// 	&:nth-child(2)
-			// 		animation-delay: .15s
-			// 	&:nth-child(3)
-			// 		animation-delay: .3s
-			// 	&:nth-child(4)
-			// 		animation-delay: .45s
-			// 	&:nth-child(5)
-			// 		animation-delay: .6s
 
 		.services-list
 			color: #fff
@@ -694,7 +735,7 @@
 				&:nth-child(5)
 					animation-delay: 1.2s
 				*
-					vertical-align: middle
+					vertical-align: baseline
 				a
 					color: inherit
 					font-size: inherit
@@ -1601,9 +1642,6 @@
 									display: none
 								span.blue
 									display: none
-									// a.calll.r-pimp
-									// a.r-pimp.zaprosl
-									// a.r-pimp.zaprosconl
 							&:nth-child(2)
 								width: 1px
 								@media (max-width: $mobile-media-width)
