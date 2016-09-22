@@ -34,18 +34,6 @@
 	display: block
 	position: relative
 
-
-// .container
-// 	display: block
-// 	margin: 0 auto
-// 	width: 970px
-// 	@media (min-width: $large)
-// 		width: 1170px
-// 	@media (max-width: $tablet)
-// 		width: 750px
-// 	@media (max-width: $mobile-large)
-// 		width: 100%
-
 .modal-image
 	transform-origin: 50% 50%;
 	transform: scale(1);
@@ -155,7 +143,7 @@
 	width: 100%
 	height: 50px
 	z-index: 3
-	.wrap
+	.wrap, .container
 		background-color: #36393d
 		position: relative
 		left: 0
@@ -185,7 +173,7 @@
 			svg, img
 				transform: rotateZ(90deg)
 	&.fixed
-		.wrap
+		.wrap, .container
 			height: 50px
 			position: fixed
 			z-index: 3
@@ -289,24 +277,6 @@
 		& > *
 			display: inline-block
 			vertical-align: middle
-		.phones-holder
-			// font-size: 20px
-			position: relative
-			svg, img
-				display: block
-				position: absolute
-				margin-top: -6px
-				top: 50%
-				left: -20px
-				height: 12px
-				width: 12px
-				transform: rotateZ(0deg)
-				transition: transform .5s
-			&.opened
-				&, a
-					color: $main-color
-				svg, img
-					transform: rotateZ(90deg)
 		.title-search
 			height: 50px
 			overflow: hidden
@@ -411,20 +381,15 @@
 // 			& + .lang-switcher-dropdown
 // 				display: block
 
-.header
-	.logo.invisible
-		opacity: 0
-		height: 0
-		width: 0
-	.wrap
-		padding: 0 35px
-		display: table
-		width: 100%
-		& > *
-			display: table-cell
-			vertical-align: middle
-			white-space: nowrap
-			width: 1px
+.fixed-header
+	background: #fff
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	height: 100px
+	z-index: 10
+	font-size: 0
 	.langs
 		@media (max-width: $tablet)
 			display: none
@@ -433,81 +398,41 @@
 			&.actlang
 				display: block
 				color: transparent
-	.logotype-holder
-		padding: 16px 0 9px
-		@media (max-width: $tablet)
-			text-align: center
-	.bccall
-		padding-right: 12.4%
-		text-align: center
-		width: 100%
-		@media (max-width: $tablet)
-			display: none
-		.phones-holder
-			color: #36393d
-			display: inline-block
-			position: relative
-			font-size: 20px
-			font-weight: 400
-			line-height: 1em
-			.clear
-				margin-bottom: 10px
-			.fl
-				cursor: pointer
+	.header-contacts-navigation-holder,
+	.logotype-holder,
+	.main-navigation-holder
+		display: inline-block
+		vertical-align: top
+		font-size: 14px
+	.header-contacts-navigation-holder
+		width: 40%
+		.header-contacts-holder
+			li
 				display: inline-block
-				vertical-align: middle
-				width: 200px
-				&:before
-					content: ''
-					background-size: contain
-					background-position: 50% 50%
-					background-repeat: no-repeat
-					display: inline-block
-					vertical-align: middle
-					height: 30px
-					width: 30px
-				&.life:before
-					background-image: url('../img/content/operator-icon-life.png')
-				&.viber:before
-					background-image: url('../img/content/operator-icon-cellphone.png')
-				&.kyivstar:before
-					background-image: url('../img/content/operator-icon-kyivstar.png')
-				&.mts:before
-					background-image: url('../img/content/operator-icon-mts.png')
-				&.mainphone:before
-					background-image: url('../img/content/operator-icon-cellphone.png')
-		.phones-list
-			background: #fff
-			padding: 0
-			position: absolute
-			overflow: hidden
-			max-height: 0
-			z-index: 4
-			transition: max-height .3s, padding .3s
-		.phones-list:hover, .mainphone:hover ~ .phones-list
-			padding: 10px 0
-			max-height: 600px
-		.r-pimp.calll
-			color: #333
-			font-size: 12px
-			font-weight: 400
-			text-transform: uppercase
+		.header-navigation-holder
+			li
+				display: inline-block
+				margin-right: 10px
+	.logotype-holder
+		text-align: center
+		padding: 10px 0
+		width: 20%
+		img
+			// max-width: 80px
+			height: 80px
+	.main-navigation-holder
+		width: 40%
+		& > li
+			display: inline-block
+			margin-left: 10px
 			position: relative
-			&:hover
-				color: $main-color
-			&:before
-				content: ''
+			.submenu
+				display: none
+				background: #fff
 				position: absolute
-				bottom: 0
-				left: 0
-				height: 1px
-				border-bottom: 0.25px dashed black
-				width: 100%
-	.blue
-		display: block
-	.menu2
-		@media (max-width: $tablet)
-			display: none
+			&:hover
+				.submenu
+					display: block
 
 
 .search
@@ -557,8 +482,8 @@
 		margin-right: 6px
 
 .categories-slider
-	background: $main-color 50% 50% no-repeat
-	padding: 20px 0 40px
+	background: $main-color url('../img/bg/categories-slider.svg') 50% 50% no-repeat
+	background-size: cover
 	.container
 		position: relative
 	.categories-label
@@ -569,17 +494,22 @@
 		font-weight: 100
 		padding-right: 60px
 		margin-top: 10px
+	.buttons-holder
+		margin-bottom: 40px
 	.prev-slide,
 	.next-slide
 		border-radius: 3px
 		cursor: pointer
-		top: 0
-		bottom: 0
+		top: 50%
 		opacity: .4
 		position: absolute
-		background: rgba(255, 255, 255, 0.3)
+		// background: rgba(255, 255, 255, 0.3)
+		margin-top: -20px
+		height: 40px
 		width: 40px
 		transition: all 0.2s
+		background-position: 50% 50%
+		background-size: contain
 		&:hover
 			opacity: 1
 		span
@@ -591,13 +521,19 @@
 			left: 50%
 			transform: translate(-50%, -50%)
 	.prev-slide
+		background-image: url('../img/icons/slide-prev-1.svg')
 		left: -60px
 	.next-slide
+		background-image: url('../img/icons/slide-next-1.svg')
 		right: -60px
 	.categories-line
-		overflow: auto
+		border-bottom: 1px solid #fff
+		margin: 4px 0 -20px
+		// overflow: auto
 		overflow: visible
 		white-space: nowrap
+		z-index: 1
+		position: relative
 		&::-webkit-scrollbar
 			width: 0
 			height: 0
@@ -607,23 +543,31 @@
 			cursor: pointer
 
 			color: whitesmoke
-			font-weight: 700
-			font-size: 18px
-			line-height: 2em
+			font-weight: 300
+			font-size: 12px
+			text-transform: uppercase
+			line-height: 44px
 			transition: all .2s
+			position: relative
 
-			overflow: hidden
-			max-width: 120px
 			text-overflow: ellipsis
-			opacity: .5
+			opacity: 0.6
 			&:hover, &.active
 				opacity: 1
-				max-width: 50%
+			&.active
+				&:after
+					content: ''
+					background: #fff
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					height: 3px
 			a
 				color: whitesmoke
 				font-weight: 700
 				font-size: 18px
-				line-height: 2em
+				line-height: inherit
 				&:hover
 					color: white
 	.contents-container
@@ -631,9 +575,9 @@
 		letter-spacing: 0
 		h2
 			color: white
-			font-weight: 700
+			font-weight: 100
 			font-size: 48px
-			letter-spacing: -1.9px
+			letter-spacing: -2px
 			line-height: 1
 			margin-top: 20px
 			margin-bottom: 0
@@ -646,7 +590,7 @@
 		.btn
 			border-radius: 0px
 			border: 1px solid #fff
-			margin: 40px -1px 0 0
+			margin: 20px 20px 0 0
 			padding: 10px 20px
 			font-weight: 600
 			// text-transform: uppercase
@@ -656,6 +600,15 @@
 			padding: 0 30px
 			min-width: 180px
 			text-align: center
+
+			border:
+				width: 2px
+				color: rgb(255, 255, 255)
+				style: solid
+				radius: 5px
+
+			&.btn-warning
+				border-color: #f54f29
 			&
 				animation: modalOpen 1s
 				animation-fill-mode: both
@@ -669,24 +622,27 @@
 					animation-delay: 1.2s
 			&:hover
 				background: #e3f3ff
+				border-color: #e3f3ff
 				color: $main-color
 		.left-col,
 		.right-col
 			display: inline-block
-			vertical-align: top
+			vertical-align: bottom
 			width: 50%
 		.left-col
-			width: 60%
+			width: 46%
 		.right-col
 			padding-left: 20px
 			text-align: right
-			width: 40%
+			width: 54%
+			max-width: 600px
 			.image-holder
-				margin-top: 40px
-				height: 340px
+				// margin-top: 40px
+				height: 100%
 				animation: modalOpen 0.4s
 				animation-fill-mode: both
 		.slide-description
+			margin-top: 62px
 			& > *
 				animation: modalOpen 0.4s
 				animation-fill-mode: both
@@ -698,6 +654,13 @@
 					animation-delay: .45s
 				&:nth-child(5)
 					animation-delay: .6s
+			h1, h2, h3
+				margin-top: 0
+			.slide-label
+				color: #fff
+				font-size: 16px
+				font-weight: 100
+				margin-bottom: 10px
 		.additional
 			margin-top: 40px
 			animation: modalOpen 1s
@@ -715,15 +678,17 @@
 
 		.services-list
 			color: #fff
-			font-size: 14px
-			margin-top: 40px
+			font-size: 18px
+			margin-top: 28px
+			padding-left: 20px
 			li
 				display: inline-block
-				margin-right: 40px
+				margin-right: 18px
 				white-space: nowrap
 				border-right: 2px solid #fff
-				padding-right: 40px
+				padding-right: 18px
 				text-align: center
+				font-weight: 100
 				animation: mobileMenuOpen 1s
 				animation-fill-mode: both
 				&:nth-child(2)
@@ -739,13 +704,17 @@
 				a
 					color: inherit
 					font-size: inherit
+					font-weight: inherit
 				b
-					font-size: 26px
+					font-size: 22px
+					font-weight: 300
 				img, svg
 					display: inline-block
-					margin-right: 10px
-					margin-bottom: 20px
-					width: 46px
+					margin-bottom: 17px
+					width: 48px
+					border: 1px solid white
+					padding: 8px
+					border-radius: 50%
 				&:last-child
 					border-right: 0
 					margin-right: 0

@@ -4,139 +4,103 @@
 #totop.bl-button
 	span Наверх
 
-.header
-	.wrap
-		a.logotype-holder(href='test.html')
-			// here is for SEO
-			.logo.logo-ru.invisible Justicon
-			img(src="http://justicon.ua/bitrix/templates/usticon/i/logo.png", alt="Justicon")
-		.bccall#cellphones-list
-			.phones-holder.hidden
-				.mainphone.fl (044) 221 4000
-				.phones-list
-					.life.fl
-						|  (093) 1000 176
-					.clear
-					.viber.fl
-						|  (093) 1000 176
-					.clear
-					.kyivstar.fl
-						|  (098) 1000 176
-			span.blue.hidden
-				a.r-pimp.calll(href='#', data-modal="#calld") Обратный звонок
-
-		.main-navigation
-			ul
+.fixed-header
+	.container
+		.header-contacts-navigation-holder
+			ul.header-contacts-holder
+				ul
+					li
+						svg(width="10" version="1.1" x="0px" y="0px" viewBox="0 0 12 13" enable-background="new 0 0 12 13" xml:space="preserve")
+							path(fill="#cccccc" d="M0,12.3L0.7,13L7,6.5l0,0l0,0L0.7,0L0,0.7l5.7,5.8L0,12.3z M5,12.3L5.7,13L12,6.5l0,0 l0,0L5.7,0L5,0.7l5.7,5.8L5,12.3z")
+						a(href="tel:0442214000") (093) 1000 176
+					li
+						a(href="tel:0442214000") (044) 221-4000
+			ul.header-navigation-holder
+				li.services-trigger
+					svg(width="10" version="1.1" x="0px" y="0px" viewBox="0 0 12 13" enable-background="new 0 0 12 13" xml:space="preserve")
+						path(fill="#cccccc" d="M0,12.3L0.7,13L7,6.5l0,0l0,0L0.7,0L0,0.7l5.7,5.8L0,12.3z M5,12.3L5.7,13L12,6.5l0,0 l0,0L5.7,0L5,0.7l5.7,5.8L5,12.3z")
+					a(href='/uslugi/')
+						span Услуги
 				li
-					a(href='about.html')
-						span Про BONO
+					a(href='price-list.html')
+						span Прайс-лист
 				li
 					a(href='#')
-						span Почему мы
-					.submenu
-						a.close(href='#')
-						.inner
-							.block-item
-								.title
-									a(href='about.html') О компании
-							.block-item
-								.title
-									a(href='/uspeshnyy-rezultat/') Успешный результат
-							.block-item
-								.title
-									a(href='/nashi-klienty/') Наши клиенты
-							.block-item
-								.title
-									a(href='/aktsii-i-predlozheniya/') Акции и предложения
-							.block-item
-								.title
-				li
-					a(href='#')
-						span Пресс-центр
-					.submenu
-						a.close(href='#')
-						.inner
-							.block-item
-								.title
-									a(href='/press-tsentr/novosti-prava/') Новости права
-							.block-item
-								.title
-									a(href='/press-tsentr/expert/') Мнение эксперта
-							.block-item
-								.title
-									a(href='/press-tsentr/publikatsii/') Публикации
-							.block-item
-								.title
-									a(href='/press-tsentr/rassylka/') Рассылка
-				li
-					a(href='contacts.html')
 						span Контакты
-				li
-					a(href='#')
-						span Укр
-					.submenu
-						.inner
-							.block-item
-								.title
-									a(href='/') Рус
-							.block-item
-								.title
-									a(href='#') En
 
-.navigation-bar
-	.wrap
-		.gamburger(data-mobile-modal="#mobile-menu")
-			span
-			span
-			span
-		ul
-			li.services-trigger
-				svg(version="1.1" x="0px" y="0px" viewBox="0 0 12 13" enable-background="new 0 0 12 13" xml:space="preserve")
-					path(fill="#ffffff" d="M0,12.3L0.7,13L7,6.5l0,0l0,0L0.7,0L0,0.7l5.7,5.8L0,12.3z M5,12.3L5.7,13L12,6.5l0,0 l0,0L5.7,0L5,0.7l5.7,5.8L5,12.3z")
-				a(href='/uslugi/')
-					span Услуги
+		.logotype-holder
+			a(href='test.html')
+				.logo.logo-ru.invisible.hidden Justicon
+				img(src="img/content/main-logo.svg", alt="Justicon")
+
+		ul.main-navigation-holder
 			li
-				a(href='price-list.html')
-					span Прайс-лист
+				a(href='about.html')
+					span Все услуги
 			li
 				a(href='#')
-					span Информ-бюро
+					span Почему мы
 				.submenu
 					a.close(href='#')
 					.inner
 						.block-item
-							.title Адресная книга
-							ul
-								li
-									a.root-item(href='/inform-byuro/adresnaya-kniga/adresa-ovir/') Адреса ОВИР
-								li
-									a.root-item(href='/inform-byuro/adresnaya-kniga/adresa-sudy/') Адреса суды
-							.menu-clear-left
+							.title
+								a(href='about.html') О компании
 						.block-item
-							.title Справочная информация
-							ul
-								li
-									a.root-item(href='/inform-byuro/spravochnaya-informatsiya/kved-2012/') Квед 2012
-								li
-									a.root-item(href='/inform-byuro/spravochnaya-informatsiya/kodifikator-stroitelnykh-rabot/') Кодификатор строительных работ
-								li
-									a.root-item(href='/inform-byuro/spravochnaya-informatsiya/kvota-immigratsii/') Квота иммиграции
-							.menu-clear-left
+							.title
+								a(href='/uspeshnyy-rezultat/') Успешный результат
 						.block-item
-							.title Архив
-		.search
-			.phones-holder
-				ul
-					li
-						svg(version="1.1" x="0px" y="0px" viewBox="0 0 12 13" enable-background="new 0 0 12 13" xml:space="preserve")
-							path(fill="#ffffff" d="M0,12.3L0.7,13L7,6.5l0,0l0,0L0.7,0L0,0.7l5.7,5.8L0,12.3z M5,12.3L5.7,13L12,6.5l0,0 l0,0L5.7,0L5,0.7l5.7,5.8L5,12.3z")
-						a(href="tel:0442214000") (093) 1000 176
-					li
-						a(href="tel:0442214000") (044) 221-4000
-			#title-search
-				form#searchform(action='/search/index.php')
-					input#title-search-input(type='text', name='q', value='', autocomplete='off')
-					input.zoom(name='s', type='submit', value='')
+							.title
+								a(href='/nashi-klienty/') Наши клиенты
+						.block-item
+							.title
+								a(href='/aktsii-i-predlozheniya/') Акции и предложения
+						.block-item
+							.title
+			li
+				a(href='#')
+					span Пресс-центр
+				.submenu
+					a.close(href='#')
+					.inner
+						.block-item
+							.title
+								a(href='/press-tsentr/novosti-prava/') Новости права
+						.block-item
+							.title
+								a(href='/press-tsentr/expert/') Мнение эксперта
+						.block-item
+							.title
+								a(href='/press-tsentr/publikatsii/') Публикации
+						.block-item
+							.title
+								a(href='/press-tsentr/rassylka/') Рассылка
+			li
+				a(href='contacts.html')
+					span Информ-бюро
+			li
+				a(href='#')
+					span Укр
+				.submenu
+					.inner
+						.block-item
+							.title
+								a(href='/') Рус
+						.block-item
+							.title
+								a(href='#') En
+
+	.navigation-bar.hidden
+		.container
+			.gamburger(data-mobile-modal="#mobile-menu")
+				span
+				span
+				span
+			.search
+				#title-search
+					form#searchform(action='/search/index.php')
+						input#title-search-input(type='text', name='q', value='', autocomplete='off')
+						input.zoom(name='s', type='submit', value='')
 
 .navigation-sidebar#navigation-sidebar(class= page === 'main' ? 'mainpage' : '')
 	.nicescroll.sidebar-expanded.sidebar-wrapper
