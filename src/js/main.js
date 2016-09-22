@@ -295,7 +295,7 @@ $(document).on('ready', function () {
 	};
 
 	$('[data-modal]').on('click', function (e) {
-		e.preventDefault();
+		if (e) e.preventDefault();
 		var $self = $(this),
 			target = $self.attr('data-modal'),
 			$target = $(target);
