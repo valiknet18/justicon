@@ -23,12 +23,16 @@
 	transition: transform 0.5s ease-out
 	@media (max-width: $tablet)
 		width: 100%
-.footer, .wrap > .consult-me-block
-	transition: transform 0.5s ease-out
 
-.sidebar-opened
-	.container > .wrap, & > .footer, .wrap > .consult-me-block
-		transform: translateX(280px)
+// .footer, .wrap > .consult-me-block
+// 	transition: transform 0.5s ease-out
+
+body
+	& > .footer, & > section, & > .container
+		transition: transform 0.5s ease-out
+	&.sidebar-opened
+		& > .footer, & > section, & > .container
+			transform: translateX(280px)
 
 .form-group
 	display: block
@@ -358,28 +362,6 @@
 				background: #f9f9f9
 				color: #333
 
-// .lang-switcher
-// 	position: relative
-// 	z-index: 2
-// 	li
-// 		background: #fff
-// 		display: block
-// 		& > *
-// 			display: inline-block
-// 			vertical-align: middle
-// 	.lang-switcher-dropdown
-// 		display: none
-// 		position: absolute
-// 		top: 0
-// 		left: 0
-// 		right: 0
-// 		padding-top: 50px
-// 		&:hover
-// 			display: block
-// 	.active
-// 		&:hover
-// 			& + .lang-switcher-dropdown
-// 				display: block
 
 .fixed-header
 	background: #fff
@@ -387,61 +369,126 @@
 	left: 0
 	top: 0
 	right: 0
-	height: 100px
+	// height: 60px
 	z-index: 10
 	font-size: 0
-	.langs
-		@media (max-width: $tablet)
-			display: none
-		& > *
-			display: none
-			&.actlang
-				display: block
-				color: transparent
+	a
+		color: inherit
+		font-size: inherit
+		font-weight: inherit
+		line-height: inherit
+	.services-trigger
+		&:after
+			content: ''
+			background: url('../img/icons/toggle-sidebar-nav-collapse.svg') 50% 50% no-repeat
+			background-size: contain
+			top: 1px
+			position: relative
+			display: inline-block
+			margin-left: 4px
+			height: 11px
+			width: 11px
+			transition: transform 600ms
+			transform: rotate(90deg)
+		&.opened
+			&:after
+				transform: rotate(0deg)
+	.lang-switcher
+		border: 2px solid $main-color
+		// text-align: center
+		// margin-left: 80px
+		float: right
+		margin: -3px -60px 0 0
+		padding: 0px 7px
+		position: relative
+		& > a
+			color: $main-color
+			font-weight: 600
+			margin-left: -2px
+		&:after
+			content: ''
+			display: inline-block
+			height: 0
+			width: 0
+			transform: rotate(45deg) translateY(-3px) translateX(-2px)
+			border: 4px solid $main-color
+			border-left-color: transparent
+			border-top-color: transparent
+		.submenu
+			left: 0
+			text-align: left
 	.header-contacts-navigation-holder,
 	.logotype-holder,
 	.main-navigation-holder
 		display: inline-block
-		vertical-align: top
+		vertical-align: middle
+		text-transform: uppercase
 		font-size: 14px
-	.header-contacts-navigation-holder
-		padding-top: 20px
-		width: 44%
-		.header-contacts-holder
-			margin-bottom: 10px
+		.submenu
+			background: transparent
+			text-transform: none
+			line-height: 3em
+			padding: 10px 0 0 0
+			white-space: nowrap
+			.inner
+				box-shadow: 0 2px 14px rgba(0,0,0,0.3)
+				background: #fff
 			li
-				display: inline-block
+				border-top: 1px solid #eee
+				padding: 0 20px
+				&:first-child
+					border: none
+				&:hover
+					background: $main-color
+					color: #fff
+				a
+					display: block
+	.header-contacts-navigation-holder
+		text-align: right
+		width: 12%
+		.header-contacts-holder
+			margin: 10px 0
+			border-left: 1px solid #ddd
+			color: $main-color
+			font-weight: 600
+			li
+				display: block
 				margin-right: 10px
+				&:first-child
+					a
+						position: relative
+						&:before
+							content: ''
+							display: inline-block
+							background: url('../img/icons/phone-icon-1.svg') 50% 50% no-repeat
+							background-size: contain
+							position: absolute
+							transform: rotate(-35deg)
+							left: -23px
+							top: 2px
+							height: 20px
+							width: 20px
 		.header-navigation-holder
 			li
 				display: inline-block
 				margin-right: 14px
-			.services-trigger
-				&:after
-					content: ''
-					background: url('../img/icons/toggle-sidebar-nav-collapse.svg') 50% 50% no-repeat
-					background-size: contain
-					top: 1px
-					position: relative
-					display: inline-block
-					margin-left: 4px
-					height: 11px
-					width: 11px
 	.logotype-holder
 		text-align: center
-		padding: 10px 0
+		padding: 6px 0
 		width: 12%
 		img
 			// max-width: 80px
-			height: 80px
+			// height: 80px
+			width: 100%
 	.main-navigation-holder
-		padding-top: 20px
-		width: 44%
+		padding: 0 80px 0 30px
+		width: 76%
 		& > li
 			display: inline-block
 			margin-left: 10px
 			position: relative
 			padding-left: 10px
+			line-height: 2em
 
 
 .search

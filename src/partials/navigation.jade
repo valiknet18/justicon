@@ -10,29 +10,27 @@
 		.logotype-holder
 			a(href='test.html')
 				.logo.logo-ru.invisible.hidden Justicon
-				img(src="img/content/main-logo.svg", alt="Justicon")
+				img(src="http://justicon.ua/bitrix/templates/usticon/i/logo.png", alt="Justicon")
+				//- img(src="img/content/main-logo.svg", alt="Justicon")
 
 		ul.main-navigation-holder
+			li.services-trigger
+				a(href='services.html')
+					span Услуги
 			li
 				a(href='#')
 					span Почему мы
 				.submenu
 					a.close(href='#')
-					.inner
-						.block-item
-							.title
-								a(href='about.html') О компании
-						.block-item
-							.title
-								a(href='/uspeshnyy-rezultat/') Успешный результат
-						.block-item
-							.title
-								a(href='/nashi-klienty/') Наши клиенты
-						.block-item
-							.title
-								a(href='/aktsii-i-predlozheniya/') Акции и предложения
-						.block-item
-							.title
+					ul.inner
+						li
+							a(href='about.html') О компании
+						li
+							a(href='/uspeshnyy-rezultat/') Успешный результат
+						li
+							a(href='/nashi-klienty/') Наши клиенты
+						li
+							a(href='/aktsii-i-predlozheniya/') Акции и предложения
 			li
 				a(href='contacts.html')
 					span Информ-бюро
@@ -41,33 +39,33 @@
 					span Пресс-центр
 				.submenu
 					a.close(href='#')
-					.inner
-						.block-item
-							.title
-								a(href='/press-tsentr/novosti-prava/') Новости права
-						.block-item
-							.title
-								a(href='/press-tsentr/expert/') Мнение эксперта
-						.block-item
-							.title
-								a(href='/press-tsentr/publikatsii/') Публикации
-						.block-item
-							.title
-								a(href='/press-tsentr/rassylka/') Рассылка
+					ul.inner
+						li
+							a(href='/press-tsentr/novosti-prava/') Новости права
+						li
+							a(href='/press-tsentr/expert/') Мнение эксперта
+						li
+							a(href='/press-tsentr/publikatsii/') Публикации
+						li
+							a(href='/press-tsentr/rassylka/') Рассылка
 			li
 				a(href='about.html')
 					span Все разделы
 			li
+				a(href='price-list.html')
+					span Прайс-лист
+			li
+				a(href='#')
+					span Контакты
+			li.lang-switcher
 				a(href='#')
 					span Укр
 				.submenu
-					.inner
-						.block-item
-							.title
-								a(href='/') Рус
-						.block-item
-							.title
-								a(href='#') En
+					ul.inner
+						li
+							a(href='/') Рус
+						li
+							a(href='#') En
 
 		.header-contacts-navigation-holder
 			ul.header-contacts-holder
@@ -78,16 +76,6 @@
 						a(href="tel:0931000176" data-modal="#contacts-modal") (093) 1000 176
 					li
 						a(href="tel:0442214000" data-modal="#contacts-modal") (044) 221 4000
-			ul.header-navigation-holder
-				li.services-trigger
-					a(href='services.html')
-						span Услуги
-				li
-					a(href='price-list.html')
-						span Прайс-лист
-				li
-					a(href='#')
-						span Контакты
 
 	.navigation-bar.hidden
 		.container

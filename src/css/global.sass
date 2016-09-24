@@ -5,7 +5,7 @@
 	box-sizing: border-box
 
 body
-	padding-top: 100px
+	padding-top: 77px
 	color: black
 	font: $font-stack
 	font-weight: 400
@@ -22,14 +22,20 @@ body
 
 li
 	.submenu
-		display: none
 		background: #fff
 		position: absolute
 		padding: 10px
 		z-index: 1
+		visibility: hidden
+		opacity: 0
+		transition: all 300ms
+		transform: translateY(12px)
 	&:hover
 		.submenu
 			display: block
+			transform: translateY(0)
+			visibility: visible
+			opacity: 1
 
 
 // webkit scroll

@@ -367,11 +367,6 @@ $(document).on('ready', function () {
 				} else if ( level === 0 ) {
 					$crossButton.addClass('cross-state');
 					$target.addClass('opened');
-					if ($(document).scrollTop() < 80) {
-						$('body, html').animate({
-							'scrollTop': 80
-						});
-					}
 					bodyOverflow.fixBody();
 					modals[0] = $target;
 					level = 1;
@@ -522,38 +517,6 @@ $(document).on('ready', function () {
 		});
 	})();
 
-
-	// fixed menu
-	(function () {
-		// TODO add status
-		var status,
-			$document = $(document),
-			$menu = $('.navigation-bar'),
-			$header = $('.header'),
-			// headerHeight = $header.height(),
-			headerHeight = 80,
-			$sidebarNavigation = $('#navigation-sidebar');
-			if ($sidebarNavigation.length === 0) {
-				$sidebarNavigation = null;
-			}
-		$document.on('scroll', function () {
-			var top = $document.scrollTop();
-			if (top > headerHeight) {
-				status = 1;
-				$menu.addClass('fixed');
-				if ($sidebarNavigation) {
-					$sidebarNavigation.css('top', 50);
-				}
-			} else {
-				status = 0;
-				$menu.removeClass('fixed');
-				if ($sidebarNavigation) {
-					$sidebarNavigation.css('top', 130 - top);
-				}
-			}
-		});
-	})();
-
 	// sidebar navigation
 	(function () {
 		var state = [],
@@ -564,9 +527,6 @@ $(document).on('ready', function () {
 			$servicesLink = $mainNav.find('.services-trigger'),
 			$submenuTriggers = $nav.find('> li > a'),
 			$toggleNavCollapse = $sidebar.find('.toggle-nav-collapse');
-
-		console.log($mainNav);
-		console.log($servicesLink);
 
 		$toggleNavCollapse.on('click', function (e) {
 			e.preventDefault();
@@ -649,12 +609,6 @@ $(document).on('ready', function () {
 				}
 				state = [];
 				bodyOverflow.unfixBody();
-			} else {
-				if ($(document).scrollTop() < 80) {
-					$('body, html').animate({
-						'scrollTop': 80
-					});
-				}
 			}
 			if ($self.hasClass('active')) {
 				$submenuTriggers
