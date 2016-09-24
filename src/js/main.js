@@ -560,10 +560,13 @@ $(document).on('ready', function () {
 			$body = $('body'),
 			$sidebar = $('#navigation-sidebar'),
 			$nav = $sidebar.find('.nav'),
-			$mainNav = $('.navigation-bar'),
+			$mainNav = $('.fixed-header'),
 			$servicesLink = $mainNav.find('.services-trigger'),
 			$submenuTriggers = $nav.find('> li > a'),
 			$toggleNavCollapse = $sidebar.find('.toggle-nav-collapse');
+
+		console.log($mainNav);
+		console.log($servicesLink);
 
 		$toggleNavCollapse.on('click', function (e) {
 			e.preventDefault();
@@ -594,7 +597,7 @@ $(document).on('ready', function () {
 		});
 
 		$servicesLink.on('click', function (e) {
-			e.preventDefault();
+			if (e) e.preventDefault();
 			if (state.length) {
 				for (var i = state.length - 1; i >= 0; i--) {
 					state[i].removeClass('opened');
