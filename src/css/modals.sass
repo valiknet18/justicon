@@ -241,7 +241,66 @@
 	.container
 		background: #fff
 		position: absolute
-		padding: 80px
+		padding: 80px 80px
 		left: 50%
 		transform: translate(-50%, 40px)
+	h1, h2, h3, h4, h5, h6
+		font-weight: 300
+		margin-bottom: 0.8em
+	li
+		margin-bottom: 6px
+	table
+		width: 100%
+		td
+			vertical-align: top
+			&:nth-child(2)
+				text-align: right
+		b, .title, .blue
+			color: $main-color
+			margin: 14px 0 6px
+			font-size: 1.3em
+			&:first-child
+				margin-top: -3px
+		iframe
+			width: 100%
 
+#search-modal
+	text-align: center
+	.modal-wrapper
+		padding: 40px 40px
+		background: rgba(255, 255, 255, 0.9)
+		border-radius: 4px
+		overflow: auto
+		position: absolute
+		top: 50%
+		top: calc(50% - 140px)
+		left: 50%
+		left: calc(50% - 600px)
+		max-height: 100%
+		max-width: 100%
+		width: 1200px
+		.search-wrapper
+			h2
+				margin-bottom: 20px
+				font-weight: 300
+			.input-form
+				input
+					width: 100%
+			button
+				padding: 5px 10px
+				margin: 20px 0 0 0
+				background: transparent
+				font-weight: 600
+				color: $main-color
+				font-size: 14px
+				line-height: 40px
+				padding: 2px 20px
+				text-align: center
+				border:
+					width: 2px
+					color: $main-color
+					style: solid
+					radius: 5px
+				&:hover
+					background: $main-color
+					color: #fff

@@ -394,16 +394,16 @@ body
 			&:after
 				transform: rotate(0deg)
 	.lang-switcher
-		border: 2px solid $main-color
+		border: 1px solid transparent
 		// text-align: center
 		// margin-left: 80px
 		float: right
-		margin: -3px -60px 0 0
+		margin: -1px -60px 0 0
 		padding: 0px 7px
 		position: relative
 		& > a
-			color: $main-color
-			font-weight: 600
+			color: #333
+			// font-weight: 600
 			margin-left: -2px
 		&:after
 			content: ''
@@ -411,7 +411,7 @@ body
 			height: 0
 			width: 0
 			transform: rotate(45deg) translateY(-3px) translateX(-2px)
-			border: 4px solid $main-color
+			border: 3px solid #444
 			border-left-color: transparent
 			border-top-color: transparent
 		.submenu
@@ -446,6 +446,7 @@ body
 	.header-contacts-navigation-holder
 		text-align: right
 		width: 12%
+		width: calc(130px)
 		.header-contacts-holder
 			margin: 10px 0
 			border-left: 1px solid #ddd
@@ -453,21 +454,34 @@ body
 			font-weight: 600
 			li
 				display: block
-				margin-right: 10px
-				&:first-child
+				margin-right: 0
+				&.operator
 					a
 						position: relative
 						&:before
 							content: ''
 							display: inline-block
-							background: url('../img/icons/phone-icon-1.svg') 50% 50% no-repeat
-							background-size: contain
+							background:
+								position: 50% 50%
+								repeat: no-repeat
+								size: contain
 							position: absolute
-							transform: rotate(-35deg)
 							left: -23px
 							top: 2px
-							height: 20px
-							width: 20px
+							height: 16px
+							width: 16px
+					&-viber
+						a
+							&:before
+								background-image: url('../img/icons/phone-icon-viber-1.svg')
+					&-lifecell
+						a
+							&:before
+								background-image: url('../img/icons/phone-icon-lifecell-1.svg')
+					&-kyivstar
+						a
+							&:before
+								background-image: url('../img/icons/phone-icon-ks-1.png')
 		.header-navigation-holder
 			li
 				display: inline-block
@@ -479,10 +493,12 @@ body
 		img
 			// max-width: 80px
 			// height: 80px
+			margin-bottom: -8px
 			width: 100%
 	.main-navigation-holder
 		padding: 0 80px 0 30px
 		width: 76%
+		width: calc(88% - 130px)
 		& > li
 			display: inline-block
 			margin-left: 10px
@@ -776,6 +792,99 @@ body
 					border-right: 0
 					margin-right: 0
 					padding-right: 0
+
+.subcategories-slider
+	overflow: hidden
+	padding: 28px 0 8px
+	.subcategories-slider-content
+		position: relative
+	.prev-slide,
+	.next-slide
+		border-radius: 3px
+		cursor: pointer
+		top: 50%
+		opacity: .4
+		position: absolute
+		margin-top: -20px
+		height: 40px
+		width: 40px
+		transition: all 0.2s
+		background-position: 50% 50%
+		background-size: contain
+		z-index: 1
+		&:hover
+			opacity: 1
+		span
+			color: #fff
+			font-size: 20px
+			font-weight: bold
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+	.prev-slide
+		background-image: url('../img/icons/slide-prev-2.svg')
+		left: -60px
+	.next-slide
+		background-image: url('../img/icons/slide-next-2.svg')
+		right: -60px
+	.subcategories-line
+		font-size: 0
+		text-align: center
+		border-bottom: 1px solid #d1d7db
+		li
+			cursor: pointer
+			display: inline-block
+			margin: 0 0 -1px 0
+			padding: 6px 18px
+			line-height: 2em
+			background: #eff2f4
+			border: 1px solid #d1d7db
+			border-left: none
+			font-size: 14px
+			&.active
+				border-bottom-color: #fff
+				background: #fff
+			&:hover
+				color: $main-color
+			&:first-child
+				border-left: 1px solid #d1d7db
+				margin-left: 0
+			&:last-child
+				margin-right: 0
+	.subcontents-container
+		font-size: 0
+		white-space: nowrap
+		.slide
+			display: inline-block
+			font-size: 14px
+			opacity: 0.4
+			padding: 20px 20px 0 20px
+			vertical-align: top
+			white-space: normal
+			width: 100%
+			transition: all 300ms
+			&.active
+				opacity: 1
+				padding: 20px 0 0 0
+			a
+				color: $main-color
+			p
+				margin-bottom: 1em
+			h1, h2, h3, h4, h5, h6
+				margin: 0 0 0.6em 0
+				font-weight: 300
+			.image-holder
+				display: inline-block
+				height: 100%
+				vertical-align: top
+				width: 30%
+				img
+					width: 80%
+			.content-holder
+				display: inline-block
+				vertical-align: top
+				width: 68%
 
 .categories-interactive
 	// display: none

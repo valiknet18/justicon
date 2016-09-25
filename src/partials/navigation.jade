@@ -57,6 +57,10 @@
 			li
 				a(href='#')
 					span Контакты
+			li
+				a(href='#' data-modal="#search-modal")
+					span
+						img(src="img/icons/search-icon-2.svg", alt="search")
 			li.lang-switcher
 				a(href='#')
 					span Укр
@@ -70,11 +74,11 @@
 		.header-contacts-navigation-holder
 			ul.header-contacts-holder
 				ul
-					li
+					li.operator.operator-lifecell
 						a(href="tel:0981000176" data-modal="#contacts-modal") (098) 1000 176
-					li
+					li.operator.operator-viber
 						a(href="tel:0931000176" data-modal="#contacts-modal") (093) 1000 176
-					li
+					li.operator.operator-kyivstar
 						a(href="tel:0442214000" data-modal="#contacts-modal") (044) 221 4000
 
 	.navigation-bar.hidden
