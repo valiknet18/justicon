@@ -19,10 +19,12 @@
 
 .wrap, .container
 	margin: 0 auto
-	width: 72.7%
+	width: 88%
 	transition: transform 0.5s ease-out
 	@media (max-width: $tablet)
 		width: 100%
+	@media (min-width: $large)
+		width: 72.7%
 
 // .footer, .wrap > .consult-me-block
 // 	transition: transform 0.5s ease-out
@@ -365,6 +367,8 @@ body
 
 .fixed-header
 	background: #fff
+	box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1)
+	transform: translateZ(0)
 	position: fixed
 	left: 0
 	top: 0
@@ -393,49 +397,27 @@ body
 		&.opened
 			&:after
 				transform: rotate(0deg)
-	.lang-switcher
-		border: 1px solid transparent
-		// text-align: center
-		// margin-left: 80px
-		float: right
-		margin: -1px -60px 0 0
-		padding: 0px 7px
-		position: relative
-		& > a
-			color: #333
-			// font-weight: 600
-			margin-left: -2px
-		&:after
-			content: ''
-			display: inline-block
-			height: 0
-			width: 0
-			transform: rotate(45deg) translateY(-3px) translateX(-2px)
-			border: 3px solid #444
-			border-left-color: transparent
-			border-top-color: transparent
-		.submenu
-			left: 0
-			text-align: left
 	.header-contacts-navigation-holder,
 	.logotype-holder,
 	.main-navigation-holder
 		display: inline-block
 		vertical-align: middle
 		text-transform: uppercase
-		font-size: 14px
+		font-size: 12px
+		@media (min-width: $large)
+			font-size: 14px
 		.submenu
 			background: transparent
 			text-transform: none
 			line-height: 3em
 			padding: 10px 0 0 0
 			white-space: nowrap
+			top: 44px
 			.inner
 				box-shadow: 0 2px 14px rgba(0,0,0,0.3)
 				background: #fff
 			li
 				border-top: 1px solid #eee
-				padding: 0 20px
 				&:first-child
 					border: none
 				&:hover
@@ -443,6 +425,7 @@ body
 					color: #fff
 				a
 					display: block
+					padding: 0 20px
 	.header-contacts-navigation-holder
 		text-align: right
 		width: 12%
@@ -491,20 +474,51 @@ body
 		padding: 6px 0
 		width: 12%
 		img
-			// max-width: 80px
-			// height: 80px
 			margin-bottom: -8px
 			width: 100%
 	.main-navigation-holder
-		padding: 0 80px 0 30px
+		// padding: 0 80px 0 30px
+		padding: 0 30px 0 30px
 		width: 76%
 		width: calc(88% - 130px)
 		& > li
 			display: inline-block
-			margin-left: 10px
+			line-height: 76px
+			margin: 0 5px
 			position: relative
-			padding-left: 10px
-			line-height: 2em
+			&.active
+				color: $main-color
+				&:after
+					content: ''
+					background: $main-color
+					position: absolute
+					left: 0
+					right: 0
+					bottom: -1px
+					height: 3px
+			&.lang-switcher
+				border: 1px solid transparent
+				float: right
+				margin: -1px 0 0 0
+				padding: 0px 7px
+				position: relative
+				& > a
+					color: #333
+					margin-left: -2px
+				&:after
+					content: ''
+					display: inline-block
+					height: 0
+					width: 0
+					transform: rotate(45deg) translateY(-3px) translateX(-2px)
+					border: 3px solid #444
+					border-left-color: transparent
+					border-top-color: transparent
+				.submenu
+					left: 0
+					text-align: left
+			&.search-trigger
+				float: right
 
 
 .search
@@ -556,6 +570,7 @@ body
 .categories-slider
 	background: $main-color url('../img/bg/categories-slider.svg') 50% 50% no-repeat
 	background-size: cover
+	overflow: hidden
 	.container
 		position: relative
 	.categories-label
@@ -575,13 +590,15 @@ body
 		top: 50%
 		opacity: .4
 		position: absolute
-		// background: rgba(255, 255, 255, 0.3)
+		background: rgba(255, 255, 255, 0.3) 50% 50% no-repeat
+		border: 4px solid transparent
 		margin-top: -20px
 		height: 40px
 		width: 40px
 		transition: all 0.2s
 		background-position: 50% 50%
 		background-size: contain
+		z-index: 1
 		&:hover
 			opacity: 1
 		span
@@ -598,6 +615,12 @@ body
 	.next-slide
 		background-image: url('../img/icons/slide-next-1.svg')
 		right: -60px
+	.slide-label
+		color: #fff
+		opacity: 0.5
+		font-size: 12px
+		font-weight: 100
+		margin: 4px 0 -12px
 	.categories-line
 		border-bottom: 1px solid #fff
 		margin: 4px 0 -20px
@@ -626,6 +649,11 @@ body
 			opacity: 0.6
 			&:hover, &.active
 				opacity: 1
+			&:hover
+				.subslides
+					opacity: 1
+					transform: translateY(0)
+					visibility: visible
 			&.active
 				&:after
 					content: ''
@@ -642,9 +670,53 @@ body
 				line-height: inherit
 				&:hover
 					color: white
+			.subslides
+				background: #fff
+				box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3)
+				color: #000
+				position: absolute
+				left: 0
+				opacity: 0
+				transform: translateY(20px)
+				transition: all 300ms
+				visibility: hidden
+				line-height: 3em
+				li
+					border-top: 1px solid #eee
+					color: inherit
+					display: block
+					margin: 0
+					opacity: 1
+					text-transform: none
+					&:focus, &:active
+						color: $main-color
+					&:first-child
+						border: none
+					&:hover
+						background: $main-color
+						color: #fff
+					a, span
+						display: block
+						padding: 0 10px
+				span
+					pointer-events: none
+	.slide
+		display: inline-block
+		opacity: 0.5
+		vertical-align: top
+		width: 100%
+		white-space: normal
+		max-height: 9px
+		transition: max-height 1800ms, opacity 300ms
+		&.active
+			opacity: 1
+			max-height: 800px
+			transition: max-height 800ms, opacity 300ms
 	.contents-container
+		transition: transform 600ms
 		font-size: 0
 		letter-spacing: 0
+		white-space: nowrap
 		h2
 			color: white
 			font-weight: 100
@@ -702,17 +774,35 @@ body
 			vertical-align: bottom
 			width: 50%
 		.left-col
-			width: 46%
+			width: 62%
+			@media (min-width: $large)
+				width: 46%
 		.right-col
 			padding-left: 20px
 			text-align: right
-			width: 54%
 			max-width: 600px
+			width: 38%
+			@media (min-width: $large)
+				width: 50%
 			.image-holder
 				// margin-top: 40px
 				height: 100%
 				animation: modalOpen 0.4s
 				animation-fill-mode: both
+
+		.left-col
+			overflow: hidden
+			white-space: nowrap
+		.subslide
+			display: inline-block
+			opacity: 0.5
+			transition: transform 600ms
+			white-space: normal
+			width: 100%
+			&.active
+				display: inline-block
+				opacity: 1
+
 		.slide-description
 			margin-top: 62px
 			& > *
@@ -728,11 +818,6 @@ body
 					animation-delay: .6s
 			h1, h2, h3
 				margin-top: 0
-			.slide-label
-				color: #fff
-				font-size: 16px
-				font-weight: 100
-				margin-bottom: 10px
 		.additional
 			margin-top: 40px
 			animation: modalOpen 1s

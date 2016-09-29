@@ -17,6 +17,15 @@
 			li.services-trigger
 				a(href='services.html')
 					span Услуги
+			li( class= page === 'price-list' ? 'active' : '' )
+				a(href='price-list.html')
+					span Прайс-лист
+			li( class= page === 'contacts' ? 'active' : '' )
+				a(href='contacts.html')
+					span Контакты
+			li( class= page === 'about' ? 'active' : '' )
+				a(href='about.html')
+					span Все разделы
 			li
 				a(href='#')
 					span Почему мы
@@ -31,8 +40,8 @@
 							a(href='/nashi-klienty/') Наши клиенты
 						li
 							a(href='/aktsii-i-predlozheniya/') Акции и предложения
-			li
-				a(href='contacts.html')
+			li( class= page === 'adresses' ? 'active' : '' )
+				a(href='adresses.html')
 					span Информ-бюро
 			li
 				a(href='#')
@@ -48,16 +57,7 @@
 							a(href='/press-tsentr/publikatsii/') Публикации
 						li
 							a(href='/press-tsentr/rassylka/') Рассылка
-			li
-				a(href='about.html')
-					span Все разделы
-			li
-				a(href='price-list.html')
-					span Прайс-лист
-			li
-				a(href='#')
-					span Контакты
-			li
+			li.search-trigger
 				a(href='#' data-modal="#search-modal")
 					span
 						img(src="img/icons/search-icon-2.svg", alt="search")
