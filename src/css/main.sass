@@ -702,16 +702,16 @@ body
 					pointer-events: none
 	.slide
 		display: inline-block
-		opacity: 0.5
-		vertical-align: top
-		width: 100%
-		white-space: normal
 		max-height: 9px
-		transition: max-height 1800ms, opacity 300ms
+		opacity: 0.5
+		transition: max-height 1800ms, opacity 300ms, padding 300ms
+		vertical-align: top
+		white-space: normal
+		width: 100%
 		&.active
 			opacity: 1
 			max-height: 800px
-			transition: max-height 800ms, opacity 300ms
+			transition: max-height 800ms, opacity 300ms, padding 300ms
 	.contents-container
 		transition: transform 600ms
 		font-size: 0

@@ -199,10 +199,16 @@ $(document).on('ready', function () {
 			current[0] = slide;
 			current[1] = subslide;
 
-			var $self = this,
+			var $self,
 				left,
-				$target = $( '#' + $self.attr('data-category') ),
+				$target = $( '#' + slide ),
 				$parent = $target.parent();
+
+			if ($self instanceof jQuery) {
+				$self = this;
+			} else {
+				$self = $_.find('[data-category=' + slide + ']');
+			}
 
 			if (!$target.length) return;
 			left = $target.index();
@@ -238,36 +244,38 @@ $(document).on('ready', function () {
 				$self.find('.subslides').children().each(function (i) {
 					$(this).attr('data-eq', i);
 				});
-				if (i === 0) changeSlide.call($self, 0, 0);
+				if (i === 0) changeSlide.call($self, $self.attr('data-category'), 0);
 			});
 		});
 
 		$_.find('.next-slide').on('click', function () {
-			var $activeSlide, $next, $nextSub;
-			$activeSlide = $_.find('[data-category].active');
-			$nextSub = $_.find('.slide.active').find('.subslide.active').next();
-			if ($nextSub.length) {
-				$nextSub.addClass('active').siblings().removeClass('active');
+			var $activeSlide, $activeSubslide, $nextSlide, $nextSubslide;
+			$activeSlide = $( '#' + current[0] );
+			$activeSubslide = $activeSlide.find('.subslide.active');
+			$nextSubslide = $activeSubslide.next();
+			if ($nextSubslide.length) {
+				changeSlide.call($_, current[0], current[1] + 1);
 			} else {
-				$next = $_.find('[data-category].active').next();
-				if ($next.length) {
-					$next.trigger('click');
+				$nextSlide = $activeSlide.next();
+				if ($nextSlide.length) {
+					changeSlide.call($_, $nextSlide.attr('id'), 0);
 				} else {
-					$_.find('[data-category]:first').trigger('click');
+					changeSlide.call($_, $activeSlide.parent().children().eq(0).attr('id'), 0);
 				}
 			}
 		});
 		$_.find('.prev-slide').on('click', function () {
-			var $activeSlide, $prev, $prevSub;
-			$prevSub = $_.find('[data-category].active').prev();
-			if ($prevSub.length) {
-				$prevSub.addClass('active').siblings().removeClass('active');
+			var $activeSlide, $activeSubslide, $prevSlide, $prevSubslide;
+			$activeSlide = $( '#' + current[0] );
+			$activeSubslide = $activeSlide.find('.subslide.active');
+			if (current[1] - 1 >= 0) {
+				changeSlide.call($_, current[0], current[1] - 1);
 			} else {
-				$prev = $_.find('.slide.active').find('.subslide.active').prev();
-				if ($prev.length) {
-					$prev.trigger('click');
+				$prevSlide = $activeSlide.prev();
+				if ($prevSlide.length) {
+					changeSlide.call($_, $prevSlide.attr('id'), $activeSubslide.parent().children().length - 1);
 				} else {
-					$_.find('[data-category]:last').trigger('click');
+					changeSlide.call($_, $activeSlide.parent().children().eq(-1).attr('id'), $activeSubslide.parent().children().length - 1);
 				}
 			}
 		});
