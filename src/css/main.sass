@@ -435,6 +435,30 @@ body
 			border-left: 1px solid #ddd
 			color: $main-color
 			font-weight: 600
+			position: relative
+			.submenu
+				display: inline-block
+				padding-top: 10px
+				pointer-events: none
+				position: absolute
+				opacity: 0
+				left: 24px
+				margin-top: 10px
+				bottom: -64px
+				transition: opacity 300ms, transform 300ms
+				transform: translateY(10px)
+				span
+					display: inline-block
+					background: #333
+					color: #fff
+					margin: 0
+					padding: 6px 12px
+					border-radius: 2px
+					line-height: 1em
+			&:hover
+				.submenu
+					opacity: 1
+					transform: translateY(0)
 			li
 				display: block
 				margin-right: 0
@@ -519,6 +543,17 @@ body
 					text-align: left
 			&.search-trigger
 				float: right
+				.submenu
+					padding-top: 10px
+					pointer-events: none
+					span
+						display: inline-block
+						background: #333
+						color: #fff
+						margin: 0
+						padding: 6px 12px
+						border-radius: 2px
+						line-height: 1em
 
 
 .search
