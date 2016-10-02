@@ -73,12 +73,8 @@ var loading = {
 		(function () {
 			var masonrySidebarNavigation = $('#navigation-sidebar').find('.nav .inner-holder').each(function () {
 				$(this).masonry({
-					// columnWidth: 10,
-					// gutter: 10,
-					// fitWidth: true,
-					// percentPosition: true,
 					itemSelector: ".inner-holder > li"
-				});
+				}).append('<div class="close"></div>');
 			});
 			// cleanup news template
 			$('.news-list').find('> *:not(.news-item)').remove();
@@ -167,6 +163,46 @@ $(document).on('ready', function () {
 				plg.up();
 			});
 			return plg;
+	})();
+
+	// Collapse when not enough space
+	(function () {
+		var $lists;
+		$lists = $('.main-navigation-holder');
+		$lists.each(function () {
+			var $list, $elements, $listsCollapse, listWidth, elementsWidth, listIsFull;
+			$list = $(this);
+			elementsWidth = 0;
+			$elements = $list.children();
+			$elements.css({
+				'display': 'none'
+			});
+			listWidth = $list.width();
+			if (listWidth === 0) {
+				listWidth = $lists.parent().width();
+			}
+			if (listWidth === 0) return;
+			$elements.each(function () {
+				var $element, elementWidth;
+				$element = $(this);
+				$element.css({
+					'display': ''
+				});
+				elementWidth = $element.width();
+				elementsWidth += elementWidth;
+				if (elementsWidth >= listWidth) {
+					listIsFull = true;
+				}
+				if (listIsFull) {
+					if (!$listsCollapse) {
+						$listsCollapse = $('<li>').addClass('list-collapse');
+						$listsCollapse.appendTo($list);
+						$listsCollapse = $('<ul>').appendTo($listsCollapse);
+					}
+					$element.appendTo($listsCollapse);
+				}
+			});
+		});
 	})();
 
 	// categories 1
@@ -588,6 +624,23 @@ $(document).on('ready', function () {
 			$servicesLink = $mainNav.find('.services-trigger'),
 			$submenuTriggers = $nav.find('> li > a'),
 			$toggleNavCollapse = $sidebar.find('.toggle-nav-collapse');
+
+		$sidebar.on('click', function (e) {
+			if (!$(e.target).hasClass('close')) return;
+			$sidebar
+				.toggleClass('expanded')
+				.removeClass('opened');
+
+			if ($sidebar.hasClass('expanded')) {
+				$body
+					.addClass('sidebar-opened');
+				$servicesLink.addClass('opened');
+			} else {
+				$body
+					.removeClass('sidebar-opened');
+				$servicesLink.removeClass('opened');
+			}
+		});
 
 		$toggleNavCollapse.on('click', function (e) {
 			e.preventDefault();

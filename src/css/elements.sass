@@ -1,4 +1,10 @@
 
+.list-collapse
+	background: url("../img/icons/toggle-sidebar-nav-collapse.svg") 50% 50% no-repeat
+	overflow: hidden
+	height: 11px
+	width: 11px
+
 #page-tit
 	padding: 52px 0 63px
 	position: relative
@@ -93,6 +99,26 @@
 			transition: transform .6s
 	.nav.nav-sidebar
 		width: 280px
+		// &:after
+		// 	content: ''
+		// 	background: url("../img/icons/toggle-sidebar-nav-collapse.svg") 50% 50% no-repeat
+		// 	background-size: contain
+		// 	position: absolute
+		// 	top: 50%
+		// 	left: 62px
+		// 	height: 12px
+		// 	width: 12px
+		& > li
+		.close
+			cursor: pointer
+			height: 20px
+			width: 20px
+			background: transparent url('../img/icons/cross-button-4.svg') 50% 50% no-repeat
+			background-size: contain
+			position: absolute
+			right: 0
+			top: 20px
+			z-index: 2
 		li
 			display: block
 			width: auto
@@ -101,8 +127,8 @@
 				padding: 12px 0
 				overflow: hidden
 				width: 80px
-				white-space: nowrap
 				transition: background 0.1s, width 0.6s
+				white-space: nowrap
 				&:hover, &.active
 					color: #000
 					background-color: #6bb6ee
@@ -211,6 +237,7 @@
 						text-transform: uppercase
 						font-weight: 700
 						display: block
+						white-space: normal
 						width: 100%
 						&:hover
 							background: none
