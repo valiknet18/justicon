@@ -4,6 +4,18 @@ if ($.browser.safari) $('body').addClass('safari');
 
 var justicon = {};
 
+var initializeMapInModal = function () {
+	var $self, $maps;
+	$self = $(this);
+	$maps = $self.find('.js-map-src');
+	$maps.each(function () {
+		var $map, src;
+		$map = $(this);
+		src = $map.attr('data-src');
+		$map.attr('src', src);
+	});
+};
+
 var loading = {
 	avgTime: 3000,
 	trg: 1,
@@ -393,7 +405,12 @@ $(document).on('ready', function () {
 		if (e) e.preventDefault();
 		var $self = $(this),
 			target = $self.attr('data-modal'),
-			$target = $(target);
+			$target = $(target),
+			onopen = $target.attr('data-onopen');
+
+		if (onopen || typeof window[onopen] === 'function' || typeof justicon[onopen] === 'function') {
+			window[onopen].call($target);
+		}
 
 		if ($target.length) {
 			modals.openModal($target);
@@ -422,7 +439,7 @@ $(document).on('ready', function () {
 	});
 
 	$('.modal').on('click', function (e) {
-		var $target = e.target;
+		var $target = $(e.target);
 		if (e) e.preventDefault();
 		if (e.target === this || $target.hasClass('close')) {
 			modals.closeModal( $(this) );

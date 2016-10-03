@@ -373,10 +373,12 @@ body
 	left: 0
 	top: 0
 	right: 0
-	// height: 60px
+	height: 77px
 	z-index: 10
 	font-size: 0
 	white-space: nowrap
+	.container
+		width: 90%
 	a
 		color: inherit
 		font-size: inherit
@@ -604,11 +606,12 @@ body
 		margin-right: 6px
 
 .categories-slider
-	background: $main-color url('../img/bg/categories-slider.svg') 50% 50% no-repeat
+	// background: $main-color url('../img/bg/categories-slider.svg') 50% 50% no-repeat
+	background: #5caae5 url('../img/bg/categories-slider.svg') 50% 50% no-repeat
 	background-size: cover
 	overflow: hidden
-	.container
-		position: relative
+	position: relative
+	padding-top: 6px
 	.categories-label
 		color: #fff
 		float: left
@@ -624,9 +627,9 @@ body
 		border-radius: 3px
 		cursor: pointer
 		top: 50%
-		opacity: .4
+		opacity: .8
 		position: absolute
-		background: rgba(255, 255, 255, 0.3) 50% 50% no-repeat
+		background: rgba(255, 255, 255, 0) 50% 50% no-repeat
 		border: 4px solid transparent
 		margin-top: -20px
 		height: 40px
@@ -647,16 +650,23 @@ body
 			transform: translate(-50%, -50%)
 	.prev-slide
 		background-image: url('../img/icons/slide-prev-1.svg')
-		left: -60px
+		left: 60px
 	.next-slide
 		background-image: url('../img/icons/slide-next-1.svg')
-		right: -60px
+		right: 60px
 	.slide-label
+		// color: #d7e8f8
 		color: #fff
-		opacity: 0.5
 		font-size: 12px
 		font-weight: 100
 		margin: 4px 0 -12px
+		position: relative
+		left: -171px
+		top: 21px
+		font-size: 16px
+		opacity: 0.5
+		pointer-events: none
+		// font-weight: 600
 	.categories-line
 		border-bottom: 1px solid #fff
 		margin: 4px 0 -20px
@@ -673,7 +683,6 @@ body
 			margin-right: 30px
 			cursor: pointer
 
-			color: whitesmoke
 			font-weight: 300
 			font-size: 12px
 			text-transform: uppercase
@@ -682,9 +691,11 @@ body
 			position: relative
 
 			text-overflow: ellipsis
-			opacity: 0.6
+			// opacity: 0.6
+			color: #d7e8f8
 			&:hover, &.active
-				opacity: 1
+				// opacity: 1
+				color: #fff
 			&:hover
 				.subslides
 					opacity: 1
@@ -739,7 +750,7 @@ body
 	.slide
 		display: inline-block
 		max-height: 9px
-		opacity: 0.5
+		opacity: 0.3
 		transition: max-height 1800ms, opacity 300ms, padding 300ms
 		vertical-align: top
 		white-space: normal
@@ -1825,128 +1836,133 @@ body
 		@media (max-width: $tablet)
 			padding-left: 20px
 
-
-.main.wide-l
-	.main-container
-		.contacts
-			$mobile-media-width: 1200px
-			table.address
-				margin-top: 80px
+.contacts
+	$mobile-media-width: 1200px
+	table.address
+		margin-top: 80px
+		width: 100%
+		@media (max-width: $mobile-media-width)
+			display: block
+			margin-top: 40px
+		@media (max-width: $tablet)
+			padding-left: 20px
+			padding-right: 20px
+		.title
+			color: #243e57
+			font-size: 28px
+			font-weight: 300
+			line-height: 40px
+			margin-bottom: 16px
+			&:nth-child(1n+2)
+				margin-top: 60px
+				@media (max-width: $mobile-media-width)
+					margin-top: 0
+		p
+			color: #666
+			font-size: 16px
+			font-weight: 400
+			line-height: 30px
+		iframe
+			height: 99%
+			width: 100%
+			@media (max-width: $mobile-media-width)
+				height: 80vh
+				width: 100%
+		tbody
+			@media (max-width: $mobile-media-width)
+				display: block
+		tr
+			@media (max-width: $mobile-media-width)
+				display: block
+		td
+			vertical-align: top
+			width: 100%
+			@media (max-width: $mobile-media-width)
+				display: block
+			.fl, .t
+				display: inline-block
+				vertical-align: middle
+			.t
+				color: #36393d
+				font-size: 20px
+				font-weight: 400
+				line-height: 40px
+				margin-left: 16px
+				// TODO remode it from DOM!
+				img
+					display: none
+			.fl
+				height: 30px
+				width: 30px
+			.blackphone
+				background:
+					image: url("../img/content/operator-icon-cellphone.png")
+					size: contain
+					position: 50% 50%
+					repeat: no-repeat
+			.life
+				background-image: url("../img/content/operator-icon-life.png")
+			.kyivstar
+				background-image: url("../img/content/operator-icon-kyivstar.png")
+			.skype
+				background-image: url("../img/content/operator-icon-kyivstar.png")
+			&:nth-child(1)
+				width: 30%
+				.clear + p
+					// TODO remode it from DOM!
+					// color: red !important
+					display: none
+				span.blue
+					display: none
+			&:nth-child(2)
+				width: 70%
+				@media (max-width: $mobile-media-width)
+					padding-top: 20px
+					width: 100%
+	.hr
+		margin-top: 50px
+		height: 1px
+		background-color: #f2f2f3
+		@media (max-width: $mobile-media-width)
+			margin-top: 30px
+	table.emails
+		margin-top: 50px
+		margin-bottom: 95px
+		@media (max-width: $mobile-media-width)
+			display: block
+			margin-top: 30px
+			margin-bottom: 30px
+		@media (max-width: $tablet)
+			padding-left: 20px
+			padding-right: 20px
+		tbody
+			@media (max-width: $mobile-media-width)
+				display: block
+			tr
 				@media (max-width: $mobile-media-width)
 					display: block
-					margin-top: 40px
-				@media (max-width: $tablet)
-					padding-left: 20px
-					padding-right: 20px
-				.title
+				td
 					color: #243e57
-					font-size: 28px
+					font-size: 24px
+					// line-height: 30px
+					line-height: 1.25em
 					font-weight: 300
-					line-height: 40px
-					margin-bottom: 16px
-					&:nth-child(1n+2)
-						margin-top: 60px
-						@media (max-width: $mobile-media-width)
+					padding-bottom: 44px
+					@media (max-width: $mobile-media-width)
+						display: block
+					@media (max-width: $tablet)
+						padding-bottom: 21px
+						font-size: 20px
+						line-height: 1.25em
+					a
+						color: #0093dd
+						display: block
+						font-size: 14px
+						font-weight: 400
+						margin-top: 14px
+						text-decoration: none
+						@media (max-width: $tablet)
 							margin-top: 0
-				p
-					color: #666
-					font-size: 16px
-					font-weight: 400
-					line-height: 30px
-				iframe
-					@media (max-width: $mobile-media-width)
-						height: 80vh
-						width: 100%
-				tbody
-					@media (max-width: $mobile-media-width)
-						display: block
-					tr
-						@media (max-width: $mobile-media-width)
-							display: block
-						td
-							vertical-align: top
-							@media (max-width: $mobile-media-width)
-								display: block
-							.fl, .t
-								display: inline-block
-								vertical-align: middle
-							.t
-								color: #36393d
-								font-size: 20px
-								font-weight: 400
-								line-height: 40px
-								margin-left: 16px
-								// TODO remode it from DOM!
-								img
-									display: none
-							.fl
-								height: 30px
-								width: 30px
-							.blackphone
-								background-image: url("../img/content/operator-icon-cellphone.png")
-							.life
-								background-image: url("../img/content/operator-icon-life.png")
-							.kyivstar
-								background-image: url("../img/content/operator-icon-kyivstar.png")
-							.skype
-								background-image: url("../img/content/operator-icon-kyivstar.png")
-							&:nth-child(1)
-								width: 100%
-								.clear + p
-									// TODO remode it from DOM!
-									// color: red !important
-									display: none
-								span.blue
-									display: none
-							&:nth-child(2)
-								width: 1px
-								@media (max-width: $mobile-media-width)
-									padding-top: 20px
-									width: 100%
-			.hr
-				margin-top: 50px
-				height: 1px
-				background-color: #f2f2f3
-				@media (max-width: $mobile-media-width)
-					margin-top: 30px
-			table.emails
-				margin-top: 50px
-				margin-bottom: 95px
-				@media (max-width: $mobile-media-width)
-					display: block
-					margin-top: 30px
-					margin-bottom: 30px
-				@media (max-width: $tablet)
-					padding-left: 20px
-					padding-right: 20px
-				tbody
-					@media (max-width: $mobile-media-width)
-						display: block
-					tr
-						@media (max-width: $mobile-media-width)
-							display: block
-						td
-							color: #243e57
-							font-size: 24px
-							// line-height: 30px
-							line-height: 1.25em
-							font-weight: 300
-							padding-bottom: 44px
-							@media (max-width: $mobile-media-width)
-								display: block
-							@media (max-width: $tablet)
-								padding-bottom: 21px
-								font-size: 20px
-								line-height: 1.25em
-							a
-								color: #0093dd
-								display: block
-								font-size: 14px
-								font-weight: 400
-								margin-top: 14px
-								text-decoration: none
-								@media (max-width: $tablet)
-									margin-top: 0
 
 
 .search-input-1

@@ -49,14 +49,13 @@
 			animation-fill-mode: forwards
 	.close
 		cursor: pointer
-		height: 20px
-		width: 20px
 		background: transparent url('../img/icons/cross-button-4.svg') 50% 50% no-repeat
 		background-size: contain
-		pointer-events: none
 		position: absolute
 		right: 20px
 		top: 20px
+		height: 20px
+		width: 20px
 
 .mobile-menu
 	background-color: #4c5155
@@ -247,37 +246,17 @@
 		top: 6px
 
 #contacts-modal
-	background-color: rgba(255,255,255,.8)
-	.container
-		background: #fff
-		box-shadow: 0 2px 23px rgba(0, 0, 0, 0.1)
-		position: absolute
-		padding: 80px 80px
-		left: 50%
-		transform: translate(-50%, 40px)
-	h1, h2, h3, h4, h5, h6
-		font-weight: 300
-		margin-bottom: 0.8em
-	li
-		margin-bottom: 6px
-	table
-		width: 100%
-		td
-			vertical-align: top
-			&:nth-child(2)
-				text-align: right
-		b, .title, .blue
-			color: $main-color
-			margin: 14px 0 6px
-			font-size: 1.3em
-			&:first-child
-				margin-top: -3px
-		iframe
-			width: 100%
+	background-color: rgba(255,255,255,1)
+	.modal-wrapper
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
 
 #search-modal
 	text-align: center
 	.modal-wrapper
+		box-shadow: 0 2px 23px rgba(0, 0, 0, 0.1)
 		padding: 40px 40px
 		background: rgba(255, 255, 255, 0.9)
 		border-radius: 4px
