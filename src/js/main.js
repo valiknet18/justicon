@@ -179,6 +179,7 @@ $(document).on('ready', function () {
 
 	// Collapse when not enough space
 	(function () {
+		return;
 		var $lists;
 		$lists = $('.main-navigation-holder');
 		$lists.each(function () {

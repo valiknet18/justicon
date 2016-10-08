@@ -7,83 +7,101 @@
 .fixed-header
 	.container
 
-		.logotype-holder
-			a(href='test.html')
-				.logo.logo-ru.invisible.hidden Justicon
-				img(src="http://justicon.ua/bitrix/templates/usticon/i/logo.png", alt="Justicon")
-				//- img(src="img/content/main-logo.svg", alt="Justicon")
+		.main-navigation-holder
 
-		ul.main-navigation-holder
-			li.services-trigger
-				a(href='services.html')
-					span Услуги
-			li( class= page === 'price-list' ? 'active' : '' )
-				a(href='price-list.html')
-					span Прайс-лист
-			li( class= page === 'contacts' ? 'active' : '' )
-				a(href='contacts.html')
-					span Контакты
-			li( class= page === 'about' ? 'active' : '' )
-				a(href='about.html')
-					span Все разделы
-			li
-				a(href='#')
-					span Почему мы
-				.submenu
-					a.close(href='#')
-					ul.inner
-						li
-							a(href='about.html') О компании
-						li
-							a(href='/uspeshnyy-rezultat/') Успешный результат
-						li
-							a(href='/nashi-klienty/') Наши клиенты
-						li
-							a(href='/aktsii-i-predlozheniya/') Акции и предложения
-			li( class= page === 'adresses' ? 'active' : '' )
-				a(href='adresses.html')
-					span Информ-бюро
-			li
-				a(href='#')
-					span Пресс-центр
-				.submenu
-					a.close(href='#')
-					ul.inner
-						li
-							a(href='/press-tsentr/novosti-prava/') Новости права
-						li
-							a(href='/press-tsentr/expert/') Мнение эксперта
-						li
-							a(href='/press-tsentr/publikatsii/') Публикации
-						li
-							a(href='/press-tsentr/rassylka/') Рассылка
-			li.search-trigger
-				a(href='#' data-modal="#search-modal")
-					span
-						img(src="img/icons/search-icon-2.svg", alt="search")
-				.submenu
-					span Поиск по сайту
-			li.lang-switcher
-				a(href='#')
-					span Укр
-				.submenu
-					ul.inner
-						li
-							a(href='/') Рус
-						li
-							a(href='#') En
+			ul.left-side
+				li.services-trigger
+					a(href='services.html')
+						.gamburger
+							span
+							span
+							span
+						span Услуги
 
-		.header-contacts-navigation-holder
-			.header-contacts-holder
-				ul
-					li.operator.operator-lifecell
-						a(href="tel:0981000176" data-modal="#contacts-modal") (098) 1000 176
-					li.operator.operator-viber
-						a(href="tel:0931000176" data-modal="#contacts-modal") (093) 1000 176
-					li.operator.operator-kyivstar
-						a(href="tel:0442214000" data-modal="#contacts-modal") (044) 221 4000
-				.submenu
-					span Показать еще
+				li( class= page === 'price-list' ? 'active' : '' )
+					a(href='price-list.html')
+						span Прайс-лист
+
+				li( class= page === 'contacts' ? 'active' : '' )
+					a(href='contacts.html')
+						span Контакты
+
+			.logotype-holder
+				a(href='test.html')
+					.logo.logo-ru.invisible.hidden Justicon
+					img(src="http://justicon.ua/bitrix/templates/usticon/i/logo.png", alt="Justicon")
+					//- img(src="img/content/main-logo.svg", alt="Justicon")
+
+			ul.right-side
+
+				li( class= page === 'about' ? 'active' : '' )
+					a(href='about.html')
+						span Все разделы
+
+				li
+					a(href='#')
+						span Почему мы
+					.submenu
+						a.close(href='#')
+						ul.inner
+							li
+								a(href='about.html') О компании
+							li
+								a(href='/uspeshnyy-rezultat/') Успешный результат
+							li
+								a(href='/nashi-klienty/') Наши клиенты
+							li
+								a(href='/aktsii-i-predlozheniya/') Акции и предложения
+
+				//- li( class= page === 'adresses' ? 'active' : '' )
+				//- 	a(href='adresses.html')
+				//- 		span Информ-бюро
+
+				li
+					a(href='#')
+						span Пресс-центр
+					.submenu
+						a.close(href='#')
+						ul.inner
+							li
+								a(href='/press-tsentr/novosti-prava/') Новости права
+							li
+								a(href='/press-tsentr/expert/') Мнение эксперта
+							li
+								a(href='/press-tsentr/publikatsii/') Публикации
+
+				li.search-trigger
+					a(href='#' data-modal="#search-modal")
+						span
+							img(src="img/icons/search-icon-2.svg", alt="search")
+					.submenu
+						span Поиск по сайту
+
+				li.lang-switcher
+					a(href='#')
+						span Укр
+					.submenu
+						ul.inner
+
+							li
+								a(href='/') Рус
+
+							li
+								a(href='#') En
+
+				.header-contacts-holder
+					ul
+						li.operator.operator-lifecell
+							a(href="tel:0981000176" data-modal="#contacts-modal") (098) 1000 176
+
+						li.operator.operator-viber
+							a(href="tel:0931000176" data-modal="#contacts-modal") (093) 1000 176
+
+						li.operator.operator-kyivstar
+							a(href="tel:0442214000" data-modal="#contacts-modal") (044) 221 4000
+
+					.submenu
+						span Показать еще
 
 	.navigation-bar.hidden
 		.container
